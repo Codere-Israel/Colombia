@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Quién ha ganado más juegos de las estrellas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El que más ha ganado el juego de Estrellas es Liga America con un total de 46 vs. Liga Nacional con un registro de 43."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se gana un run line?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un run line o handicap es cuando el equipo favorito ofrece una ventaja y el equipo menos favorito recibe una ventaja, para ganar un run line el equipo que ofrece la ventaja debe ganar o más carreras de las que ofrece, es decir si tiene un run line o handicap de - 1,5 el equipo debe ganar por 2 carreras o más, si recibe un run line de 1,5 el equipo debe ganar o en su defecto perder por menos de carreras para ganar la apuesta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué significa +1.5 en béisbol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Significa que un equipo está recibiendo a su favor antes de hacer la apuesta una ventaja de 1.5 carreras, es decir, al comienzo del partido se encuentra 2 x 0 a favor de que obtiene o realiza esta apuesta. Por lo tanto, para no ganar la apuesta debe perder este equipo por 2 carreras o más."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es un handicap en béisbol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un handicap en béisbol es una ventaja o desventaja que otorgan los equipos, el favorito otorgará una ventaja, el no favorito recibirá una desventaja."
+      }
+    }
+  ]
+}

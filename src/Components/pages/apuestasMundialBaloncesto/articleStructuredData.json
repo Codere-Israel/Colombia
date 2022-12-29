@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Quién ha ganado más mundiales de baloncesto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estados Unidos es el país que lidera el medallero general del Mundial. En la era profesional, el equipo se consagró campeón olímpico en 1992, 1996, 2000, 2008, 2012, 2016 y 2020. "
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo es el próximo Mundial de Baloncesto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Copa Mundial de Baloncesto se llevará a cabo el viernes 25 de agosto de 2023 hasta el domingo 10 de septiembre y se celebrará conjuntamente en Filipinas, Japón e Indonesia."
+      }
+    }
+  ]
+}

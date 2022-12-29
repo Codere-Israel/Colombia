@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué Mundial viene después de Qatar 2022?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El siguiente Mundial a Qatar 2022 se llevará a cabo en Canadá/Estados Unidos/México en el 2026. La sede triple fue escogida el 13 de junio de 2018, durante el 68.º Congreso de la FIFA en Moscú, Rusia. Es la primera vez que la FIFA otorga una sede a tres países para organizar el campeonato. Esta será la primera ocasión en que 48 selecciones clasifiquen a la fase final luego de la decisión de FIFA, promovida por Gianni Infantino, aprobada el 10 de enero de 2017 de elevar de 32 plazas a 48 donde habrá 16 grupos de tres equipos y las eliminatorias empezarán en dieciseisavos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué países participarán en el Mundial 2022?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los 32 países que lograron conseguir su cupo a Qatar 2022 son: Qatar, Alemania, Dinamarca, Brasil, Francia, Bélgica, Croacia, España, Serbia, Inglaterra, Suiza, Holanda, Argentina, Irán, Corea del Sur, Japón, Arabia Saudita, Ecuador, Uruguay, Canadá, Ghana, Senegal, Portugal, Polonia, Túnez, Marruecos, Camerún, México, Estados Unidos, Gales, Australia y Costa Rica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué el Mundial de Qatar es en noviembre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En 2011, Joseph Blatter anunció que este mundial podría ser adelantado a enero de 2022 o postergado a noviembre del mismo año, debido a que en Catar en verano las temperaturas en los meses de junio y julio llegan a 50º C. Al final, decidieron postergarlo al mes de noviembre y diciembre, ya que el clima en esos meses es de entre 20° y 30° y así podría protegerse a los futbolistas y a todos los relacionados con dicho certamen."
+      }
+    }
+  ]
+}

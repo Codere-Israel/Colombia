@@ -1,0 +1,48 @@
+{
+  "top_games": [
+    {
+      "name": "Blue Wizard",
+      "alt": "Juega European Roulette High Stakes en casino online",
+      "logo_alt": "Logo juego European Roulette",
+      "sponsor": "Playtech",
+      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/topGameLeft.webp",
+      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/topGameLeftLogo.webp",
+      "gamelink": "https://m.codere.com.co/deportescolombia/#/CasinoPage?Playgame=PT%20Blue%20Wizard"
+    },
+    {
+      "name": "Live Roulette",
+      "alt": "Juega Live Roulette en casino online",
+      "logo_alt": "Live Roulette",
+      "sponsor": "Evolution",
+      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/topGameRight.webp",
+      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/topGameRightLogo.webp",
+      "gamelink": "https://m.codere.com.co/deportescolombia/#/CasinoPage?Playgame=PT%20Live%20Roulette"
+    }
+  ],
+  "bottom_games": [
+    {
+      "name": "AGE OF THE GODS EPIC TROY",
+      "alt": "AGE OF THE GODS EPIC TROY",
+      "logo_alt": "Logo AGE OF THE GODS EPIC TROY",
+      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/newGamesLeft.webp",
+      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/newGamesLeftLogo.webp",
+      "gamelink": "https://m.codere.com.co/deportescolombia/#/CasinoPage?playgame=PT%20Age%20of%20the%20Gods%20Epic%20Troy"
+    },
+    {
+      "name": "5 MARIACHIS",
+      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/newGamesMiddle.webp",
+      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/newGamesMiddleLogo.webp",
+      "alt": "5 MARIACHIS en casino online",
+      "logo_alt": "Logo 5 MARIACHIS",
+      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=HAB%205%20MARIACHIS"
+    },
+    {
+      "name": "AVIATOR",
+      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/BIRDOFTHUNDER.webp",
+      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/BIRDOFTHUNDERLOGO2.webp",
+      "alt": "AVIATOR en casino online",
+      "logo_alt": "Logo AVIATOR",
+      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=PRP%20Aviator"
+    }
+  ]
+}

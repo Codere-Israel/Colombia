@@ -1,0 +1,20 @@
+.img-desktop{
+  display: block;
+}
+.img-mobile{
+  display: none;
+}
+
+.PageH2TitleSeoPages923 {
+  text-align: left;
+}
+
+@media  (max-width: 767px) {
+.img-desktop{
+  display: none;
+}
+.img-mobile{
+  display: block;
+}
+
+ }
