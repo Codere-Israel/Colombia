@@ -59,12 +59,9 @@ const App = () => {
         </isMobileContext.Provider>
         <main className="mainSeoPagesColombia">
           <Routes>
-            <Route exact path="/" element={<Splash />} />
-            <Route
-              exact
-              path="eventos-deportivos"
-              element={<EventosDeportivos />}
-            >
+            <Route exact path="testsplashreactseo" element={<Splash />} />
+            <Route exact path="eventos-deportivos">
+              <Route exact path="" element={<EventosDeportivos />} />
               <Route
                 exact
                 path="apuestas-mundial-fifa"
@@ -85,7 +82,6 @@ const App = () => {
                 path="apuestas-superbowl"
                 element={<ApuestasSuperbowl />}
               />
-              <Route exact path="*" element={<Page404 />} />
             </Route>
           </Routes>
         </main>

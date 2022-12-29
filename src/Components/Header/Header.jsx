@@ -30,6 +30,8 @@ import { faBaseball } from "@fortawesome/free-solid-svg-icons/faBaseball";
 import "./Header.css";
 
 function Header(props) {
+  const regLink =
+    "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage";
   const acceder =
     "https://m.codere.com.co/deportescolombia/#/HomePage?openlogin=true";
   const LOGO =
@@ -221,7 +223,7 @@ function Header(props) {
                     Acceder
                   </Button>
                   <Button
-                    href={props.regis}
+                    href={regLink}
                     className="registrate-button header_btn"
                     rel="nofollow"
                   >
@@ -330,7 +332,7 @@ function Header(props) {
                   Acceder
                 </Button>
                 <Button
-                  href={props.regis}
+                  href={regLink}
                   className="registrate-button header_btn"
                   rel="nofollow"
                 >
