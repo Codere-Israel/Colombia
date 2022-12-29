@@ -60,8 +60,11 @@ const App = () => {
         <main className="mainSeoPagesColombia">
           <Routes>
             <Route exact path="/" element={<Splash />} />
-            <Route exact path="eventos-deportivos">
-              <Route exact path="" element={<EventosDeportivos />} />
+            <Route
+              exact
+              path="eventos-deportivos"
+              element={<EventosDeportivos />}
+            >
               <Route
                 exact
                 path="apuestas-mundial-fifa"
