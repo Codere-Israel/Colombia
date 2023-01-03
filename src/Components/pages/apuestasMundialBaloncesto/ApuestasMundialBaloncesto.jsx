@@ -17,7 +17,6 @@ const ApuestasMundialBaloncesto = () => {
           name="description"
           content="Los mejores partidos del mundial de baloncesto se viven por Codere, coloca tus apuestas online con las mejores cuotas del mercado Colombiano."
         ></meta>
-        <meta name="robots" content="noindex,nofollow"></meta>
         <script type="application/ld+json">
           {JSON.stringify(articleStructuredData)}
         </script>

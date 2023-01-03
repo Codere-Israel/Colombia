@@ -933,9 +933,9 @@ h1.bottomContentSubTitle {
     color: #fff;
 }
 
-.hamb-accordion .accordion-item {
+/* .hamb-accordion .accordion-item {
     border: unset;
-}
+} */
 
 .hamb-accordion .accordion-button:not(.collapsed),
 .hamb-accordion .accordion-button {

@@ -17,7 +17,6 @@ const EventosDeportivos = () => {
           name="tesdescriptiont"
           content="Conoce más acerca del mundo de los eventos deportivos y pon a prueba tu suerte en Codere, la casa de apuestas deportivas y casino online #1 en Colombia."
         ></meta>
-        <meta name="robots" content="noindex,nofollow"></meta>
 
         <script type="application/ld+json">
           {JSON.stringify(articleStructuredData)}
@@ -27,12 +26,10 @@ const EventosDeportivos = () => {
       <div className="container">
         <div className="row mb-5">
           <div className="col-12 mt-3-6">
-            <Link to={"Google.com"}>
-              <Image
-                className="img-fluid"
-                src="https://codere.com.co/SEOpagesImg/EventosDeportivos/top-banner-eventos.webp"
-              />
-            </Link>
+            <Image
+              className="img-fluid"
+              src="https://codere.com.co/SEOpagesImg/EventosDeportivos/top-banner-eventos.webp"
+            />
           </div>
         </div>
 

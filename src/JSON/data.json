@@ -1,11 +1,11 @@
 {
   "desktop_slide_list": [
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/valladolid-vs-real-madrid-desktop.jpg",
-      "img_alt": "valladolid-vs-real-madrid",
+      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/ChelseaVsManchesterCityDesktop.webp",
+      "img_alt": "Premier League - Chelsea vs Manchester City",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2022-12-28T09:00:00Z",
-      "endDate": "2022-12-30T15:30:00Z",
+      "startDate": "2023-01-03T09:00:00Z",
+      "endDate": "2023-01-05T08:30:00Z",
       "scheduled": true
     },
     {
@@ -45,11 +45,11 @@
   ],
   "mobile_slide_list": [
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/valladolid-vs-real-madrid-mobile.jpg",
-      "img_alt": "valladolid-vs-real-madrid",
+      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/ChelseaVsManchesterCityMobile.webp",
+      "img_alt": "Premier League - Chelsea vs Manchester City",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2022-12-28T09:00:00Z",
-      "endDate": "2022-12-30T15:30:00Z",
+      "startDate": "2023-01-03T09:00:00Z",
+      "endDate": "2023-01-05T08:30:00Z",
       "scheduled": true
     },
     {

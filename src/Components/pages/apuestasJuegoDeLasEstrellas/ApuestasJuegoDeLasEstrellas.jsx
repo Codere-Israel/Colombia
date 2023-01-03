@@ -15,7 +15,6 @@ const ApuestasJuegoDeLasEstrellas = () => {
           name="description"
           content="Consulta los pronósticos para las apuestas online del juego de las estrellas de la MLB, en Codere Colombia están las mejores cuotas deportivas del mercado."
         ></meta>
-        <meta name="robots" content="noindex,nofollow"></meta>
         <script type="application/ld+json">
           {JSON.stringify(articleStructuredData)}
         </script>

@@ -1,8 +1,7 @@
-
 import { Helmet } from "react-helmet";
 import { Accordion, Image, Row, Col } from "react-bootstrap";
 
-import articleStructuredData from './articleStructuredData.json';
+import articleStructuredData from "./articleStructuredData.json";
 import "../pages.css";
 import "../pagesMobile.css";
 import "./apuestas-mundial-fifa.css";
@@ -13,8 +12,10 @@ const ApuestasMundialFifa = () => {
       <Helmet>
         <title>Apuestas online para el Mundial de la Fifa | Codere®</title>
         <link rel="canonical" href="https://www.codere.com.co/" />
-        <meta name="description" content="Juega online y realiza tus apuestas deportivas con la mejores cuotas del mercado para el mundial de futbol. Codere la mejor casa de apuestas de Colombia."></meta>
-        <meta name="robots" content="noindex,nofollow"></meta>
+        <meta
+          name="description"
+          content="Juega online y realiza tus apuestas deportivas con la mejores cuotas del mercado para el mundial de futbol. Codere la mejor casa de apuestas de Colombia."
+        ></meta>
         <script type="application/ld+json">
           {JSON.stringify(articleStructuredData)}
         </script>
@@ -59,13 +60,12 @@ const ApuestasMundialFifa = () => {
               pocos los que han quedado marcados en la mente de los apasionados
               de este deporte. Dentro de los más destacados están:
             </p>
-            <Col className='text-center'>
+            <Col className="text-center">
               <Image
                 className="img-fluid imgFsDiv"
                 src="https://codere.com.co/SEOpagesReact/apuestas-mundial-fifa/assets/images/banner2-qatar-desk.webp"
               />
             </Col>
-
 
             <h3 className="PageH3TitleSeoPages923 mt-4 mb-2">
               Suiza 1954, "El milagro de Berna"
@@ -143,7 +143,7 @@ const ApuestasMundialFifa = () => {
               ahora, el trío de títulos Eurocopa 2008 - Mundial 2010 - Eurocopa
               2012.
             </p>
-            <Col className='text-center'>
+            <Col className="text-center">
               <Image
                 className="img-fluid imgFsDiv"
                 src="https://codere.com.co/SEOpagesReact/apuestas-mundial-fifa/assets/images/banner3-qatar-desk.webp"
@@ -352,24 +352,61 @@ const ApuestasMundialFifa = () => {
                 </Accordion.Body>
               </Accordion.Item>
 
-
-
               <Accordion.Item className="accordionT454" eventKey="1">
                 <Accordion.Header className="PageH3TitleSeoPages923 accordionT454">
                   Preguntas frecuentes sobre Qatar 2022
                 </Accordion.Header>
                 <h3 className="PageH3TitleSeoPages923 "> </h3>
                 <Accordion.Body className="accordionBody text982T">
-                  <p className="text982T">Aquí te orientamos con algunas preguntas frecuentes que pueden ayudar a resolver tus dudas acerca del mundial de fútbol. </p>
+                  <p className="text982T">
+                    Aquí te orientamos con algunas preguntas frecuentes que
+                    pueden ayudar a resolver tus dudas acerca del mundial de
+                    fútbol.{" "}
+                  </p>
 
-                  <h3 className="PageH3TitleSeoPages923 mt-4 mb-2">¿Qué Mundial viene después de Qatar 2022?</h3>
-                  <p className="text982T">El siguiente Mundial a Qatar 2022 se llevará a cabo en Canadá/Estados Unidos/México en el 2026. La sede triple fue escogida el 13 de junio de 2018, durante el 68.º Congreso de la FIFA en Moscú, Rusia. Es la primera vez que la FIFA otorga una sede a tres países para organizar el campeonato.</p>
-                  <p className="text982T">Esta será la primera ocasión en que 48 selecciones clasifiquen a la fase final luego de la decisión de FIFA, promovida por Gianni Infantino, aprobada el 10 de enero de 2017 de elevar de 32 plazas a 48 donde habrá 16 grupos de tres equipos y las eliminatorias empezarán en dieciseisavos.</p>
-                  <h3 className="PageH3TitleSeoPages923 mt-4 mb-2">¿Qué países participarán en el Mundial 2022? </h3>
-                  <p className="text982T"> Los 32 países que lograron conseguir su cupo a Qatar 2022 son: Qatar, Alemania, Dinamarca, Brasil, Francia, Bélgica, Croacia, España, Serbia, Inglaterra, Suiza, Holanda, Argentina, Irán, Corea del Sur, Japón, Arabia Saudita, Ecuador, Uruguay, Canadá, Ghana, Senegal, Portugal, Polonia, Túnez, Marruecos, Camerún, México, Estados Unidos, Gales, Australia y Costa Rica. </p>
-                  <h3 className="PageH3TitleSeoPages923 mt-4 mb-2">¿Por qué el Mundial de Qatar es en noviembre? </h3>
-                  <p className="text982T">En 2011, Joseph Blatter anunció que este mundial podría ser adelantado a enero de 2022 o postergado a noviembre del mismo año, debido a que en Catar en verano las temperaturas en los meses de junio y julio llegan a 50º C. Al final, decidieron postergarlo al mes de noviembre y diciembre, ya que el clima en esos meses es de entre 20° y 30° y así podría protegerse a los futbolistas y a todos los relacionados con dicho certamen. </p>
-
+                  <h3 className="PageH3TitleSeoPages923 mt-4 mb-2">
+                    ¿Qué Mundial viene después de Qatar 2022?
+                  </h3>
+                  <p className="text982T">
+                    El siguiente Mundial a Qatar 2022 se llevará a cabo en
+                    Canadá/Estados Unidos/México en el 2026. La sede triple fue
+                    escogida el 13 de junio de 2018, durante el 68.º Congreso de
+                    la FIFA en Moscú, Rusia. Es la primera vez que la FIFA
+                    otorga una sede a tres países para organizar el campeonato.
+                  </p>
+                  <p className="text982T">
+                    Esta será la primera ocasión en que 48 selecciones
+                    clasifiquen a la fase final luego de la decisión de FIFA,
+                    promovida por Gianni Infantino, aprobada el 10 de enero de
+                    2017 de elevar de 32 plazas a 48 donde habrá 16 grupos de
+                    tres equipos y las eliminatorias empezarán en dieciseisavos.
+                  </p>
+                  <h3 className="PageH3TitleSeoPages923 mt-4 mb-2">
+                    ¿Qué países participarán en el Mundial 2022?{" "}
+                  </h3>
+                  <p className="text982T">
+                    {" "}
+                    Los 32 países que lograron conseguir su cupo a Qatar 2022
+                    son: Qatar, Alemania, Dinamarca, Brasil, Francia, Bélgica,
+                    Croacia, España, Serbia, Inglaterra, Suiza, Holanda,
+                    Argentina, Irán, Corea del Sur, Japón, Arabia Saudita,
+                    Ecuador, Uruguay, Canadá, Ghana, Senegal, Portugal, Polonia,
+                    Túnez, Marruecos, Camerún, México, Estados Unidos, Gales,
+                    Australia y Costa Rica.{" "}
+                  </p>
+                  <h3 className="PageH3TitleSeoPages923 mt-4 mb-2">
+                    ¿Por qué el Mundial de Qatar es en noviembre?{" "}
+                  </h3>
+                  <p className="text982T">
+                    En 2011, Joseph Blatter anunció que este mundial podría ser
+                    adelantado a enero de 2022 o postergado a noviembre del
+                    mismo año, debido a que en Catar en verano las temperaturas
+                    en los meses de junio y julio llegan a 50º C. Al final,
+                    decidieron postergarlo al mes de noviembre y diciembre, ya
+                    que el clima en esos meses es de entre 20° y 30° y así
+                    podría protegerse a los futbolistas y a todos los
+                    relacionados con dicho certamen.{" "}
+                  </p>
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -377,7 +414,7 @@ const ApuestasMundialFifa = () => {
         </div>
 
         <Row>
-          <Col className='text-center imgFsDiv'>
+          <Col className="text-center imgFsDiv">
             <Image
               className="img-fluid"
               src="https://codere.com.co/SEOpagesReact/apuestas-mundial-fifa/assets/images/banner4-qatar-desk.webp"
@@ -402,7 +439,7 @@ const ApuestasMundialFifa = () => {
           </div>
           <hr className="mt-6" />
         </div>
-      </div > {" "}
+      </div>{" "}
       {/*container end div*/}
     </>
   );

@@ -54,17 +54,13 @@ const Splash = () => {
           name="description"
           content="La casa de apuestas deportivas y casino online #1 en Colombia. Blackjack, ruleta online, slots y tus deportes favoritos ⚽. ¡Entra y diviértete en Codere!"
         ></meta>
-        <meta name="robots" content="noindex,nofollow"></meta>
 
         <script type="application/ld+json">
           {JSON.stringify(articleStructuredData)}
         </script>
       </Helmet>
 
-      {/* console.log(<isMobileContext.Provider />); */}
-      {/* <isMobileContext.Provider value={flag}> */}
       <div id="first-section">
-        {/* <Header regis={regis} /> */}
         <CookieConsent
           cookieName="codere_cookie"
           expires={365}
@@ -92,12 +88,7 @@ const Splash = () => {
       </div>
 
       <Games />
-      {/* </isMobileContext.Provider> */}
       <Content />
-      {/* {flag ? <StickyFooter /> : null} */}
-      {/* <Footer /> */}
-
-      {/* end return  */}
     </>
   );
 };

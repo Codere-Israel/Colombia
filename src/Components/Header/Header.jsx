@@ -35,10 +35,11 @@ function Header(props) {
   const acceder =
     "https://m.codere.com.co/deportescolombia/#/HomePage?openlogin=true";
   const LOGO =
-    new Date() < new Date("2022-12-19T07:00:00Z")
-      ? "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/SponsorsLogoGrey.png"
-      : "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/christmassLogo.gif";
+    "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/SponsorsLogoGrey.png";
+
   // Hooks
+
+  console.log(new Date());
   const [show, setShow] = useState(false);
   const [hamburger, setHamburger] = useState(false);
   const hamburgerHandler = (evt) => {
@@ -81,14 +82,6 @@ function Header(props) {
                       href="https://m.codere.com.co/deportescolombia/#/HomePage"
                       rel="nofollow"
                     >
-                      <FontAwesomeIcon icon={faCodeFork} />
-                      Acceder
-                      <FontAwesomeIcon icon={faAngleRight} />
-                    </a>
-                    <a
-                      href="https://m.codere.com.co/deportescolombia/#/HomePage"
-                      rel="nofollow"
-                    >
                       <FontAwesomeIcon icon={faCrosshairs} />
                       Deportes
                       <FontAwesomeIcon icon={faAngleRight} />
@@ -102,7 +95,7 @@ function Header(props) {
                       <FontAwesomeIcon icon={faAngleRight} />
                     </a>
                     <a
-                      href="https://m.codere.com.co/deportescolombia/#/CasinoPage"
+                      href="https://m.codere.com.co/deportescolombia/#/SlotsPage"
                       rel="nofollow"
                     >
                       <FontAwesomeIcon icon={faCoins} />
@@ -110,7 +103,7 @@ function Header(props) {
                       <FontAwesomeIcon icon={faAngleRight} />
                     </a>
                     <a
-                      href="https://m.codere.com.co/deportescolombia/#/PromotionsPage"
+                      href="https://m.codere.com.co/deportescolombia/#/CasinoPage"
                       rel="nofollow"
                     >
                       <FontAwesomeIcon icon={faCoins} />
@@ -118,11 +111,11 @@ function Header(props) {
                       <FontAwesomeIcon icon={faAngleRight} />
                     </a>
                     <a
-                      href="https://m.codere.com.co/deportescolombia/#/PromotionsPage"
+                      href="https://m.codere.com.co/deportes/#/CasinoenVivoPage"
                       rel="nofollow"
                     >
                       <FontAwesomeIcon icon={faList} />
-                      Slots
+                      Casino en vivo
                       <FontAwesomeIcon icon={faAngleRight} />
                     </a>
                     <a
@@ -134,7 +127,7 @@ function Header(props) {
                       <FontAwesomeIcon icon={faAngleRight} />
                     </a>
                     <a
-                      href="https://m.codere.com.co/deportescolombia/#/PromotionsPage"
+                      href="https://m.codere.com.co/deportescolombia/#/NearestLocalPage"
                       rel="nofollow"
                     >
                       <FontAwesomeIcon icon={faCannabis} />
@@ -142,7 +135,7 @@ function Header(props) {
                       <FontAwesomeIcon icon={faAngleRight} />
                     </a>
                     <a
-                      href="https://m.codere.com.co/deportescolombia/#/PromotionsPage"
+                      href="https://www.codere.com.co/paginas/Dep%C3%B3sitosEnEfectivo.aspx"
                       rel="nofollow"
                     >
                       <FontAwesomeIcon icon={faBullhorn} />
@@ -270,7 +263,7 @@ function Header(props) {
                   </Nav.Link>
 
                   <Nav.Link
-                    href="https://m.codere.com.co/deportes/#/Casino%20en%20VivoPage"
+                    href="https://m.codere.com.co/deportes/#/CasinoenVivoPage"
                     rel="nofollow"
                   >
                     CASINO EN VIVO
