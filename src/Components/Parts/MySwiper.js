@@ -24,7 +24,7 @@ function MySwiper(props) {
 
     imgs[swiper.realIndex].ctaText
       ? setRegisButtonText(imgs[swiper.realIndex].ctaText)
-      : setRegisButtonText("Registrate");
+      : setRegisButtonText("Regístrate");
     imgs[swiper.realIndex].ctaURL
       ? setRegis(imgs[swiper.realIndex].ctaURL)
       : setRegis(props.regis);

@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons/faHeadset";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube";
-import { faMailchimp } from "@fortawesome/free-brands-svg-icons/faMailchimp";
 import "./Footer.css";
 // Codere Footer \\
 function Footer() {

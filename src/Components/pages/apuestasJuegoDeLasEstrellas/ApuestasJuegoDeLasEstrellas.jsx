@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 
 import "../pages.css";
 import "../pagesMobile.css";
+import BottomRegistrateButton from "../../Parts/BottomRegistrateButton";
 import articleStructuredData from "./articleStructuredData.json";
 const ApuestasJuegoDeLasEstrellas = () => {
   return (
@@ -297,16 +298,10 @@ const ApuestasJuegoDeLasEstrellas = () => {
               Vive la emoción de apostar a tus eventos deportivos favoritos
             </h2>
           </div> */}
-          <div className="col-12 mt-3 RegistrateMobBtn">
-            <a
-              rel="nofollow"
-              className="registrate-button  bottomContentPromoButton btn btn-primary"
-              href="https://m.codere.com.co/deportescolombia/#/RegistroCONewPage"
-            >
-              Regístrate Ahora
-            </a>
-          </div>
-          <hr className="mt-6" />
+
+          <BottomRegistrateButton />
+
+          <hr className="mt-3" />
         </div>
       </div>{" "}
     </>
