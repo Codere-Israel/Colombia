@@ -39,7 +39,6 @@ function Header(props) {
 
   // Hooks
 
-  console.log(new Date());
   const [show, setShow] = useState(false);
   const [hamburger, setHamburger] = useState(false);
   const hamburgerHandler = (evt) => {
@@ -256,7 +255,7 @@ function Header(props) {
                     CROWN
                   </Nav.Link>
                   <Nav.Link
-                    href="https://m.codere.com.co/deportes/#/CasinoPage?filter=Casino"
+                    href="https://m.codere.com.co/deportes/#/CasinoPage"
                     rel="nofollow"
                   >
                     CASINO

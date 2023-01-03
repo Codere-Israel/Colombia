@@ -59,7 +59,7 @@ const App = () => {
         </isMobileContext.Provider>
         <main className="mainSeoPagesColombia">
           <Routes>
-            <Route exact path="testsplashreactseo" element={<Splash />} />
+            <Route exact path="/" element={<Splash />} />
             <Route exact path="eventos-deportivos">
               <Route exact path="" element={<EventosDeportivos />} />
               <Route

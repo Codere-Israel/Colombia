@@ -14,14 +14,14 @@ function StickyFooter() {
         className="sticky-item"
         rel="nofollow"
       >
-          ★ CASINO ★
+        ★ CASINO ★
       </a>
       <a
         href="https://m.codere.com.co/deportescolombia/#/DirectosPage"
         className="sticky-item"
         rel="nofollow"
       >
-          EN VIVO
+        EN VIVO
       </a>
     </div>
   );
