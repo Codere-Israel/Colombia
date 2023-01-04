@@ -11,7 +11,10 @@ const ApuestasMundialFifa = () => {
     <>
       <Helmet>
         <title>Apuestas online para el Mundial de la Fifa | Codere®</title>
-        <link rel="canonical" href="https://www.codere.com.co/" />
+        <link
+          rel="canonical"
+          href="https://www.codere.com.co/eventos-deportivos/apuestas-mundial-fifa"
+        />
         <meta
           name="description"
           content="Juega online y realiza tus apuestas deportivas con la mejores cuotas del mercado para el mundial de futbol. Codere la mejor casa de apuestas de Colombia."

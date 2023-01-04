@@ -12,9 +12,12 @@ const EventosDeportivos = () => {
     <>
       <Helmet>
         <title>Apuestas de Eventos Deportivos en Colombia | Codere®</title>
-        <link rel="canonical" href="https://www.codere.com.co/" />
+        <link
+          rel="canonical"
+          href="https://www.codere.com.co/eventos-deportivos"
+        />
         <meta
-          name="tesdescriptiont"
+          name="description"
           content="Conoce más acerca del mundo de los eventos deportivos y pon a prueba tu suerte en Codere, la casa de apuestas deportivas y casino online #1 en Colombia."
         ></meta>
 

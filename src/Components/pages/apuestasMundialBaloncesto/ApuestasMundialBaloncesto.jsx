@@ -12,7 +12,10 @@ const ApuestasMundialBaloncesto = () => {
     <>
       <Helmet>
         <title>Apuestas para el Mundial de Baloncesto | Codere®</title>
-        <link rel="canonical" href="https://www.codere.com.co/" />
+        <link
+          rel="canonical"
+          href="https://www.codere.com.co/eventos-deportivos/apuestas-mundial-baloncesto"
+        />
         <meta
           name="description"
           content="Los mejores partidos del mundial de baloncesto se viven por Codere, coloca tus apuestas online con las mejores cuotas del mercado Colombiano."

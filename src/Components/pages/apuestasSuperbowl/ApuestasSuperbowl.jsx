@@ -10,7 +10,10 @@ const ApuestasSuperbowl = () => {
     <>
       <Helmet>
         <title>Apuestas y pronósticos Super Bowl en Colombia | Codere®</title>
-        <link rel="canonical" href="https://www.codere.com.co/" />
+        <link
+          rel="canonical"
+          href="https://www.codere.com.co/eventos-deportivos/apuestas-superbowl"
+        />
         <meta
           name="description"
           content="Juega online en Codere, la casa de apuestas deportivas #1 en Colombia y aprovecha las mejores cuotas del mercado para el Super Bowl de la NFL."

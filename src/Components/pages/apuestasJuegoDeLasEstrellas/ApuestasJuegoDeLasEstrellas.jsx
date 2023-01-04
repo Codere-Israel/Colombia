@@ -10,7 +10,10 @@ const ApuestasJuegoDeLasEstrellas = () => {
     <>
       <Helmet>
         <title>Apuestas Juego de las Estrellas de la MLB | Codere®</title>
-        <link rel="canonical" href="https://www.codere.com.co/" />
+        <link
+          rel="canonical"
+          href="https://www.codere.com.co/eventos-deportivos/apuestas-juego-de-las-estrellas"
+        />
         <meta
           name="description"
           content="Consulta los pronósticos para las apuestas online del juego de las estrellas de la MLB, en Codere Colombia están las mejores cuotas deportivas del mercado."
