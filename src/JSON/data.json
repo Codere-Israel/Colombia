@@ -1,11 +1,11 @@
 {
   "desktop_slide_list": [
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/villarreal-vs-real-madrid-desktop.webp",
-      "img_alt": "villarreal-vs-real-madrid",
+      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/real-madrid-valencia-desktop.jpg",
+      "img_alt": "real-madrid-valencia",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-01-05T14:00:00Z",
-      "endDate": "2023-01-07T15:15:00Z",
+      "startDate": "2023-01-09T14:00:00Z",
+      "endDate": "2023-01-11T19:00:00Z",
       "scheduled": true
     },
     {
@@ -45,11 +45,11 @@
   ],
   "mobile_slide_list": [
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/villarreal-vs-real-madrid-mobile.webp",
-      "img_alt": "villarreal-vs-real-madrid",
+      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/real-madrid-valencia-mobile.jpg",
+      "img_alt": "real-madrid-valencia",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-01-05T14:00:00Z",
-      "endDate": "2023-01-05T08:30:00Z",
+      "startDate": "2023-01-09T14:00:00Z",
+      "endDate": "2023-01-11T19:00:00Z",
       "scheduled": true
     },
     {
