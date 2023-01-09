@@ -52,7 +52,7 @@ const Splash = () => {
         <link rel="canonical" href="https://www.codere.com.co/" />
         <meta
           name="description"
-          content="La casa de apuestas deportivas y casino online #1 en Colombia. Blackjack, ruleta online, slots y tus deportes favoritos ⚽. ¡Entra y diviértete en Codere!"
+          content="La casa de apuestas deportivas y casino online #1 en Colombia. Juega en línea Blackjack, ruleta, slots y apuesta en tus deportes favoritos ⚽."
         ></meta>
 
         <script type="application/ld+json">
