@@ -1,11 +1,11 @@
 {
   "desktop_slide_list": [
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/real-madrid-valencia-desktop.jpg",
-      "img_alt": "real-madrid-valencia",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/manchesterCityVsTottenhamDesktop.webp",
+      "img_alt": "Manchester City vs Tottenham",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-01-09T14:00:00Z",
-      "endDate": "2023-01-11T19:00:00Z",
+      "startDate": "2023-01-17T14:00:00Z",
+      "endDate": "2023-01-19T20:00:00Z",
       "scheduled": true
     },
     {
@@ -45,11 +45,11 @@
   ],
   "mobile_slide_list": [
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/real-madrid-valencia-mobile.jpg",
-      "img_alt": "real-madrid-valencia",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/manchesterCityVsTottenhamMobile.webp",
+      "img_alt": "Manchester City vs Tottenham",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-01-09T14:00:00Z",
-      "endDate": "2023-01-11T19:00:00Z",
+      "startDate": "2023-01-17T14:00:00Z",
+      "endDate": "2023-01-19T20:00:00Z",
       "scheduled": true
     },
     {
