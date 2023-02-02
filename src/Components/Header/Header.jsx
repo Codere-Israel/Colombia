@@ -42,7 +42,7 @@ function Header(props) {
   const [show, setShow] = useState(false);
   const [hamburger, setHamburger] = useState(false);
   const hamburgerHandler = (evt) => {
-    console.log(evt.target.className);
+    // console.log(evt.target.className);
     let flag = false;
     if (!hamburger && evt.target.id.includes("react-burger-menu-btn")) {
       evt.target.parentNode.classList.add("open");
