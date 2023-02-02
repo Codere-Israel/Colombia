@@ -9,19 +9,19 @@
       "scheduled": true
     },
     {
+      "image": "https://www.codere.com.co/Colombia/images/inisio/athleticBilbaoVsRealMadridDesktop.jpg",
+      "img_alt": "Athletic vs Real Madrid",
+      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
+      "startDate": "2023-01-20T14:00:00Z",
+      "endDate": "2023-01-22T20:00:00Z",
+      "scheduled": true
+    },
+    {
       "image": "https://www.codere.com.co/Colombia/images/inisio/OpenDeAustraliaDesktop.webp",
       "img_alt": "Open de Australia",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-01-16T14:00:00Z",
       "endDate": "2023-01-29T16:59:00Z",
-      "scheduled": true
-    },
-    {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/new-year-desktop.jpg",
-      "img_alt": "new-year",
-      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2022-12-30T07:00:00Z",
-      "endDate": "2023-01-03T21:59:00Z",
       "scheduled": true
     },
     {
@@ -54,10 +54,18 @@
   "mobile_slide_list": [
     {
       "image": "https://www.codere.com.co/Colombia/images/inisio/manchesterCityVsTottenhamMobile.webp",
-      "img_alt": "Manchester City vs Tottenham",
+      "img_alt": "manchesterCityVsTottenham",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-01-17T14:00:00Z",
       "endDate": "2023-01-19T20:00:00Z",
+      "scheduled": true
+    },    
+    {
+      "image": "https://www.codere.com.co/Colombia/images/inisio/athleticBilbaoVsRealMadridMobile.webp",
+      "img_alt": "Athletic vs Real Madrid",
+      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
+      "startDate": "2023-01-20T14:00:00Z",
+      "endDate": "2023-01-22T20:00:00Z",
       "scheduled": true
     },
     {
@@ -66,14 +74,6 @@
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-01-16T14:00:00Z",
       "endDate": "2023-01-29T16:59:00Z",
-      "scheduled": true
-    },
-    {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/new-year-mobile.jpg",
-      "img_alt": "new-year",
-      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2022-12-30T07:00:00Z",
-      "endDate": "2023-01-07T15:15:00Z",
       "scheduled": true
     },
     {
