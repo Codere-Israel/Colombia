@@ -18,6 +18,7 @@ import ApuestasMundialBaloncesto from "../pages/apuestasMundialBaloncesto/Apuest
 import ApuestasJuegoDeLasEstrellas from "../pages/apuestasJuegoDeLasEstrellas/ApuestasJuegoDeLasEstrellas";
 import ApuestasSuperbowl from "../pages/apuestasSuperbowl/ApuestasSuperbowl";
 import StickyFooter from "../Parts/StickyFooter";
+import AQueApostar from "../pages/ayuda/apuestas/aQueApostar/aQueApostar";
 
 import Splash from "../pages/splash/splash";
 
@@ -82,6 +83,10 @@ const App = () => {
                 path="apuestas-superbowl"
                 element={<ApuestasSuperbowl />}
               />
+            </Route>
+            {/* Ayuda  */}
+            <Route exact path="apuestas">
+              <Route exact path="aQueApostar" element={<AQueApostar />} />
             </Route>
           </Routes>
         </main>
