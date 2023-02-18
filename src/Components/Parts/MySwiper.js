@@ -16,8 +16,20 @@ import { isMobileDT } from "../App/App";
 var imgs = [];
 
 function MySwiper(props) {
+  const weekday = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   const [regisButtonText, setRegisButtonText] = useState("");
   const [regis, setRegis] = useState("");
+  const d = new Date();
+  const day = weekday[d.getDay()];
+
   const indexHandler = (swiper) => {
     if (swiper.realIndex === 0) props.setShowTimer(true);
     else props.setShowTimer(false);
@@ -38,9 +50,29 @@ function MySwiper(props) {
   }
 
   function BannerFilter(banner) {
-    if (!banner.scheduled) return banner;
+    if (banner.data.display === true) {
+      if (banner.data.days.includes(day)) {
+        let eventDate = new Date();
+        let jsonDate = eventDate.toJSON();
+        let jsonDatea = new Date().toISOString().split("T")[0];
+        if (banner.data.timeStart != "" || 
+            banner.data.timeStart != undefined) 
+            {
+              banner.startDate = jsonDatea + "T" + banner.data.timeStart + ":00Z";
+            } else if (
+          banner.data.timeEnd != "" ||
+          banner.data.timeEnd != undefined
+        ) {
+          banner.endDate = jsonDatea + "T" + banner.data.timeEnd + ":00Z";
+        }
+        return banner;
+      }
+    } 
     else {
-      if (dateInBetween(banner)) return banner;
+      if (!banner.scheduled) return banner;
+      else {
+        if (dateInBetween(banner)) return banner;
+      }
     }
   }
 
