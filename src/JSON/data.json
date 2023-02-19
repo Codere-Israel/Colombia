@@ -23,9 +23,9 @@
       "scheduled": true,
       "data":{
        "display": true,
-       "timeStart": "",
-       "timeEnd" : "", 
-       "days": ["Sunday", "Saturday", "Tuesday"]
+       "timeStart": "06:21",
+       "timeEnd" : "15:30", 
+       "days": [ "Saturday", "Tuesday"]
       }
     },
     {
@@ -33,13 +33,13 @@
       "img_alt": "Open de Australia",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-01-16T14:00:00Z",
-      "endDate": "2023-05-29T16:59:00Z",
+      "endDate": "2023-01-29T16:59:00Z",
       "scheduled": true,
       "data":{
        "display": true,
-       "timeStart": "24:00",
-       "timeEnd" : "23:59", 
-       "days": ["Sunday", "Saturday", "Thursday", "Tuesday"]
+       "timeStart": "00:00",
+       "timeEnd" : "21:30", 
+       "days": ["Sunday", "Saturday", "Thursday", "Tuesday"] 
       }
     },
     {
@@ -75,7 +75,7 @@
        "display": true,
        "timeStart": "",
        "timeEnd" : "", 
-       "days": ["Sunday",  "Saturday","Tuesday"]
+       "days": [  "Saturday","Tuesday"]
       }
     },
     {

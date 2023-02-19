@@ -52,20 +52,31 @@ function MySwiper(props) {
   function BannerFilter(banner) {
     if (banner.data.display === true) {
       if (banner.data.days.includes(day)) {
-        let eventDate = new Date();
-        let jsonDate = eventDate.toJSON();
-        let jsonDatea = new Date().toISOString().split("T")[0];
-        if (banner.data.timeStart != "" || 
+        const eventDate = new Date();
+        const jsonDate = eventDate.toJSON();
+        const jsonDatea = new Date().toISOString().split("T")[0];
+        if (banner.data.timeStart != "" &&  
             banner.data.timeStart != undefined) 
             {
-              banner.startDate = jsonDatea + "T" + banner.data.timeStart + ":00Z";
-            } else if (
-          banner.data.timeEnd != "" ||
-          banner.data.timeEnd != undefined
-        ) {
-          banner.endDate = jsonDatea + "T" + banner.data.timeEnd + ":00Z";
-        }
-        return banner;
+              Object.keys(banner).forEach(key => {
+                if (key == "startDate") {
+                  banner[key] = jsonDatea + "T" + banner.data.timeStart + ":00Z";   
+                }
+              });
+            } 
+        if (
+            banner.data.timeEnd != "" &&
+            banner.data.timeEnd != undefined) 
+            {
+              Object.keys(banner).forEach(key => {
+                if (key == "endDate") {
+                  banner[key] = jsonDatea + "T" + banner.data.timeEnd + ":00Z";  
+                console.log(banner[key]) 
+                }
+              });
+            }
+        if (dateInBetween(banner)) return banner;
+  
       }
     } 
     else {
