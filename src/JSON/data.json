@@ -1,11 +1,11 @@
 {
   "desktop_slide_list": [
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/superbowlBannersDesktop.webp",
-      "img_alt": "Manchester City vs Tottenham",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-desktop.jpg",
+      "img_alt": "champions-league",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-02-10T07:30:00Z",
-      "endDate": "2023-02-12T23:30:00Z",
+      "startDate": "2023-02-21T13:00:00Z",
+      "endDate": "2023-02-22T20:30:00Z",
       "scheduled": true
     },
     {
@@ -53,11 +53,11 @@
   ],
   "mobile_slide_list": [
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/superbowlBannersMobile.webp",
-      "img_alt": "Manchester City vs Tottenham",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-mobile.jpg",
+      "img_alt": "champions-league",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-02-10T07:30:00Z",
-      "endDate": "2023-02-12T23:30:00Z",
+      "startDate": "2023-02-21T13:00:00Z",
+      "endDate": "2023-02-22T20:30:00Z",
       "scheduled": true
     },
     {
