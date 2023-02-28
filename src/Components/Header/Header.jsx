@@ -28,6 +28,7 @@ import { faCannabis } from "@fortawesome/free-solid-svg-icons/faCannabis";
 import { faFutbol } from "@fortawesome/free-solid-svg-icons/faFutbol";
 import { faBaseball } from "@fortawesome/free-solid-svg-icons/faBaseball";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 function Header(props) {
   const regLink =
@@ -310,9 +311,12 @@ function Header(props) {
                     <Dropdown.Item href="https://www.codere.com.co/blackjack">
                       Blackjack
                     </Dropdown.Item>
-                    <Dropdown.Item href="https://www.codere.com.co/eventos-deportivos">
-                      Eventos deportivos
-                    </Dropdown.Item>
+                    <Link
+                      to={"/eventos-deportivos"}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Dropdown.Item as={"p"}>Eventos deportivos</Dropdown.Item>
+                    </Link>
                   </Dropdown.Menu>
                 </Dropdown>
                 <Button

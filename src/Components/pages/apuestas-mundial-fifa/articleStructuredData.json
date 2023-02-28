@@ -4,26 +4,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Qué Mundial viene después de Qatar 2022?",
+      "name": "¿Cuándo y dónde será la copa del mundo de 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El siguiente Mundial a Qatar 2022 se llevará a cabo en Canadá/Estados Unidos/México en el 2026. La sede triple fue escogida el 13 de junio de 2018, durante el 68.º Congreso de la FIFA en Moscú, Rusia. Es la primera vez que la FIFA otorga una sede a tres países para organizar el campeonato. Esta será la primera ocasión en que 48 selecciones clasifiquen a la fase final luego de la decisión de FIFA, promovida por Gianni Infantino, aprobada el 10 de enero de 2017 de elevar de 32 plazas a 48 donde habrá 16 grupos de tres equipos y las eliminatorias empezarán en dieciseisavos."
+        "text": "FIFA anunció las 16 sedes de la Copa Mundial de 2026. Y por supuesto las ciudades que recibirán al evento más importante del deporte. Tres serán en México, dos en Canadá y las once restantes en Estados Unidos."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Qué países participarán en el Mundial 2022?",
+      "name": "¿Cuántos países clasifican al mundial?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Los 32 países que lograron conseguir su cupo a Qatar 2022 son: Qatar, Alemania, Dinamarca, Brasil, Francia, Bélgica, Croacia, España, Serbia, Inglaterra, Suiza, Holanda, Argentina, Irán, Corea del Sur, Japón, Arabia Saudita, Ecuador, Uruguay, Canadá, Ghana, Senegal, Portugal, Polonia, Túnez, Marruecos, Camerún, México, Estados Unidos, Gales, Australia y Costa Rica."
+        "text": "En la reciente edición del Mundial en total clasificaron 32 Selecciones. Sin embargo, para el Mundial 2026, que se realizará en Estados Unidos, Canadá y México, por primera vez, tendrá un total de 48 selecciones. De esta forma, la Copa Mundial 2026 tendrá 16 ciudades anfitrionas de la primera edición del torneo más emblemático del balompié mundial en enfrentar a 48 equipos."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Por qué el Mundial de Qatar es en noviembre?",
+      "name": "¿Qué país ha organizado más Mundiales en la historia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "En 2011, Joseph Blatter anunció que este mundial podría ser adelantado a enero de 2022 o postergado a noviembre del mismo año, debido a que en Catar en verano las temperaturas en los meses de junio y julio llegan a 50º C. Al final, decidieron postergarlo al mes de noviembre y diciembre, ya que el clima en esos meses es de entre 20° y 30° y así podría protegerse a los futbolistas y a todos los relacionados con dicho certamen."
+        "text": "Brasil sigue liderando la lista, no solo es el país que más Mundiales ha ganado, con un total de cinco, sino que también ha sido anfitrión del torneo en dos ocasiones. Ningún país ha albergado más de dos torneos, y los cinco grandes continentes han organizado al menos un Mundial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo inician los procesos de clasificación al Mundial de 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las Eliminatorias para el Mundial de Canadá, Estados Unidos y México 2026 comenzarán en este 2023, el fixture de las próximas eliminatorias todavía no está definido, se sorteará en las primeras semanas del año, y el torneo comenzará en marzo de 2023 con una doble fecha y terminará en octubre de 2025."
       }
     }
   ]
