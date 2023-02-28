@@ -6,7 +6,17 @@
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-02-21T13:00:00Z",
       "endDate": "2023-02-22T20:30:00Z",
-      "scheduled": true
+      "scheduled": true,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/Colombia/images/inisio/athleticBilbaoVsRealMadridDesktop.jpg",
@@ -14,7 +24,17 @@
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-01-20T14:00:00Z",
       "endDate": "2023-01-22T20:00:00Z",
-      "scheduled": true
+      "scheduled": true,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/Colombia/images/inisio/OpenDeAustraliaDesktop.webp",
@@ -22,31 +42,81 @@
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-01-16T14:00:00Z",
       "endDate": "2023-01-29T16:59:00Z",
-      "scheduled": true
+      "scheduled": true,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/Colombia/images/inisio/inicioDesktop.webp",
       "img_alt": "bono",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "scheduled": false
+      "scheduled": false,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/slide1.webp",
       "img_alt": "BIENVENIDACASINOCO",
       "tycLink": "https://m.codere.com.co/deportescolombia/#/PromotionsPage?url=https://www.codere.com.co/PromosCO/actives/BIENVENIDACASINOCO.aspx",
-      "scheduled": false
+      "scheduled": false,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/slide3.webp",
       "img_alt": "Bingo",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "scheduled": false
+      "scheduled": false,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/casino-retail-desktop.webp",
       "img_alt": "NearestLocalPage",
       "tycLink": "https://m.codere.com.co/deportescolombia/#/NearestLocalPage",
       "scheduled": false,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      },
       "ctaURL": "https://m.codere.com.co/deportescolombia/#/NearestLocalPage",
       "ctaText": "Encuentranos"
     }
@@ -58,7 +128,17 @@
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-02-21T13:00:00Z",
       "endDate": "2023-02-22T20:30:00Z",
-      "scheduled": true
+      "scheduled": true,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/Colombia/images/inisio/athleticBilbaoVsRealMadridMobile.webp",
@@ -66,7 +146,17 @@
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-01-20T14:00:00Z",
       "endDate": "2023-01-22T20:00:00Z",
-      "scheduled": true
+      "scheduled": true,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/Colombia/images/inisio/OpenDeAustraliaMobile.webp",
@@ -74,30 +164,80 @@
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "startDate": "2023-01-16T14:00:00Z",
       "endDate": "2023-01-29T16:59:00Z",
-      "scheduled": true
+      "scheduled": true,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/Colombia/images/inisio/inicioMobile.webp",
       "img_alt": "christmass",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "scheduled": false
+      "scheduled": false,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/slideMobile1.webp",
       "img_alt": "BIENVENIDACASINOCO",
       "tycLink": "https://m.codere.com.co/deportescolombia/#/PromotionsPage?url=https://www.codere.com.co/PromosCO/actives/BIENVENIDACASINOCO.aspx",
-      "scheduled": false
+      "scheduled": false,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/slideMobile3.webp",
       "img_alt": "Codere casa de apuestas movil",
       "tycLink": "",
-      "scheduled": false
+      "scheduled": false,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      }
     },
     {
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/casino-retail-mobile.webp",
       "img_alt": "Codere casa de apuestas movil",
       "scheduled": false,
+      "data": {
+        "display": false,
+        "timeStart": "09:15",
+        "timeEnd": "10:45",
+        "days": [
+          "Sunday",
+          "Saturday",
+          "Tuesday"
+        ]
+      },
       "ctaURL": "https://m.codere.com.co/deportescolombia/#/NearestLocalPage",
       "ctaText": "Encuentranos"
     }

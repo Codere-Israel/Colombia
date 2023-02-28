@@ -16,20 +16,8 @@ import { isMobileDT } from "../App/App";
 var imgs = [];
 
 function MySwiper(props) {
-  const weekday = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
   const [regisButtonText, setRegisButtonText] = useState("");
   const [regis, setRegis] = useState("");
-  const d = new Date();
-  const day = weekday[d.getDay()];
-
   const indexHandler = (swiper) => {
     if (swiper.realIndex === 0) props.setShowTimer(true);
     else props.setShowTimer(false);
@@ -50,40 +38,9 @@ function MySwiper(props) {
   }
 
   function BannerFilter(banner) {
-    if (banner.data.display === true) {
-      if (banner.data.days.includes(day)) {
-        const eventDate = new Date();
-        const jsonDate = eventDate.toJSON();
-        const jsonDatea = new Date().toISOString().split("T")[0];
-        if (banner.data.timeStart != "" &&  
-            banner.data.timeStart != undefined) 
-            {
-              Object.keys(banner).forEach(key => {
-                if (key == "startDate") {
-                  banner[key] = jsonDatea + "T" + banner.data.timeStart + ":00Z";   
-                }
-              });
-            } 
-        if (
-            banner.data.timeEnd != "" &&
-            banner.data.timeEnd != undefined) 
-            {
-              Object.keys(banner).forEach(key => {
-                if (key == "endDate") {
-                  banner[key] = jsonDatea + "T" + banner.data.timeEnd + ":00Z";  
-                console.log(banner[key]) 
-                }
-              });
-            }
-        if (dateInBetween(banner)) return banner;
-  
-      }
-    } 
+    if (!banner.scheduled) return banner;
     else {
-      if (!banner.scheduled) return banner;
-      else {
-        if (dateInBetween(banner)) return banner;
-      }
+      if (dateInBetween(banner)) return banner;
     }
   }
 
