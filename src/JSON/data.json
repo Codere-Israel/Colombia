@@ -4,35 +4,36 @@
       "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-desktop.jpg",
       "img_alt": "champions-league",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-02-21T13:00:00Z",
-      "endDate": "2023-02-22T20:30:00Z",
+      "startDate": "2023-03-06T07:00:00Z",
+      "endDate": "2023-06-10T22:00:00Z",
       "scheduled": true,
       "data": {
-        "display": false,
-        "timeStart": "09:15",
-        "timeEnd": "10:45",
+        "display": true,
+        "timeStart": "",
+        "timeEnd": "",
         "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
+          "Monday",
+          "Tuesday",
+          "Wednesday"
         ]
       }
     },
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/athleticBilbaoVsRealMadridDesktop.jpg",
-      "img_alt": "Athletic vs Real Madrid",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/la-liga-inglesa-desktop.png",
+      "img_alt": "la-liga-inglesa",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-01-20T14:00:00Z",
-      "endDate": "2023-01-22T20:00:00Z",
+      "startDate": "2023-03-02T07:00:00Z",
+      "endDate": "2093-06-10T22:00:00Z",
       "scheduled": true,
       "data": {
-        "display": false,
-        "timeStart": "09:15",
-        "timeEnd": "10:45",
+        "display": true,
+        "timeStart": "",
+        "timeEnd": "",
         "days": [
-          "Sunday",
+          "Thursday",
+          "Friday",
           "Saturday",
-          "Tuesday"
+          "Sunday"
         ]
       }
     },
@@ -126,35 +127,36 @@
       "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-mobile.jpg",
       "img_alt": "champions-league",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-02-21T13:00:00Z",
-      "endDate": "2023-02-22T20:30:00Z",
+      "startDate": "2023-03-06T07:00:00Z",
+      "endDate": "2023-06-10T22:00:00Z",
       "scheduled": true,
       "data": {
-        "display": false,
-        "timeStart": "09:15",
-        "timeEnd": "10:45",
+        "display": true,
+        "timeStart": "",
+        "timeEnd": "",
         "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
+          "Monday",
+          "Tuesday",
+          "Wednesday"
         ]
       }
     },
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/athleticBilbaoVsRealMadridMobile.webp",
-      "img_alt": "Athletic vs Real Madrid",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/la-liga-inglesa-mobile.png",
+      "img_alt": "la-liga-inglesa",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-01-20T14:00:00Z",
-      "endDate": "2023-01-22T20:00:00Z",
+      "startDate": "2023-03-02T07:00:00Z",
+      "endDate": "2093-06-10T22:00:00Z",
       "scheduled": true,
       "data": {
-        "display": false,
-        "timeStart": "09:15",
-        "timeEnd": "10:45",
+        "display": true,
+        "timeStart": "",
+        "timeEnd": "",
         "days": [
-          "Sunday",
+          "Thursday",
+          "Friday",
           "Saturday",
-          "Tuesday"
+          "Sunday"
         ]
       }
     },
