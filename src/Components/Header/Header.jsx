@@ -28,7 +28,6 @@ import { faCannabis } from "@fortawesome/free-solid-svg-icons/faCannabis";
 import { faFutbol } from "@fortawesome/free-solid-svg-icons/faFutbol";
 import { faBaseball } from "@fortawesome/free-solid-svg-icons/faBaseball";
 import "./Header.css";
-import { Link } from "react-router-dom";
 
 function Header(props) {
   const regLink =
@@ -135,7 +134,7 @@ function Header(props) {
                       <FontAwesomeIcon icon={faAngleRight} />
                     </a>
                     <a
-                      href="https://www.codere.com.co/paginas/Dep%C3%B3sitosEnEfectivo.aspx"
+                      href="/ayuda/deposito-en-efectivo"
                       rel="nofollow"
                     >
                       <FontAwesomeIcon icon={faBullhorn} />
@@ -149,42 +148,42 @@ function Header(props) {
                         <Accordion.Body>
                           <ul>
                             <li>
-                              <a href="https://www.codere.com.co/jackpots">
+                              <a href="/casino/jackpots">
                                 <FontAwesomeIcon icon={faFutbol} />
                                 Jackpots
                                 <FontAwesomeIcon icon={faAngleRight} />
                               </a>
                             </li>
                             <li>
-                              <a href="https://www.codere.com.co/slots">
+                              <a href="/casino/slots">
                                 <FontAwesomeIcon icon={faBaseball} />
                                 Slots
                                 <FontAwesomeIcon icon={faAngleRight} />
                               </a>
                             </li>
                             <li>
-                              <a href="https://www.codere.com.co/ruleta">
+                              <a href="/casino/ruleta">
                                 <FontAwesomeIcon icon={faStar} />
                                 Rutleta
                                 <FontAwesomeIcon icon={faAngleRight} />
                               </a>
                             </li>
                             <li>
-                              <a href="https://www.codere.com.co/casino">
+                              <a href="/casino">
                                 <FontAwesomeIcon icon={faCoins} />
                                 Casino
                                 <FontAwesomeIcon icon={faAngleRight} />
                               </a>
                             </li>
                             <li>
-                              <a href="https://www.codere.com.co/blackjack">
+                              <a href="/casino/blackjack">
                                 <FontAwesomeIcon icon={faHeart} />
                                 Blackjack
                                 <FontAwesomeIcon icon={faAngleRight} />
                               </a>
                             </li>
                             <li>
-                              <a href="https://www.codere.com.co/eventos-deportivos">
+                              <a href="/eventos-deportivos">
                                 <FontAwesomeIcon icon={faHeart} />
                                 Eventos deportivos
                                 <FontAwesomeIcon icon={faAngleRight} />
@@ -282,7 +281,7 @@ function Header(props) {
                     LOCALES
                   </Nav.Link>
                   <Nav.Link
-                    href="https://www.codere.com.co/paginas/Dep%C3%B3sitosEnEfectivo.aspx"
+                    href="/ayuda/deposito-en-efectivo"
                     rel="nofollow"
                   >
                     RECARGAS Y RETIROS
@@ -293,30 +292,27 @@ function Header(props) {
                     <FontAwesomeIcon icon={faAngleDown} />
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item href="https://www.codere.com.co/jackpots">
+                    <Dropdown.Item href="/casino/jackpots">
                       Jackpots
                     </Dropdown.Item>
-                    <Dropdown.Item href="https://www.codere.com.co/slots">
+                    <Dropdown.Item href="/casino/slots">
                       Slots
                     </Dropdown.Item>
-                    <Dropdown.Item href="https://www.codere.com.co/ruleta">
+                    <Dropdown.Item href="/casino/ruleta">
                       Ruleta
                     </Dropdown.Item>
-                    <Dropdown.Item href="https://www.codere.com.co/casino">
+                    <Dropdown.Item href="/casino">
                       Casino
                     </Dropdown.Item>
-                    <Dropdown.Item href="https://www.codere.com.co/casino/casino-en-vivo">
+                    <Dropdown.Item href="/casino/casino-en-vivo">
                       Casino en vivo
                     </Dropdown.Item>
-                    <Dropdown.Item href="https://www.codere.com.co/blackjack">
+                    <Dropdown.Item href="/casino/blackjack">
                       Blackjack
                     </Dropdown.Item>
-                    <Link
-                      to={"/eventos-deportivos"}
-                      style={{ textDecoration: "none" }}
-                    >
-                      <Dropdown.Item as={"p"}>Eventos deportivos</Dropdown.Item>
-                    </Link>
+                    <Dropdown.Item href="/eventos-deportivos">
+                      Eventos deportivos
+                    </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
                 <Button
@@ -342,5 +338,4 @@ function Header(props) {
     </isMobileContext.Consumer>
   );
 }
-
 export default Header;

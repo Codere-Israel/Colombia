@@ -6,8 +6,7 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { Slide } from "react-awesome-reveal";
 
 function TopGame(props) {
-  const dir = ["left", "right", "top", "bottom"];
-
+  const dir = ["left", "right", "top", "bottom"]; 
   return (
     <div className={gameCSS.topGame}>
       <div className={gameCSS.card}>
