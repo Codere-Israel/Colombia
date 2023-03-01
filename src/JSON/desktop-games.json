@@ -1,4 +1,30 @@
 {
+  "spanish_games": [
+    {
+      "name": "Ruleta Relampago En Vivo",
+      "alt": "Ruleta Relampago En Vivo",
+      "logo_alt": "Ruleta Relampago En Vivo Logo",
+      "image": "",
+      "logo": "",
+      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=EVG%20Ruleta%20Relampago%20En%20Vivo"
+    },
+    {
+      "name": "",
+      "alt": "",
+      "logo_alt": "",
+      "image": "",
+      "logo": "",
+      "gamelink": ""
+    },
+    {
+      "name": "",
+      "alt": "",
+      "logo_alt": "",
+      "image": "",
+      "logo": "",
+      "gamelink": ""
+    }
+  ],
   "top_games": [
     {
       "name": "Blue Wizard",

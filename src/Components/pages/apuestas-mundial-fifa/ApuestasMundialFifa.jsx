@@ -54,13 +54,13 @@ const ApuestasMundialFifa = () => {
   const maximos = {
     headers: ["Jugador", "Partidos", "País"],
     list: [
-      { onu: "Miroslav Klose", dos: 22, tres: "Alemania" },
-      { onu: "Ronaldo", dos: 22, tres: "Brasil" },
-      { onu: "Gerd Muller", dos: 22, tres: "Alemania" },
-      { onu: "Just Fontaine", dos: 22, tres: "Francia" },
-      { onu: "Lionel Messi", dos: 22, tres: "Argentina" },
-      { onu: "Pelé", dos: 22, tres: "Brasil" },
-      { onu: "Kylian Mbappé", dos: 22, tres: "Francia" },
+      { onu: "Miroslav Klose", dos: 16, tres: "Alemania" },
+      { onu: "Ronaldo", dos: 15, tres: "Brasil" },
+      { onu: "Gerd Muller", dos: 14, tres: "Alemania" },
+      { onu: "Just Fontaine", dos: 13, tres: "Francia" },
+      { onu: "Lionel Messi", dos: 13, tres: "Argentina" },
+      { onu: "Pelé", dos: 12, tres: "Brasil" },
+      { onu: "Kylian Mbappé", dos: 12, tres: "Francia" },
     ],
   };
 

@@ -75,7 +75,7 @@ function Footer() {
                 <ul className="list-unstyled">
                   <li>
                     <a
-                      href="/ayuda/juego-responsable"
+                      href="https://codere.com.co/Paginas/juego-responsable.aspx"
                       target="_blank"
                       title=""
                       rel="nofollow"
@@ -85,7 +85,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="/ayuda/politica-de-cookies"
+                      href="https://www.codere.com.co/Paginas/Pol%C3%ADtica-de-cookies.aspx"
                       target="_blank"
                       title=""
                       rel="nofollow"
@@ -155,7 +155,7 @@ function Footer() {
                 <ul className="list-unstyled">
                   <li>
                     <a
-                      href="/ayuda/resultados-y-estadisticas"
+                      href="https://www.codere.com.co/resultados-y-estadisticas"
                       target="_blank"
                       title=""
                       rel="nofollow"
@@ -194,19 +194,19 @@ function Footer() {
                   </li>
                   <ul className={"footerList34u"}>
                     <li>
-                      <a href="/casino/jackpots">Jackpots</a>
+                      <a href="https://www.codere.com.co/jackpots">Jackpots</a>
                     </li>
                     <li>
-                      <a href="/casino/slots">Slots</a>
+                      <a href="https://www.codere.com.co/slots">Slots</a>
                     </li>
                     <li>
-                      <a href="/casino/ruleta">Ruleta</a>
+                      <a href="https://www.codere.com.co/ruleta">Ruleta</a>
                     </li>
                     <li>
-                      <a href="/casino">Casino</a>
+                      <a href="https://www.codere.com.co/casino">Casino</a>
                     </li>
                     <li>
-                      <a href="/casino/blackjack">
+                      <a href="https://www.codere.com.co/blackjack">
                         Blackjack
                       </a>
                     </li>
@@ -222,7 +222,7 @@ function Footer() {
                 <ul className="list-unstyled">
                   <li>
                     <a
-                      href="/ayuda/deposito-online"
+                      href="https://www.codere.com.co/depósitos/depósito-online"
                       title=""
                     >
                       Info depósitos y cobros
@@ -230,7 +230,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="/ayuda/como-y-donde-apostar"
+                      href="https://www.codere.com.co/apuestas/c%C3%B3mo-y-d%C3%B3nde-apostar"
                       title=""
                     >
                       Cómo y dónde apostar
@@ -245,7 +245,7 @@ function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="/eventos-deportivos">
+                    <a href="https://www.codere.com.co/eventos-deportivos">
                       Eventos deportivos
                     </a>
                   </li>
@@ -267,7 +267,7 @@ function Footer() {
 
                 <ul className="list-unstyled">
                   <li>
-                    <a href="/ayuda" title="">
+                    <a href="https://www.codere.com.co/ayuda" title="">
                       Ayuda Términos y Condiciones
                     </a>
                   </li>

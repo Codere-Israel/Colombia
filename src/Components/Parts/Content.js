@@ -237,28 +237,28 @@ function Content(props) {
               En nuestro{" "}
               <a
                 className={"bottomContentLink"}
-                href="/casino"
+                href="https://www.codere.com.co/casino"
               >
                 casino online
               </a>{" "}
               encontrarás todas las mesas y máquinas que te puedas imaginar:{" "}
               <a
                 className={"bottomContentLink"}
-                href="/casino/blackjack"
+                href="https://www.codere.com.co/blackjack"
               >
                 BlackJack
               </a>
               , Póker,{" "}
               <a
                 className={"bottomContentLink"}
-                href="/casino/ruleta"
+                href="https://www.codere.com.co/ruleta"
               >
                 Ruleta
               </a>
               ,{" "}
               <a
                 className={"bottomContentLink"}
-                href="/casino/slots"
+                href="https://www.codere.com.co/slots"
               >
                 tragamonedas
               </a>

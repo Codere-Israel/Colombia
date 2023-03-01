@@ -6,10 +6,8 @@ import "swiper/css/lazy";
 import "swiper/css/autoplay";
 
 function GameSwiper(props) {
-
   return (
     <div className="game-carousel">
-   
       <Swiper
         modules={[Autoplay, Lazy]}
         lazy={{ loadPrevNext: true, loadPrevNextAmount: 1 }}
