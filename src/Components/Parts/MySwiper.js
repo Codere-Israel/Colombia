@@ -12,15 +12,28 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
 import { useState } from "react";
-import { isMobileDT } from "../App/App";
 var imgs = [];
 
 function MySwiper(props) {
   const [regisButtonText, setRegisButtonText] = useState("");
   const [regis, setRegis] = useState("");
+
+  const weekday = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const cur = new Date();
+  const day = weekday[cur.getDay()];
+
   const indexHandler = (swiper) => {
-    if (swiper.realIndex === 0) props.setShowTimer(true);
-    else props.setShowTimer(false);
+    // if (swiper.realIndex === 0) props.setShowTimer(true);
+    // else props.setShowTimer(false);
 
     imgs[swiper.realIndex].ctaText
       ? setRegisButtonText(imgs[swiper.realIndex].ctaText)
@@ -37,14 +50,41 @@ function MySwiper(props) {
     );
   }
 
+  //   function BannerFilter(banner) {
+  //   console.log(`${formated} ${banner.data.timeEnd}`);
+  //   if (!banner.scheduled) return banner;
+  //   else if (banner.data.days.includes(day) && banner.data.display) {
+  //     if (new Date(`${formated} ${banner.data.timeEnd}`) < cur) {
+  //       return banner;
+  //     }
+  //   } else if (!banner.data.display && dateInBetween(banner)) return banner;
+  // }
+
   function BannerFilter(banner) {
-    if (!banner.scheduled) return banner;
-    else {
-      if (dateInBetween(banner)) return banner;
+    if (banner.data.display === true) {
+      if (banner.data.days.includes(day)) {
+        let eventDate = new Date();
+        let jsonDate = eventDate.toJSON();
+        let jsonDatea = new Date().toISOString().split("T")[0];
+        if (banner.data.timeStart != "" || banner.data.timeStart != undefined) {
+          banner.startDate = jsonDatea + "T" + banner.data.timeStart + ":00Z";
+        } else if (
+          banner.data.timeEnd != "" ||
+          banner.data.timeEnd != undefined
+        ) {
+          banner.endDate = jsonDatea + "T" + banner.data.timeEnd + ":00Z";
+        }
+        return banner;
+      }
+    } else {
+      if (!banner.scheduled) return banner;
+      else {
+        if (dateInBetween(banner)) return banner;
+      }
     }
   }
 
-  if (!isMobileDT) imgs = banners.desktop_slide_list.filter(BannerFilter);
+  if (!props.flag) imgs = banners.desktop_slide_list.filter(BannerFilter);
   else imgs = banners.mobile_slide_list.filter(BannerFilter);
 
   return (
@@ -66,7 +106,7 @@ function MySwiper(props) {
               <img rel="preload" src={item.image} alt={item.img_alt} />
             </a>
 
-            {!isMobileDT ? (
+            {!props.flag ? (
               <div id="des-reg">
                 <Button
                   className="central-regis gl-effect"
@@ -96,7 +136,7 @@ function MySwiper(props) {
           </SwiperSlide>
         ))}
       </Swiper>
-      {isMobileDT ? (
+      {props.flag ? (
         <>
           <SlideButton regis={regis} regisButtonText={regisButtonText} />
         </>

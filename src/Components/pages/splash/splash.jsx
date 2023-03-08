@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "@fontsource/roboto-condensed";
-import { isMobile } from "react-device-detect";
 import React, { useState, useEffect, useMemo } from "react";
 import CookieConsent from "react-cookie-consent";
 
@@ -11,37 +10,9 @@ import Games from "../../Parts/Games";
 import Content from "../../Parts/Content";
 import "../../Parts/CSS/App.css";
 
-export const mobileDevice = isMobile;
-
-const Splash = () => {
+const Splash = (props) => {
   const regis = "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage";
-  const [flag, setFlag] = useState(isMobile);
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
   const [showTimer, setShowTimer] = useState(true);
-
-  useEffect(() => {
-    if (windowSize.width <= 768 || isMobile) setFlag(true);
-    else setFlag(false);
-  }, [windowSize]);
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const memoSwiper = useMemo(() => {
-    return <MySwiper regis={regis} setShowTimer={setShowTimer} />;
-  }, []);
 
   return (
     <>
@@ -84,10 +55,10 @@ const Splash = () => {
           </a>
           .
         </CookieConsent>
-        {memoSwiper}
+        <MySwiper regis={regis} flag={props.flag} setShowTimer={setShowTimer} />
       </div>
 
-      <Games />
+      <Games flag={props.flag} />
       <Content />
     </>
   );

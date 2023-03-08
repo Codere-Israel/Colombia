@@ -206,9 +206,7 @@ function Footer() {
                       <a href="/casino">Casino</a>
                     </li>
                     <li>
-                      <a href="/casino/blackjack">
-                        Blackjack
-                      </a>
+                      <a href="/casino/blackjack">Blackjack</a>
                     </li>
                   </ul>
                 </ul>
@@ -220,18 +218,12 @@ function Footer() {
 
                 <ul className="list-unstyled">
                   <li>
-                    <a
-                      href="/ayuda/deposito-online"
-                      title=""
-                    >
+                    <a href="/ayuda/deposito-online" title="">
                       Info depósitos y cobros
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/ayuda/como-y-donde-apostar"
-                      title=""
-                    >
+                    <a href="/ayuda/como-y-donde-apostar" title="">
                       Cómo y dónde apostar
                     </a>
                   </li>
@@ -244,9 +236,7 @@ function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="/eventos-deportivos">
-                      Eventos deportivos
-                    </a>
+                    <a href="/eventos-deportivos">Eventos deportivos</a>
                   </li>
                   <li>
                     <a
@@ -491,9 +481,7 @@ function Footer() {
                 de 2025. Operado por Codere Apuestas, S.A.U.
                 <br />
                 01-8000-975827 -{" "}
-                <a href="mailto:apuestas@codere.com">
-                  apuestas@codere.com
-                </a>{" "}
+                <a href="mailto:apuestas@codere.com">apuestas@codere.com</a>
               </span>
             </div>
           </div>

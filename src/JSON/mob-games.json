@@ -1,44 +1,84 @@
 {
+  "spanish_games": [
+    {
+      "name": "VIP Blackjack Espanol 7",
+      "alt": "VIP Blackjack Espanol 7",
+      "provider": "EVG",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/vip-blackjack-mobile.png"
+    },
+    {
+      "name": "Blackjack Clasico Espanol 1",
+      "alt": "Blackjack Clasico Espanol 1",
+      "provider": "EVG",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/blackjack-mobile.png"
+    },
+    {
+      "name": "Ruleta Relampago En Vivo",
+      "alt": "Ruleta Relampago En Vivo",
+      "provider": "EVG",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/lightning-mobile.png"
+    },
+    {
+      "name": "Futbol Studio",
+      "provider": "EVG",
+      "alt": "Futbol Studio",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/futbol-mobile.png"
+    },
+    {
+      "name": "Bacara Rapido Espanol",
+      "provider": "EVG",
+      "alt": "Bacara Rapido Espanol",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/baccarat-mobile.png"
+    }
+  ],
   "first_slide_list": [
     {
-      "name": "Beasts",
+      "name": "Four Divine Beasts",
+      "provider": "HAB",
       "alt": "Juego de Casino Blackjack",
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/HABFOURDIVINEBEASTS_Square.webp"
     },
     {
       "name": "Jungle Jim Eldorado",
+      "provider": "MGS",
       "alt": "Juego de Casino American Roulette Hight Stakes",
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/MGSJungleJimElDorado_Square.webp"
     },
     {
-      "name": "Hunter",
-      "alt": "Juego de Casino European Roulette 10c Min",
+      "name": "London Hunter",
+      "provider": "HAB",
+      "alt": "",
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/HABLONDONHUNTER_Square.webp"
     },
     {
-      "name": "HABBird Of Thunder",
-      "alt": "Juego de Casino European Roulette High Stakes",
+      "name": "Bird Of Thunder",
+      "provider": "HAB",
+      "alt": "",
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/HABBirdOfThunder_Square.webp"
     }
   ],
   "second_slide_list": [
     {
       "name": "Parrot's Gold",
+      "provider": "PRP",
       "alt": "Juego de Casino Parrot's Gold",
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/MGSRetroReelsDiamondGlitz_Square.webp"
     },
     {
       "name": "Wolf Riches",
+      "provider": "PRP",
       "alt": "Juego de Casino Wolf Riches",
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/MGSDragonz_Square.webp"
     },
     {
       "name": "Rumble Rhino",
+      "provider": "PRP",
       "alt": "Juego de Casino Rumble Rhino",
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/MGSBeautifulBones_Square.webp"
     },
     {
-      "name": " Goddess Of Fortunes",
+      "name": "Goddess Of Fortunes",
+      "provider": "PRP",
       "alt": "Juego de Casino Goddess Of Fortunes",
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/MGSEaglesWings_Square.webp"
     }

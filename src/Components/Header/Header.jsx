@@ -63,279 +63,251 @@ function Header(props) {
   };
 
   return (
-    <isMobileContext.Consumer>
-      {(isMobile) => {
-        return (
-          <Navbar className="header_nav stroke" variant="dark">
-            {isMobile ? (
-              <div id="father">
-                <div id="outer-container" onClick={hamburgerHandler}>
-                  <Menu
-                    id="elastic"
-                    left
-                    customCrossIcon={false}
-                    pageWrapId={"page-wrap"}
-                    outerContainerId={"outer-container"}
-                  >
-                    <a
-                      href="https://m.codere.com.co/deportescolombia/#/HomePage"
-                      rel="nofollow"
-                    >
-                      <FontAwesomeIcon icon={faCrosshairs} />
-                      Deportes
-                      <FontAwesomeIcon icon={faAngleRight} />
-                    </a>
-                    <a
-                      href="https://m.codere.com.co/deportescolombia/#/DirectosPage"
-                      rel="nofollow"
-                    >
-                      <FontAwesomeIcon icon={faCirclePlay} />
-                      Directo
-                      <FontAwesomeIcon icon={faAngleRight} />
-                    </a>
-                    <a
-                      href="https://m.codere.com.co/deportescolombia/#/SlotsPage"
-                      rel="nofollow"
-                    >
-                      <FontAwesomeIcon icon={faCoins} />
-                      Crown
-                      <FontAwesomeIcon icon={faAngleRight} />
-                    </a>
-                    <a
-                      href="https://m.codere.com.co/deportescolombia/#/CasinoPage"
-                      rel="nofollow"
-                    >
-                      <FontAwesomeIcon icon={faCoins} />
-                      Casino
-                      <FontAwesomeIcon icon={faAngleRight} />
-                    </a>
-                    <a
-                      href="https://m.codere.com.co/deportes/#/CasinoenVivoPage"
-                      rel="nofollow"
-                    >
-                      <FontAwesomeIcon icon={faList} />
-                      Casino en vivo
-                      <FontAwesomeIcon icon={faAngleRight} />
-                    </a>
-                    <a
-                      href="https://m.codere.com.co/deportescolombia/#/PromotionsPage"
-                      rel="nofollow"
-                    >
-                      <FontAwesomeIcon icon={faBullhorn} />
-                      Promociones
-                      <FontAwesomeIcon icon={faAngleRight} />
-                    </a>
-                    <a
-                      href="https://m.codere.com.co/deportescolombia/#/NearestLocalPage"
-                      rel="nofollow"
-                    >
-                      <FontAwesomeIcon icon={faCannabis} />
-                      Locales
-                      <FontAwesomeIcon icon={faAngleRight} />
-                    </a>
-                    <a
-                      href="/ayuda/deposito-en-efectivo"
-                      rel="nofollow"
-                    >
-                      <FontAwesomeIcon icon={faBullhorn} />
-                      Recargas Y Retiros
-                      <FontAwesomeIcon icon={faAngleRight} />
-                    </a>
+    <Navbar className="header_nav stroke" variant="dark">
+      {props.flag ? (
+        <div id="father">
+          <div id="outer-container" onClick={hamburgerHandler}>
+            <Menu
+              id="elastic"
+              left
+              customCrossIcon={false}
+              pageWrapId={"page-wrap"}
+              outerContainerId={"outer-container"}
+            >
+              <a
+                href="https://m.codere.com.co/deportescolombia/#/HomePage"
+                rel="nofollow"
+              >
+                <FontAwesomeIcon icon={faCrosshairs} />
+                Deportes
+                <FontAwesomeIcon icon={faAngleRight} />
+              </a>
+              <a
+                href="https://m.codere.com.co/deportescolombia/#/DirectosPage"
+                rel="nofollow"
+              >
+                <FontAwesomeIcon icon={faCirclePlay} />
+                Directo
+                <FontAwesomeIcon icon={faAngleRight} />
+              </a>
+              <a
+                href="https://m.codere.com.co/deportescolombia/#/SlotsPage"
+                rel="nofollow"
+              >
+                <FontAwesomeIcon icon={faCoins} />
+                Crown
+                <FontAwesomeIcon icon={faAngleRight} />
+              </a>
+              <a
+                href="https://m.codere.com.co/deportescolombia/#/CasinoPage"
+                rel="nofollow"
+              >
+                <FontAwesomeIcon icon={faCoins} />
+                Casino
+                <FontAwesomeIcon icon={faAngleRight} />
+              </a>
+              <a
+                href="https://m.codere.com.co/deportes/#/CasinoenVivoPage"
+                rel="nofollow"
+              >
+                <FontAwesomeIcon icon={faList} />
+                Casino en vivo
+                <FontAwesomeIcon icon={faAngleRight} />
+              </a>
+              <a
+                href="https://m.codere.com.co/deportescolombia/#/PromotionsPage"
+                rel="nofollow"
+              >
+                <FontAwesomeIcon icon={faBullhorn} />
+                Promociones
+                <FontAwesomeIcon icon={faAngleRight} />
+              </a>
+              <a
+                href="https://m.codere.com.co/deportescolombia/#/NearestLocalPage"
+                rel="nofollow"
+              >
+                <FontAwesomeIcon icon={faCannabis} />
+                Locales
+                <FontAwesomeIcon icon={faAngleRight} />
+              </a>
+              <a href="/ayuda/deposito-en-efectivo" rel="nofollow">
+                <FontAwesomeIcon icon={faBullhorn} />
+                Recargas Y Retiros
+                <FontAwesomeIcon icon={faAngleRight} />
+              </a>
 
-                    <Accordion className="hamb-accordion">
-                      <Accordion.Item eventKey="0">
-                        <Accordion.Header>¿Cómo jugar?</Accordion.Header>
-                        <Accordion.Body>
-                          <ul>
-                            <li>
-                              <a href="/casino/jackpots">
-                                <FontAwesomeIcon icon={faFutbol} />
-                                Jackpots
-                                <FontAwesomeIcon icon={faAngleRight} />
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/casino/slots">
-                                <FontAwesomeIcon icon={faBaseball} />
-                                Slots
-                                <FontAwesomeIcon icon={faAngleRight} />
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/casino/ruleta">
-                                <FontAwesomeIcon icon={faStar} />
-                                Rutleta
-                                <FontAwesomeIcon icon={faAngleRight} />
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/casino">
-                                <FontAwesomeIcon icon={faCoins} />
-                                Casino
-                                <FontAwesomeIcon icon={faAngleRight} />
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/casino/blackjack">
-                                <FontAwesomeIcon icon={faHeart} />
-                                Blackjack
-                                <FontAwesomeIcon icon={faAngleRight} />
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/eventos-deportivos">
-                                <FontAwesomeIcon icon={faHeart} />
-                                Eventos deportivos
-                                <FontAwesomeIcon icon={faAngleRight} />
-                              </a>
-                            </li>
-                          </ul>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                    </Accordion>
-                  </Menu>
-                  <main id="page-wrap"></main>
-                </div>
-                <a
-                  href="https://m.codere.com.co/deportescolombia/#/HomePage"
-                  rel="nofollow"
-                >
-                  <img
-                    src={LOGO}
-                    alt="Logo Casa de Apuestas Codere - Real Madrid "
-                  />
-                </a>
-                <div id="header_buttons">
-                  {/* onClick={handleShow} */}
-                  <Button
-                    href={acceder}
-                    className="acceder-button header_btn"
-                    rel="nofollow"
-                  >
-                    Acceder
-                  </Button>
-                  <Button
-                    href={regLink}
-                    className="registrate-button header_btn"
-                    rel="nofollow"
-                  >
-                    Regístrate
-                  </Button>
-                </div>
-              </div>
-            ) : (
-              <Container>
-                <a
-                  href="https://m.codere.com.co/deportescolombia/#/HomePage"
-                  rel="nofollow"
-                >
-                  <img
-                    src={LOGO}
-                    alt="Logo Casa de Apuestas Codere - Real Madrid "
-                  />
-                </a>
+              <Accordion className="hamb-accordion">
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>¿Cómo jugar?</Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      <li>
+                        <a href="/casino/jackpots">
+                          <FontAwesomeIcon icon={faFutbol} />
+                          Jackpots
+                          <FontAwesomeIcon icon={faAngleRight} />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/casino/slots">
+                          <FontAwesomeIcon icon={faBaseball} />
+                          Slots
+                          <FontAwesomeIcon icon={faAngleRight} />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/casino/ruleta">
+                          <FontAwesomeIcon icon={faStar} />
+                          Rutleta
+                          <FontAwesomeIcon icon={faAngleRight} />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/casino">
+                          <FontAwesomeIcon icon={faCoins} />
+                          Casino
+                          <FontAwesomeIcon icon={faAngleRight} />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/casino/blackjack">
+                          <FontAwesomeIcon icon={faHeart} />
+                          Blackjack
+                          <FontAwesomeIcon icon={faAngleRight} />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/eventos-deportivos">
+                          <FontAwesomeIcon icon={faHeart} />
+                          Eventos deportivos
+                          <FontAwesomeIcon icon={faAngleRight} />
+                        </a>
+                      </li>
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </Menu>
+            <main id="page-wrap"></main>
+          </div>
+          <a
+            href="https://m.codere.com.co/deportescolombia/#/HomePage"
+            rel="nofollow"
+          >
+            <img src={LOGO} alt="Logo Casa de Apuestas Codere - Real Madrid " />
+          </a>
+          <div id="header_buttons">
+            {/* onClick={handleShow} */}
+            <Button
+              href={acceder}
+              className="acceder-button header_btn"
+              rel="nofollow"
+            >
+              Acceder
+            </Button>
+            <Button
+              href={regLink}
+              className="registrate-button header_btn"
+              rel="nofollow"
+            >
+              Regístrate
+            </Button>
+          </div>
+        </div>
+      ) : (
+        <Container>
+          <a
+            href="https://m.codere.com.co/deportescolombia/#/HomePage"
+            rel="nofollow"
+          >
+            <img src={LOGO} alt="Logo Casa de Apuestas Codere - Real Madrid " />
+          </a>
 
-                <Nav className="me-auto">
-                  <Nav.Link
-                    href="https://m.codere.com.co/deportescolombia/#/HomePage"
-                    rel="nofollow"
-                  >
-                    DEPORTES
-                  </Nav.Link>
-                  <Nav.Link
-                    href="https://m.codere.com.co/deportescolombia/#/DirectosPage"
-                    rel="nofollow"
-                  >
-                    DIRECTO
-                  </Nav.Link>
-                  <Nav.Link
-                    href="https://m.codere.com.co/deportescolombia/#/SlotsPage"
-                    rel="nofollow"
-                  >
-                    CROWN
-                  </Nav.Link>
-                  <Nav.Link
-                    href="https://m.codere.com.co/deportes/#/CasinoPage"
-                    rel="nofollow"
-                  >
-                    CASINO
-                  </Nav.Link>
+          <Nav className="me-auto">
+            <Nav.Link
+              href="https://m.codere.com.co/deportescolombia/#/HomePage"
+              rel="nofollow"
+            >
+              DEPORTES
+            </Nav.Link>
+            <Nav.Link
+              href="https://m.codere.com.co/deportescolombia/#/DirectosPage"
+              rel="nofollow"
+            >
+              DIRECTO
+            </Nav.Link>
+            <Nav.Link
+              href="https://m.codere.com.co/deportescolombia/#/SlotsPage"
+              rel="nofollow"
+            >
+              CROWN
+            </Nav.Link>
+            <Nav.Link
+              href="https://m.codere.com.co/deportes/#/CasinoPage"
+              rel="nofollow"
+            >
+              CASINO
+            </Nav.Link>
 
-                  <Nav.Link
-                    href="https://m.codere.com.co/deportes/#/CasinoenVivoPage"
-                    rel="nofollow"
-                  >
-                    CASINO EN VIVO
-                  </Nav.Link>
+            <Nav.Link
+              href="https://m.codere.com.co/deportes/#/CasinoenVivoPage"
+              rel="nofollow"
+            >
+              CASINO EN VIVO
+            </Nav.Link>
 
-                  <Nav.Link
-                    href="https://m.codere.com.co/deportescolombia/#/PromotionsPage"
-                    rel="nofollow"
-                  >
-                    PROMOCIONES
-                  </Nav.Link>
-                  <Nav.Link
-                    href="https://m.codere.com.co/deportescolombia/#/NearestLocalPage"
-                    rel="nofollow"
-                  >
-                    LOCALES
-                  </Nav.Link>
-                  <Nav.Link
-                    href="/ayuda/deposito-en-efectivo"
-                    rel="nofollow"
-                  >
-                    RECARGAS Y RETIROS
-                  </Nav.Link>
-                </Nav>
-                <Dropdown>
-                  <Dropdown.Toggle className="header_btn">
-                    <FontAwesomeIcon icon={faAngleDown} />
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="/casino/jackpots">
-                      Jackpots
-                    </Dropdown.Item>
-                    <Dropdown.Item href="/casino/slots">
-                      Slots
-                    </Dropdown.Item>
-                    <Dropdown.Item href="/casino/ruleta">
-                      Ruleta
-                    </Dropdown.Item>
-                    <Dropdown.Item href="/casino">
-                      Casino
-                    </Dropdown.Item>
-                    <Dropdown.Item href="/casino/casino-en-vivo">
-                      Casino en vivo
-                    </Dropdown.Item>
-                    <Dropdown.Item href="/casino/blackjack">
-                      Blackjack
-                    </Dropdown.Item>
-                    <Dropdown.Item href="/eventos-deportivos">
-                      Eventos deportivos
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Button
-                  href={acceder}
-                  // onClick={handleShow}
-                  className="acceder-button header_btn"
-                  rel="nofollow"
-                >
-                  Acceder
-                </Button>
-                <Button
-                  href={regLink}
-                  className="registrate-button header_btn"
-                  rel="nofollow"
-                >
-                  Regístrate
-                </Button>
-              </Container>
-            )}
-          </Navbar>
-        );
-      }}
-    </isMobileContext.Consumer>
+            <Nav.Link
+              href="https://m.codere.com.co/deportescolombia/#/PromotionsPage"
+              rel="nofollow"
+            >
+              PROMOCIONES
+            </Nav.Link>
+            <Nav.Link
+              href="https://m.codere.com.co/deportescolombia/#/NearestLocalPage"
+              rel="nofollow"
+            >
+              LOCALES
+            </Nav.Link>
+            <Nav.Link href="/ayuda/deposito-en-efectivo" rel="nofollow">
+              RECARGAS Y RETIROS
+            </Nav.Link>
+          </Nav>
+          <Dropdown>
+            <Dropdown.Toggle className="header_btn">
+              <FontAwesomeIcon icon={faAngleDown} />
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="/casino/jackpots">Jackpots</Dropdown.Item>
+              <Dropdown.Item href="/casino/slots">Slots</Dropdown.Item>
+              <Dropdown.Item href="/casino/ruleta">Ruleta</Dropdown.Item>
+              <Dropdown.Item href="/casino">Casino</Dropdown.Item>
+              <Dropdown.Item href="/casino/casino-en-vivo">
+                Casino en vivo
+              </Dropdown.Item>
+              <Dropdown.Item href="/casino/blackjack">Blackjack</Dropdown.Item>
+              <Dropdown.Item href="/eventos-deportivos">
+                Eventos deportivos
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          <Button
+            href={acceder}
+            // onClick={handleShow}
+            className="acceder-button header_btn"
+            rel="nofollow"
+          >
+            Acceder
+          </Button>
+          <Button
+            href={regLink}
+            className="registrate-button header_btn"
+            rel="nofollow"
+          >
+            Regístrate
+          </Button>
+        </Container>
+      )}
+    </Navbar>
   );
 }
 export default Header;

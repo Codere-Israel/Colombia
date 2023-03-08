@@ -5,7 +5,8 @@ import { NavLink } from "react-bootstrap";
 import { Bounce } from "react-awesome-reveal";
 
 function BottomGame(props) {
-  // console.log(props);
+  const dir = ["left", "left"];
+
   return (
     <NavLink href={props.gameLink} rel={"nofollow"}>
       <div className={gameCSS.bottom_card}>
@@ -20,11 +21,13 @@ function BottomGame(props) {
             )}
           </div>
 
-          <div className={gameCSS.logo}>
+          <div
+            className={`${gameCSS.logo} ${
+              props.isDuped ? "top_new_" + props.index : ""
+            }`}
+          >
             <Bounce duration={1500} right>
-              {/* <div className="avner"> */}
               <img src={props.logo} alt={props.logoAlt} />
-              {/* </div> */}
             </Bounce>
           </div>
         </div>

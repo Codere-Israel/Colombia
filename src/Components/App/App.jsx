@@ -55,14 +55,16 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <isMobileContext.Provider value={flag}>
-          <Header />
-        </isMobileContext.Provider>
+        <Header flag={flag} />
         <main className="mainSeoPagesColombia">
           <Routes>
-            <Route exact path="/" element={<Splash />} />
+            <Route exact path="/" element={<Splash flag={flag} />} />
             <Route exact path="eventos-deportivos">
-              <Route exact path="" element={<EventosDeportivos />} />
+              <Route
+                exact
+                path=""
+                element={<EventosDeportivos flag={flag} />}
+              />
               <Route
                 exact
                 path="apuestas-mundial-fifa"

@@ -54,6 +54,13 @@
   width: 35vw;
 }
 
+.top_new1 img {
+  position: relative;
+  top: 0;
+  width: 15rem;
+  height: auto !important;
+}
+
 .topGameImage,
 .game_logo {
   transition: 0.3s;
@@ -162,10 +169,8 @@ img.game_logo:hover {
   position: relative;
   min-width: 20vw;
   height: 27vw;
-  box-shadow:
-    inset 5px 5px 5px rgb(0 0 0 / 20%),
-    inset -5px -5px 15px rgb(255 255 255 / 10%),
-    5px 5px 15px rgb(0 0 0 / 30%),
+  box-shadow: inset 5px 5px 5px rgb(0 0 0 / 20%),
+    inset -5px -5px 15px rgb(255 255 255 / 10%), 5px 5px 15px rgb(0 0 0 / 30%),
     -5px -5px 15px rgb(255 255 255 / 10%);
   border-radius: 15px;
   margin: 25px 0;
@@ -339,14 +344,13 @@ img.game_logo:hover {
   /* animation-delay: 2.2s; */
   animation-iteration-count: infinite;
   animation-direction: normal;
-  background:
-    linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.03) 20%,
-      rgba(176, 209, 240, 0.445) 100%,
-      rgba(255, 255, 255, 0.5) 92%,
-      rgba(61, 86, 201, 0.1) 30%
-    );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.03) 20%,
+    rgba(176, 209, 240, 0.445) 100%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(61, 86, 201, 0.1) 30%
+  );
   z-index: 1;
 }
 

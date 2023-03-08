@@ -9,13 +9,9 @@
       "scheduled": true,
       "data": {
         "display": true,
-        "timeStart": "",
-        "timeEnd": "",
-        "days": [
-          "Monday",
-          "Tuesday",
-          "Wednesday"
-        ]
+        "timeStart": "22:10",
+        "timeEnd": "23:12",
+        "days": ["Monday", "Tuesday", "Wednesday"]
       }
     },
     {
@@ -29,12 +25,7 @@
         "display": true,
         "timeStart": "",
         "timeEnd": "",
-        "days": [
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ]
+        "days": ["Thursday", "Friday", "Saturday", "Sunday"]
       }
     },
     {
@@ -48,11 +39,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       }
     },
     {
@@ -64,11 +51,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       }
     },
     {
@@ -80,11 +63,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       }
     },
     {
@@ -96,11 +75,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       }
     },
     {
@@ -112,11 +87,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       },
       "ctaURL": "https://m.codere.com.co/deportescolombia/#/NearestLocalPage",
       "ctaText": "Encuentranos"
@@ -134,11 +105,7 @@
         "display": true,
         "timeStart": "",
         "timeEnd": "",
-        "days": [
-          "Monday",
-          "Tuesday",
-          "Wednesday"
-        ]
+        "days": ["Monday", "Tuesday", "Wednesday"]
       }
     },
     {
@@ -152,12 +119,7 @@
         "display": true,
         "timeStart": "",
         "timeEnd": "",
-        "days": [
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ]
+        "days": ["Thursday", "Friday", "Saturday", "Sunday"]
       }
     },
     {
@@ -171,11 +133,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       }
     },
     {
@@ -187,11 +145,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       }
     },
     {
@@ -203,11 +157,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       }
     },
     {
@@ -219,11 +169,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       }
     },
     {
@@ -234,11 +180,7 @@
         "display": false,
         "timeStart": "09:15",
         "timeEnd": "10:45",
-        "days": [
-          "Sunday",
-          "Saturday",
-          "Tuesday"
-        ]
+        "days": ["Sunday", "Saturday", "Tuesday"]
       },
       "ctaURL": "https://m.codere.com.co/deportescolombia/#/NearestLocalPage",
       "ctaText": "Encuentranos"

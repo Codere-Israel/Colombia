@@ -6,10 +6,8 @@ import "swiper/css/lazy";
 import "swiper/css/autoplay";
 
 function GameSwiper(props) {
-
   return (
     <div className="game-carousel">
-   
       <Swiper
         modules={[Autoplay, Lazy]}
         lazy={{ loadPrevNext: true, loadPrevNextAmount: 1 }}
@@ -22,10 +20,7 @@ function GameSwiper(props) {
           return (
             <SwiperSlide key={index}>
               <a
-                href={
-                  "https://m.codere.com.co/deportescolombia/#/CasinoPage?Playgame=" +
-                  item.name
-                }
+                href={`https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=${item.provider} ${item.name}`}
                 rel={"nofollow"}
               >
                 <img src={item.image} alt={item.alt} />
