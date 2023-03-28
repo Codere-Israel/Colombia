@@ -67,10 +67,12 @@
       }
     },
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/slide3.webp",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/lifemiles-desktop.jpg",
       "img_alt": "Bingo",
-      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "scheduled": false,
+      "tycLink": "https://m.codere.com.co/deportescolombia/#/PromotionsPage?url=https://www.codere.com.co/PromosCO/actives/CO2003LifemilesALLCAS.aspx",
+      "startDate":"2023-03-24T06:00:00Z",
+      "endDate":"2023-04-08T22:00:00Z",
+      "scheduled": true,
       "data": {
         "display": false,
         "timeStart": "09:15",
@@ -161,10 +163,12 @@
       }
     },
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/slideMobile3.webp",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/lifemiles-mobile.jpg",
       "img_alt": "Codere casa de apuestas movil",
-      "tycLink": "",
-      "scheduled": false,
+      "tycLink": "https://m.codere.com.co/deportescolombia/#/PromotionsPage?url=https://www.codere.com.co/PromosCO/actives/CO2003LifemilesALLCAS.aspx",
+      "startDate":"2023-03-24T06:00:00Z",
+      "endDate":"2023-04-08T22:00:00Z",
+      "scheduled": true,
       "data": {
         "display": false,
         "timeStart": "09:15",
