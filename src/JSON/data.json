@@ -67,12 +67,10 @@
       }
     },
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/lifemiles-desktop.jpg",
-      "img_alt": "Bingo",
-      "tycLink": "https://m.codere.com.co/deportescolombia/#/PromotionsPage?url=https://www.codere.com.co/PromosCO/actives/CO2003LifemilesALLCAS.aspx",
-      "startDate":"2023-03-24T06:00:00Z",
-      "endDate":"2023-04-08T22:00:00Z",
-      "scheduled": true,
+      "image": "https://www.codere.com.co/Colombia/images/inisio/payment-methods-desktop.jpg",
+      "img_alt": "payment-methods",
+      "tycLink": "",
+      "scheduled": false,
       "data": {
         "display": false,
         "timeStart": "09:15",
@@ -163,12 +161,10 @@
       }
     },
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/lifemiles-mobile.jpg",
-      "img_alt": "Codere casa de apuestas movil",
-      "tycLink": "https://m.codere.com.co/deportescolombia/#/PromotionsPage?url=https://www.codere.com.co/PromosCO/actives/CO2003LifemilesALLCAS.aspx",
-      "startDate":"2023-03-24T06:00:00Z",
-      "endDate":"2023-04-08T22:00:00Z",
-      "scheduled": true,
+      "image": "https://www.codere.com.co/Colombia/images/inisio/payment-methods-mobile.jpg",
+      "img_alt": "payment-methods",
+      "tycLink": "",
+      "scheduled": false,
       "data": {
         "display": false,
         "timeStart": "09:15",
