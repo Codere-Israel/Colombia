@@ -238,14 +238,6 @@ function Footer() {
                   <li>
                     <a href="/eventos-deportivos">Eventos deportivos</a>
                   </li>
-                  <li>
-                    <a
-                      href="https://m.codere.com.co/deportescolombia/#/CheckTicketPage"
-                      title=""
-                    >
-                      Consulta tu ticket
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
