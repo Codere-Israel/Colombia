@@ -67,9 +67,9 @@
       }
     },
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/slide3.webp",
-      "img_alt": "Bingo",
-      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/payment-methods-desktop.jpg",
+      "img_alt": "payment-methods",
+      "tycLink": "",
       "scheduled": false,
       "data": {
         "display": false,
@@ -161,8 +161,8 @@
       }
     },
     {
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/slideMobile3.webp",
-      "img_alt": "Codere casa de apuestas movil",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/payment-methods-mobile.jpg",
+      "img_alt": "payment-methods",
       "tycLink": "",
       "scheduled": false,
       "data": {
