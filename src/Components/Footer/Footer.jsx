@@ -249,20 +249,34 @@ function Footer() {
                 <ul className="list-unstyled">
                   <li>
                     <a href="/ayuda" title="">
-                      Ayuda Términos y Condiciones
+                      Área de ayuda
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://m.codere.com.co/deportescolombia/#/ContactPage" title="" target='_blank'>
+                      Área de contacto
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://m.codere.com.co/deportescolombia/#/LanguagePage"
+                      href="https://api.whatsapp.com/send?phone=573112025833&amp;text=Hola%20Coderista,%0D%0A%20Bienvenido%20a%20nuestro%20soporte%20online%20al%20usuario%20%0D%0A%C2%BFEn%20que%20podemos%20ayudarte?"
                       title=""
+                      rel="nofollow"
+                      target="_blank"
+                      className="whatsapp"
                     >
-                      Idioma
+                      WhatsApp:  +573 1120 25833
                     </a>
                   </li>
+
                   <li>
-                    <a href="#0" title="">
-                      Contacto:
+                    <a
+                      href="tel:018000834313"
+                      title=""
+                      rel="nofollow"
+                      target="_blank"
+                    >
+                      Teléfono: 01-8000-934313
                     </a>
                   </li>
                   <li>
@@ -271,20 +285,8 @@ function Footer() {
                       title=""
                       rel="nofollow"
                       target="_blank"
-                      className="whatsapp"
                     >
-                      apuestas@codere.com
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://wa.me/573 1120 25833"
-                      title=""
-                      rel="nofollow"
-                      target="_blank"
-                      className="whatsapp"
-                    >
-                      <FontAwesomeIcon icon={faWhatsapp} /> +573 1120 25833
+                      Contacto:  apuestas@codere.com
                     </a>
                   </li>
                 </ul>
