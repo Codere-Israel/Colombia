@@ -26,9 +26,7 @@ const Splash = (props) => {
           content="La casa de apuestas deportivas y casino online #1 en Colombia. Juega en línea Blackjack, ruleta, slots y apuesta en tus deportes favoritos ⚽."
         ></meta>
 
-        <script type="application/ld+json">
-          {JSON.stringify(articleStructuredData)}
-        </script>
+
       </Helmet>
 
       <div id="first-section">
