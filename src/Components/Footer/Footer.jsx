@@ -194,19 +194,25 @@ function Footer() {
                   </li>
                   <ul className={"footerList34u"}>
                     <li>
-                      <a href="/casino/jackpots">Jackpots</a>
+                      <a href="/casino">Casino</a>
                     </li>
                     <li>
-                      <a href="/casino/slots">Slots</a>
+                      <a href="/casino/casino-en-vivo">Casino en Vivo</a>
                     </li>
                     <li>
                       <a href="/casino/ruleta">Ruleta</a>
                     </li>
                     <li>
-                      <a href="/casino">Casino</a>
+                      <a href="/casino/slots">Slots</a>
                     </li>
                     <li>
                       <a href="/casino/blackjack">Blackjack</a>
+                    </li>
+                    <li>
+                      <a href="/casino/jackpots">Jackpots</a>
+                    </li>
+                    <li>
+                      <a href="/eventos-deportivos">Eventos deportivos</a>
                     </li>
                   </ul>
                 </ul>
@@ -253,7 +259,11 @@ function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="https://m.codere.com.co/deportescolombia/#/ContactPage" title="" target='_blank'>
+                    <a
+                      href="https://m.codere.com.co/deportescolombia/#/ContactPage"
+                      title=""
+                      target="_blank"
+                    >
                       Área de contacto
                     </a>
                   </li>
@@ -265,7 +275,7 @@ function Footer() {
                       target="_blank"
                       className="whatsapp"
                     >
-                      WhatsApp:  +573 1120 25833
+                      WhatsApp: +573 1120 25833
                     </a>
                   </li>
 
@@ -286,7 +296,7 @@ function Footer() {
                       rel="nofollow"
                       target="_blank"
                     >
-                      Contacto:  apuestas@codere.com
+                      Contacto: apuestas@codere.com
                     </a>
                   </li>
                 </ul>

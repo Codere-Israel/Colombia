@@ -142,9 +142,23 @@ function Header(props) {
                   <Accordion.Body>
                     <ul>
                       <li>
-                        <a href="/casino/jackpots">
-                          <FontAwesomeIcon icon={faFutbol} />
-                          Jackpots
+                        <a href="/casino">
+                          <FontAwesomeIcon icon={faCoins} />
+                          Casino
+                          <FontAwesomeIcon icon={faAngleRight} />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/casino/casino-en-vivo ">
+                          <FontAwesomeIcon icon={faCoins} />
+                          Casino en Vivo
+                          <FontAwesomeIcon icon={faAngleRight} />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/casino/ruleta">
+                          <FontAwesomeIcon icon={faStar} />
+                          Ruleta
                           <FontAwesomeIcon icon={faAngleRight} />
                         </a>
                       </li>
@@ -156,23 +170,16 @@ function Header(props) {
                         </a>
                       </li>
                       <li>
-                        <a href="/casino/ruleta">
-                          <FontAwesomeIcon icon={faStar} />
-                          Rutleta
-                          <FontAwesomeIcon icon={faAngleRight} />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/casino">
-                          <FontAwesomeIcon icon={faCoins} />
-                          Casino
-                          <FontAwesomeIcon icon={faAngleRight} />
-                        </a>
-                      </li>
-                      <li>
                         <a href="/casino/blackjack">
                           <FontAwesomeIcon icon={faHeart} />
                           Blackjack
+                          <FontAwesomeIcon icon={faAngleRight} />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/casino/jackpots">
+                          <FontAwesomeIcon icon={faFutbol} />
+                          Jackpots
                           <FontAwesomeIcon icon={faAngleRight} />
                         </a>
                       </li>
@@ -277,14 +284,14 @@ function Header(props) {
               <FontAwesomeIcon icon={faAngleDown} />
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="/casino/jackpots">Jackpots</Dropdown.Item>
-              <Dropdown.Item href="/casino/slots">Slots</Dropdown.Item>
-              <Dropdown.Item href="/casino/ruleta">Ruleta</Dropdown.Item>
               <Dropdown.Item href="/casino">Casino</Dropdown.Item>
-              <Dropdown.Item href="/casino/casino-en-vivo">
-                Casino en vivo
+              <Dropdown.Item href="/casino/casino-en-vivo ">
+                Casino en Vivo
               </Dropdown.Item>
+              <Dropdown.Item href="/casino/ruleta">Ruleta</Dropdown.Item>
+              <Dropdown.Item href="/casino/slots">Slots</Dropdown.Item>
               <Dropdown.Item href="/casino/blackjack">Blackjack</Dropdown.Item>
+              <Dropdown.Item href="/casino/jackpots">Jackpots</Dropdown.Item>
               <Dropdown.Item href="/eventos-deportivos">
                 Eventos deportivos
               </Dropdown.Item>

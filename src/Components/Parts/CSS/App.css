@@ -795,6 +795,14 @@ h1.bottomContentSubTitle {
   text-align: center;
   color: #79c000;
   text-transform: capitalize;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: calc(1.325rem + .9vw);
+  font-weight: 500;
+
 }
 
 .bottomContentSubTitle {
@@ -1778,4 +1786,17 @@ footer.nb-footer .footer-info-single p {
   #acc-section {
     width: 100%;
   }
+}
+
+
+.codere_desktop_game_title {
+  color: #e8e5e5;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 1.4vw;
+  font-weight: 700;
+  letter-spacing: 1px;
+  flex-wrap: nowrap;
+  align-items: center;
 }

@@ -12,19 +12,19 @@ function Games(props) {
   return (
     <>
       {props.flag ? (
-        <section id="mobile-games-section">
-          <h2 className="gamesTitle">
+        <div id="mobile-games-section">
+          <span className="gamesTitle">
             <span style={{ textTransform: "uppercase" }}>Mesas en Español</span>
-          </h2>
+          </span>
           <GameSwiper games={gameCarousel.spanish_games} />
-          <h2 className="gamesTitle mt-3"> JUEGOS DESTACADOS </h2>
+          <span className="gamesTitle mt-3"> JUEGOS DESTACADOS </span>
           <GameSwiper games={gameCarousel.first_slide_list} />
-          <h2 className="gamesTitle mt-3"> NUEVOS JUEGOS </h2>
+          <span className="gamesTitle mt-3"> NUEVOS JUEGOS </span>
           <GameSwiper games={gameCarousel.second_slide_list} />
-        </section>
+        </div>
       ) : (
         <div id={gameCSS.desktop_games}>
-          <h2> Mesas en Español </h2>
+          <span className="codere_desktop_game_title"> Mesas en Español </span>
           <div className={gameCSS.bottom_conatiner}>
             {deskGames.spanish_games.map((item, key) => (
               <BottomGame
@@ -40,7 +40,7 @@ function Games(props) {
               />
             ))}
           </div>
-          <h2> Mejores Juegos </h2>
+          <span className="codere_desktop_game_title"> Mejores Juegos </span>
           <div className={gameCSS.top_games_conatiner}>
             {deskGames.top_games.map((item, key) => {
               return (
@@ -57,7 +57,7 @@ function Games(props) {
               );
             })}
           </div>
-          <h2> Nuevos Juegos </h2>
+          <span className="codere_desktop_game_title"> Nuevos Juegos </span>
 
           <div className={gameCSS.bottom_conatiner}>
             {deskGames.bottom_games.map((item, key) => {
