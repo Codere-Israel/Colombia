@@ -18,7 +18,7 @@ const Splash = (props) => {
     <>
       <Helmet>
         <title>
-          Apuestas Deportivas y Casino » Bono hasta $100mil | Codere®
+        Apuestas Deportivas y Casino » Bono de $100.000 | Codere®
         </title>
         <link rel="canonical" href="https://www.codere.com.co/" />
         <meta
