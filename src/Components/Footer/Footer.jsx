@@ -481,7 +481,7 @@ function Footer() {
                 on domicilio principal en Bogotá, Colombia, Ak.103 No. 25F-12 y
                 cuyo procesamiento de pagos son operados por Codere Apuestas
                 S.A.U. Está licenciada en Colombia por COLJUEGOS con el número
-                de concesión C1901 del 15 de noviembre de 2022 al 10 noviembre
+                de concesión C1901 del 15 de noviembre de 2022 al 14 noviembre
                 de 2025. Operado por Codere Apuestas, S.A.U.
                 <br />
                 01-8000-975827 -{" "}
