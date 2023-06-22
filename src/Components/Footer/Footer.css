@@ -181,9 +181,12 @@ footer.nb-footer .footer-info-single p {
 }
 
 .logoColjuegos {
-    height: 4vw !important;
+    height: 3vw !important;
 }
-
+.kk93845l a:first-child .logoColjuegos:first-child {
+    height: 2.79vw!important;
+    margin-right: 1vw;
+}
 .fd089 {
     display: flex;
     max-width: 50%;
@@ -317,9 +320,12 @@ footer.nb-footer .footer-info-single p {
     }
 
     .logoColjuegos {
-        height: 5.5rem !important;
+        height: 2.5rem !important;
     }
-
+.kk93845l a:first-child .logoColjuegos:first-child {
+    height: 2.5rem !important;
+    margin-right: 4vw;
+}
     .legalFooter>a {
         font-size: 1rem;
     }
