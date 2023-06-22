@@ -1,34 +1,6 @@
 {
   "desktop_slide_list": [
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-desktop.jpg",
-      "img_alt": "champions-league",
-      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-03-06T07:00:00Z",
-      "endDate": "2023-06-10T22:00:00Z",
-      "scheduled": true,
-      "data": {
-        "display": true,
-        "timeStart": "22:10",
-        "timeEnd": "23:12",
-        "days": ["Monday", "Tuesday", "Wednesday"]
-      }
-    },
-    {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/la-liga-inglesa-desktop.png",
-      "img_alt": "la-liga-inglesa",
-      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-03-02T07:00:00Z",
-      "endDate": "2093-06-10T22:00:00Z",
-      "scheduled": true,
-      "data": {
-        "display": true,
-        "timeStart": "",
-        "timeEnd": "",
-        "days": ["Thursday", "Friday", "Saturday", "Sunday"]
-      }
-    },
-    {
       "image": "https://www.codere.com.co/Colombia/images/inisio/OpenDeAustraliaDesktop.webp",
       "img_alt": "Open de Australia",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
@@ -94,34 +66,6 @@
     }
   ],
   "mobile_slide_list": [
-    {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-mobile.jpg",
-      "img_alt": "champions-league",
-      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-03-06T07:00:00Z",
-      "endDate": "2023-06-10T22:00:00Z",
-      "scheduled": true,
-      "data": {
-        "display": true,
-        "timeStart": "",
-        "timeEnd": "",
-        "days": ["Monday", "Tuesday", "Wednesday"]
-      }
-    },
-    {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/la-liga-inglesa-mobile.png",
-      "img_alt": "la-liga-inglesa",
-      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
-      "startDate": "2023-03-02T07:00:00Z",
-      "endDate": "2093-06-10T22:00:00Z",
-      "scheduled": true,
-      "data": {
-        "display": true,
-        "timeStart": "",
-        "timeEnd": "",
-        "days": ["Thursday", "Friday", "Saturday", "Sunday"]
-      }
-    },
     {
       "image": "https://www.codere.com.co/Colombia/images/inisio/OpenDeAustraliaMobile.webp",
       "img_alt": "Open de Australia",
