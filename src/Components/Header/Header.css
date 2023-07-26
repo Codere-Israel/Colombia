@@ -491,8 +491,11 @@
       color: #b8b7ad;
       padding-top: 0.8em;
       width: 182%;
+        overflow-y: auto;
     }
-  
+    #elastic .accordion-body {
+        height: 600px;
+    }
     .bm-menu .fa-angle-right {
       float: right;
     }
