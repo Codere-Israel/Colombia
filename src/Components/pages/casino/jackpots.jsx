@@ -313,7 +313,7 @@ export default function Jackpots(props)
 			</Helmet>
 
 			<Navbar/>
-			<Floating text="!Los mejores Jackpots!" juega={true}/>
+			<Floating text="¡Los mejores Jackpots!" juega={true}/>
 			<div
 				className="top-bg-seo "
 

@@ -276,7 +276,7 @@ export default function Slots(props)
 			</Helmet>
 
 			<Navbar/>
-			<Floating text="!Los mejores Slots!" juega={true}/>
+			<Floating text="¡Los mejores Slots!" juega={true}/>
 			<div
 				className="top-bg-seo "
 

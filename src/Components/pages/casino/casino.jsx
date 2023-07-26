@@ -292,7 +292,7 @@ export default function Casino(props)
 			</Helmet>
 
 			<Navbar />
-			<Floating text="!El mejor Casino!" juega={true}/>
+			<Floating text="¡El mejor Casino!" juega={true}/>
 			<div
 				className="top-bg-seo "
 				/*

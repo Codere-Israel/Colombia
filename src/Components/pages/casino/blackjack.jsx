@@ -219,7 +219,7 @@ export default function Blackjack(props)
 			</Helmet>
 
 			<Navbar />
-			<Floating text="!El mejor BlackJack!" juega={true}/>
+			<Floating text="¡El mejor BlackJack!" juega={true}/>
 			<div
 				className="top-bg-seo "
 

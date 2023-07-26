@@ -153,7 +153,7 @@ export default function Ruleta(props)
 		</Helmet>
 
 		<Navbar />
-		<Floating text="!Las mejores Ruletas!" juega={true}/>
+		<Floating text="¡Las mejores Ruletas!" juega={true}/>
 		<div
 			className="top-bg-seo "
 

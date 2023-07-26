@@ -28,6 +28,8 @@ import {faCannabis} from "@fortawesome/free-solid-svg-icons/faCannabis";
 import {faFutbol} from "@fortawesome/free-solid-svg-icons/faFutbol";
 import {faBaseball} from "@fortawesome/free-solid-svg-icons/faBaseball";
 import "./Header.css";
+import {NavLink, Link} from "react-router-dom";
+import DropdownMenuComponent from "../Parts/DropdownMenuComponent";
 
 function Header(props)
 {
@@ -66,6 +68,45 @@ function Header(props)
 		}
 		if (flag) setHamburger(!hamburger);
 	};
+
+	const DropdownMenuDesktop = [
+		{
+			"name": "Casino",
+			"path": "/casino"
+		},
+		{
+			"name": "Casino en Vivo",
+			"path": "/casino/casino-en-vivo"
+		},
+		{
+			"name": "Ruleta",
+			"path": "/casino/ruleta"
+		},
+		{
+			"name": "Slots",
+			"path": "/casino/slots"
+		},
+		{
+			"name": "Blackjack",
+			"path": "/casino/blackjack"
+		},
+		{
+			"name": "Jackpots",
+			"path": "/casino/jackpots"
+		},
+		{
+			"name": "Baccarat",
+			"path": "/casino/baccarat"
+		},
+		{
+			"name": "Video Bingo",
+			"path": "/casino/video-bingo"
+		},
+		{
+			"name": "Eventos deportivos",
+			"path": "/eventos-deportivos"
+		}
+	]
 
 	return (
 		<Navbar className="header_nav stroke" variant="dark">
@@ -206,11 +247,11 @@ function Header(props)
 											</li>
 
 											<li>
-												<a href="/eventos-deportivos">
+												<NavLink to="/eventos-deportivos">
 													{/*<FontAwesomeIcon icon={faHeart}/>*/}
 													Eventos deportivos
 													{/*<FontAwesomeIcon icon={faAngleRight}/>*/}
-												</a>
+												</NavLink>
 											</li>
 
 										</ul>
@@ -252,6 +293,8 @@ function Header(props)
 					>
 						<img src={LOGO} alt="Logo Casa de Apuestas Codere - Real Madrid "/>
 					</a>
+
+
 
 					<Nav className="me-auto">
 						<Nav.Link
@@ -302,26 +345,7 @@ function Header(props)
 							RECARGAS Y RETIROS
 						</Nav.Link>
 					</Nav>
-					<Dropdown>
-						<Dropdown.Toggle className="header_btn">
-							<FontAwesomeIcon icon={faAngleDown}/>
-						</Dropdown.Toggle>
-						<Dropdown.Menu>
-							<Dropdown.Item href="/casino">Casino</Dropdown.Item>
-							<Dropdown.Item href="/casino/casino-en-vivo ">
-								Casino en Vivo
-							</Dropdown.Item>
-							<Dropdown.Item href="/casino/ruleta">Ruleta</Dropdown.Item>
-							<Dropdown.Item href="/casino/slots">Slots</Dropdown.Item>
-							<Dropdown.Item href="/casino/blackjack">Blackjack</Dropdown.Item>
-							<Dropdown.Item href="/casino/jackpots">Jackpots</Dropdown.Item>
-							<Dropdown.Item href="/casino/baccarat">Baccarat</Dropdown.Item>
-							<Dropdown.Item href="/casino/video-bingo">Video Bingo</Dropdown.Item>
-							<Dropdown.Item href="/eventos-deportivos">
-								Eventos deportivos
-							</Dropdown.Item>
-						</Dropdown.Menu>
-					</Dropdown>
+					<DropdownMenuComponent menuItems={DropdownMenuDesktop} />
 					<Button
 						href={acceder}
 						// onClick={handleShow}

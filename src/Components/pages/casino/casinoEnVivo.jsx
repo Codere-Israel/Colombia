@@ -217,7 +217,7 @@ export default function CasinoEnVivo(props)
 			</Helmet>
 
 			<Navbar />
-			<Floating text="!El mejor Casino En Vivo!" juega={true}/>
+			<Floating text="¡El mejor Casino En Vivo!" juega={true}/>
 			<div
 				className="top-bg-seo "
 

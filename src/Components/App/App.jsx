@@ -41,7 +41,6 @@ const App = () =>
 {
 
 	let fontUrl;
-	console.log(window.location.hostname)
 	switch (window.location.hostname) {
 		case 'localhost':
 			fontUrl = "https://colambiastage.coderetech.com/Fonts/HighSchool-V3.1.c78c7153ed9023134905.ttf";
