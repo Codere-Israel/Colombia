@@ -276,7 +276,7 @@ function Content(props) {
           </Zoom>
         </div>
       </div>
-      <Table striped bordered hover variant="dark">
+      <Table striped bordered hover variant="dark" style={{ width: '90%' }}>
         <tbody>
           <tr>
             <td>🏆 Inicio de operaciones</td>
