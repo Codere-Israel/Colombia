@@ -25,18 +25,6 @@ const Splash = (props) => {
           name="description"
           content="La casa de apuestas deportivas y casino online #1 en Colombia. Juega en línea Blackjack, ruleta, slots y apuesta en tus deportes favoritos ⚽."
         ></meta>
-        <link rel="alternate" hreflang="x-default" href="https://www.codereonline.com/overview/default.aspx"/>
-        <link rel="alternate" hreflang="es-es" href="https://www.codere.es/"/>
-        <link rel="alternate" hreflang="en-es" href="https://www.codere.es/"/>
-        <link rel="alternate" hreflang="es-mx" href="https://www.codere.mx/"/>
-        <link rel="alternate" hreflang="en-mx" href="https://www.codere.mx/"/>
-        <link rel="alternate" hreflang="es-pa" href="https://www.codere.pa/"/>
-        <link rel="alternate" hreflang="en-pa" href="https://www.codere.pa/"/>
-        <link rel="alternate" hreflang="es-co" href="https://www.codere.com.co/"/>
-        <link rel="alternate" hreflang="en-co" href="https://www.codere.com.co/"/>
-        <link rel="alternate" hreflang="es-ar" href="https://www.codere.bet.ar/"/>
-        <link rel="alternate" hreflang="en-ar" href="https://www.codere.bet.ar/"/>
-
       </Helmet>
 
       <div id="first-section">
@@ -45,7 +33,7 @@ const Splash = (props) => {
           expires={365}
           buttonText="- Aceptar -"
           buttonClasses="cookie-btn"
-          overlay={true}
+          overlay={false}
           cookieValue={"accepted"}
           extraCookieOptions={{ domain: ".codere.com.co" }}
           overlayClasses="cookie-overlay"

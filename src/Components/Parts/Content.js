@@ -346,65 +346,6 @@ function Content(props) {
           La emoción del deporte y del casino al alcance de tu mano
         </div>
         <BottomRegistrateButton />
-        <div className="bottomContentSeperator"></div>
-
-        <div className="row tg78dRea">
-          <div className="col-6 col-sm-2 ">
-            <a
-              href="https://codere.onelink.me/ymBn/bec1421"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                className="logoBottomImg"
-                src="https://www.codere.com.co/_catalogs/masterpage/codere/img/FooterdescargaIos.png"
-                alt="Codere Colombia"
-              />
-            </a>
-          </div>
-          <div className="col-6 col-sm-2 ">
-            <a
-              href="https://codere.onelink.me/ymBn/bec1421"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                className="logoBottomImg"
-                src="https://www.codere.com.co/_catalogs/masterpage/codere/img/android.webp"
-                alt="Codere Colombia"
-              />
-            </a>
-          </div>
-          <div className="col-12 col-sm-2 logoBottomImgCodereLogoSP">
-            <img
-              className="logoBottomImg"
-              src="https://www.codere.com.co/_catalogs/masterpage/codere/img/Codere_PastillaRealMadrid.webp"
-              alt="Codere Colombia"
-            />
-          </div>
-          <div className="col-4 col-sm-2 ">
-            <img
-              className="logoBottomImg logoBottomImg3ssa3"
-              src="https://www.codere.com.co/_catalogs/masterpage/codere/img/CasinoFantasiaRoyal.webp"
-              alt="Codere Colombia"
-            />
-          </div>
-          <div className="col-4 col-sm-2 ">
-            <img
-              className="logoBottomImg logoBottomImg3ssa3"
-              src="https://www.codere.com.co/_catalogs/masterpage/codere/img/logo_crown.webp"
-              alt="Codere Colombia"
-            />
-          </div>
-
-          <div className="col-4 col-sm-2 ">
-            <img
-              className="logoBottomImg logoBottomImg3ssa3"
-              src="https://www.codere.com.co/_catalogs/masterpage/codere/img/Logo-MF-Blanco.webp"
-              alt="Codere Colombia"
-            />
-          </div>
-        </div>
       </section>
     </div>
   );

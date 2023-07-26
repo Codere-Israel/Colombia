@@ -112,7 +112,7 @@
     padding-top: 5px;
 }
 
-.dropdown a:nth-child(7) {
+.dropdown a:nth-child(9) {
     border: unset;
     padding-bottom: 5px;
 }
@@ -137,7 +137,7 @@
 }
 
 .dropdown.show .dropdown-menu {
-    max-height: 23rem;
+    max-height: 25rem;
     opacity: 1;
 }
 

@@ -9,12 +9,77 @@ import {
 import { faHeadset } from "@fortawesome/free-solid-svg-icons/faHeadset";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube";
 import "./Footer.css";
+import ScrollToTopButton from "../pages/parts/ScrollToTopButton";
+import BottomBanner from "../pages/parts/BottomBanner";
+import React from "react";
 // Codere Footer \\
 function Footer() {
+
   return (
     <div>
       {/* <hr /> */}
-      <footer className="nb-footer">
+      <footer className="nb-footer mt-5">
+        <div className="row tg78dRea">
+          <div className="bottomContentSeperator"></div>
+
+          <div className="col-6 col-sm-2 ">
+            <a
+                href="https://codere.onelink.me/ymBn/bec1421"
+                rel="noreferrer"
+                target="_blank"
+            >
+              <img
+                  className="logoBottomImg"
+                  src="https://www.codere.com.co/_catalogs/masterpage/codere/img/FooterdescargaIos.png"
+                  alt="Codere Colombia"
+              />
+            </a>
+          </div>
+          <div className="col-6 col-sm-2 ">
+            <a
+                href="https://codere.onelink.me/ymBn/bec1421"
+                rel="noreferrer"
+                target="_blank"
+            >
+              <img
+                  className="logoBottomImg"
+                  src="https://www.codere.com.co/Colombia/images/footer/android.png"
+                  alt="Codere Colombia"
+              />
+            </a>
+          </div>
+          <div className="col-12 col-sm-2 logoBottomImgCodereLogoSP">
+            <img
+                className="logoBottomImg"
+                src="https://www.codere.com.co/_catalogs/masterpage/codere/img/Codere_PastillaRealMadrid.webp"
+                alt="Codere Colombia"
+            />
+          </div>
+          <div className="col-4 col-sm-2 ">
+            <img
+                className="logoBottomImg logoBottomImg3ssa3"
+                src="https://www.codere.com.co/_catalogs/masterpage/codere/img/CasinoFantasiaRoyal.webp"
+                alt="Codere Colombia"
+            />
+          </div>
+          <div className="col-4 col-sm-2 ">
+            <img
+                className="logoBottomImg logoBottomImg3ssa3"
+                src="https://www.codere.com.co/_catalogs/masterpage/codere/img/logo_crown.webp"
+                alt="Codere Colombia"
+            />
+          </div>
+
+          <div className="col-4 col-sm-2 ">
+            <img
+                className="logoBottomImg logoBottomImg3ssa3"
+                src="https://www.codere.com.co/_catalogs/masterpage/codere/img/Logo-MF-Blanco.webp"
+                alt="Codere Colombia"
+            />
+          </div>
+        </div>
+
+
         <div className="about">
           <div className="social-media">
             <ul className="list-inline">
@@ -210,6 +275,12 @@ function Footer() {
                     </li>
                     <li>
                       <a href="/casino/jackpots">Jackpots</a>
+                    </li>
+                    <li>
+                      <a href="/casino/baccarat">Baccarat</a>
+                    </li>
+                    <li>
+                      <a href="/casino/video-bingo">Video Bingo</a>
                     </li>
                     <li>
                       <a href="/eventos-deportivos">Eventos deportivos</a>
@@ -490,9 +561,12 @@ function Footer() {
             </div>
           </div>
         </div>
+        <ScrollToTopButton/>
+        {/*<BottomBanner />*/}
       </footer>
     </div>
   );
+
 }
 
 export default Footer;

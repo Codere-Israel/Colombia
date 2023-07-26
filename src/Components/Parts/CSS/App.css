@@ -215,7 +215,7 @@ body {
   padding-top: 5px;
 }
 
-.dropdown a:nth-child(7) {
+.dropdown a:nth-child(9) {
   border: unset;
   padding-bottom: 5px;
 }
@@ -241,7 +241,7 @@ body {
 }
 
 .dropdown.show .dropdown-menu {
-  max-height: 23rem;
+  max-height: 25rem;
   opacity: 1;
 }
 
@@ -852,7 +852,7 @@ h1.bottomContentSubTitle {
 
 /* Table */
 .table {
-  width: 90%;
+
   margin: auto;
   margin-bottom: 1rem;
 }
@@ -1040,7 +1040,7 @@ h1.bottomContentSubTitle {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  max-width: 70%;
+  max-width: 50%;
 }
 
 .logoBottomImg {

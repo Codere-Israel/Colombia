@@ -45,7 +45,7 @@ const EventosDeportivos = () => {
         </div>
 
         <div className="row mb-3">
-          <div className="col-12 col-sm-6 ">
+          <div className="col-12 col-sm-6 text-center justify-content-center align-content-center mb-4">
             <Zoom triggerOnce>
               <Card>
                 <Card.Img
@@ -78,7 +78,7 @@ const EventosDeportivos = () => {
             </Zoom>
           </div>
 
-          <div className="col-12 col-sm-6 ">
+          <div className="col-12 col-sm-6 text-center justify-content-center align-content-center mb-4">
             <Zoom triggerOnce>
               <Card>
                 <Card.Img
@@ -112,7 +112,7 @@ const EventosDeportivos = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-12 col-sm-6">
+          <div className="col-12 col-sm-6 text-center justify-content-center align-content-center mb-4">
             <Zoom triggerOnce>
               <Card>
                 <Card.Img

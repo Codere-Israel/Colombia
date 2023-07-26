@@ -1,0 +1,822 @@
+
+
+/* For LOCAL env */
+
+/*@font-face {*/
+/*    font-family: Codere;*/
+/*    src: url(../../../../fonts/HighSchool-V3.1.ttf);*/
+/*}*/
+
+
+
+/* For PRODUCTION */
+/*@font-face {*/
+/*    font-family: Codere;*/
+/*    src: url(https://www.codere.com.co/Fonts/HighSchool-V3.1.c78c7153ed9023134905.ttf);*/
+/*    font-display: fallback;*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: Codere-Roboto;*/
+/*    src: url(https://www.codere.com.co/Fonts/roboto-condensed-all-400-normal.242461da0ded06ef3693.woff);*/
+/*    font-display: fallback;*/
+/*}*/
+
+
+
+
+body {
+    /* background-color: #334049; */
+}
+
+.header {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.cas-seo h1,
+.cas-seo h2,
+.cas-seo h3 {
+    font-weight: 400;
+    color: #79c000;
+}
+
+.subtitle {
+    /* border-left: 3px solid #79c000; */
+    font-weight: 400;
+    color: #79c000;
+    border-radius: 0;
+    padding-left: 0.75rem;
+}
+
+.colored {
+    color: #79c000;
+    filter: invert(55%) sepia(103%) saturate(1266%) hue-rotate(62deg)
+    brightness(94%) contrast(77%);
+}
+
+.e-nav h5 {
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+h5.colored {
+    border-bottom: 3px solid #79c000;
+    padding-bottom: 5px;
+}
+
+.e-nav {
+    /*height: 10rem;*/
+    padding: 2.2rem 0 0 0;
+}
+
+.e-nav a:hover,
+.e-nav a:hover h5 {
+    filter: invert(55%) sepia(103%) saturate(1266%) hue-rotate(62deg)
+    brightness(94%) contrast(77%);
+    /* border-bottom: 3px solid #79c000;
+    height: 2rem; */
+    /* border-radius: 0.25rem; */
+    /* transition: all 300ms ease-in-out; */
+}
+.e-nav a:hover h5 {
+    border-bottom: 3px solid #79c000;
+    padding-bottom: 0.25rem;
+}
+
+#eventos ul,
+.event ul {
+    color: #fff;
+    padding-left: 0;
+}
+
+#eventos ul li,
+.event ul li {
+    /* list-style-type: none; */
+}
+
+#eventos p,
+.event p {
+    color: #fff;
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.ver_btn {
+    /* background-color: #79c000; */
+    background-color: unset;
+    border: 1px solid #79c000;
+    font-weight: 400;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    padding: 0.75rem 4rem 0.75rem 4rem;
+    float: left;
+    transition-duration: 0.35s;
+}
+
+#eventos a h2 {
+    font-size: 1.1vw;
+    font-weight: 700;
+    color: #79c000;
+    position: relative;
+    text-align: center;
+}
+
+.ver_btn:hover,
+.ver_btn:focus {
+    background-color: unset;
+    border: none;
+    /* box-shadow: inset 13em 0 0 0 #79c000; */
+    box-shadow: inset 13em 0 0 0 #548801;
+}
+
+/* Card */
+
+.eventos-container {
+    max-width: 75%;
+    display: flex;
+    text-align: center;
+}
+
+.eventos-container .row > * {
+    padding: 0;
+}
+
+.eventos_card {
+    /* background-color: #252a30; */
+    background-color: #323f47;
+    margin: 5px;
+    /* width: 50%; */
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+.card-header {
+    padding: 0;
+    background-color: unset !important;
+    border-bottom: unset !important;
+    text-transform: uppercase;
+}
+
+.eventos-container img {
+    max-width: 100%;
+    transition: all 0.5s;
+}
+
+.eventos-container img {
+    filter: grayscale(55%);
+    transition: all 0.5s;
+}
+
+.eventos-container :hover img {
+    filter: grayscale(0);
+}
+
+.card-footer {
+    border-top: none;
+}
+
+.event .accordion {
+    margin: 2rem 0 3rem 0;
+}
+
+.event .accordion-button {
+    /* color: #fff; */
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.event .accordion-item {
+    color: #fff;
+}
+
+.scroll .fa-chevron-up {
+    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+}
+
+/* Casino */
+.casino-row {
+    --bs-gutter-y: 1.5rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.cas-game-wrapper {
+    box-shadow: -10px 0 10px -7px #000, 10px 0 10px -7px #000,
+    5px 5px 15px 5px transparent;
+}
+
+.casino-game-img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: opacity 500ms ease-in-out;
+}
+
+.top-bg-seo {
+    padding-bottom: 17.5% ;
+}
+
+.cas-game-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cas-game-wrapper .hvr {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    transform: scale(0.65);
+}
+
+.hvr {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hvr p {
+    white-space: nowrap;
+    text-align: center;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: none;
+}
+
+.hvr img {
+    max-width: 104px;
+    /* transition: opacity 0.5s; */
+    /* transition: opacity 0.3s ease-in-out; */
+}
+.cas-game-wrapper:hover .casino-game-img {
+    background: #fff;
+    opacity: 0.25;
+    transition: opacity 500ms ease-in-out;
+}
+
+.cas-game-wrapper:hover .hvr {
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.cas-reg-btn {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto 0;
+    border: none;
+    border-radius: 70px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0.65rem 4rem;
+    text-align: center;
+    max-width: 180px;
+}
+
+.shining {
+    -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0, 0, 0, 0.2) 50%,#000 75%);
+    mask-image: linear-gradient(
+            45deg,
+            #000 25%,
+            rgba(0, 0, 0, 0.1) 50%,
+            #000 75%
+    );
+    -webkit-mask-size: 800%;
+    mask-size: 800%;
+    -webkit-mask-position: 0;
+    mask-position: 0;
+}
+
+.shining:hover {
+    /* transition: mask-position 2s ease, -webkit-mask-position 2s ease; */
+    -webkit-mask-position: 100%;
+    mask-position: 100%;
+    opacity: 1;
+}
+
+
+/*Navbar SEO pages*/
+
+
+.codereInnerMenuItems {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 4rem;
+    min-height: 5rem;
+}
+
+.codereInnerMenuItemsT64 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    color: #fff;
+}
+nav > ul > li:nth-child(n) > a.codereInnerMenuItems > div.codereInnerMenuItemsT64 > img {
+    height: 2rem;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 0.4rem;
+}
+
+nav > ul.codereInnerMenuSeoPmenus > li:nth-child(n) > a.active,
+nav > ul.codereInnerMenuSeoPmenus > li:nth-child(n) > a:hover {
+    color: var(--codereGreen) !important;
+    border-bottom: 3px solid #79c000 !important;
+}
+
+.navBarMenuTitle {
+    font-size: 0.9rem;
+}
+nav > ul.codereInnerMenuSeoPmenus > li:nth-child(n) > a.active img,
+.codereInnerMenuItemsT64:hover img {
+    filter: invert(68%) sepia(14%) saturate(3743%) hue-rotate(43deg) brightness(163%) contrast(101%);
+    /* width: 4rem; */
+}
+
+
+.codereInnerMenuSeoP {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+.codereInnerMenuSeoPmenus {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+ul.codereInnerMenuSeoPmenus > li > a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.1rem;
+    text-decoration: none;
+    margin: 0 0.2rem;
+    font-size: 1.2rem;
+}
+.active .navBarImage,
+.active .navBarTitle {
+    color: #79c000;
+    /*filter: invert(55%) sepia(103%) saturate(1266%) hue-rotate(62deg) brightness(94%) contrast(77%);*/
+}
+
+@media screen and (max-width: 767px) {
+    .e-nav {
+        height: auto;
+        padding: 0;
+    }
+
+    .e-nav img {
+        width: 8vw;
+    }
+
+    .header {
+        text-align: left;
+        font-size: 1.55rem;
+    }
+
+    #eventos h1 {
+        padding: 0 0.25rem 0 0.25rem;
+        /* margin-bottom: 1.75rem; */
+    }
+
+    #eventos a h2 {
+        font-size: 1rem;
+    }
+
+    /* Card */
+    .eventos-container {
+        max-width: 100%;
+        display: block;
+    }
+
+    .eventos-container h2,
+    .eventos-container p,
+    .ver_btn {
+        text-align: center;
+        float: none;
+    }
+
+    .eventos_card {
+        width: 100%;
+        margin: auto;
+        padding: 0.35rem 0;
+    }
+
+    .eventos-container .row > * {
+        padding: 0.25rem;
+    }
+
+    .eventos_card .btn {
+        padding: 0.475rem 0.1rem;
+        font-size: 0.6rem;
+    }
+
+    .card-body {
+        padding: 0.25rem;
+    }
+
+    .event .accordion {
+        width: 100%;
+    }
+
+    /* Casino */
+    .casino-row {
+        --bs-gutter-x: 0.5rem;
+        --bs-gutter-y: 0.5rem;
+        margin: 0;
+    }
+
+    .top-bg-seo {
+        padding-bottom: 50%;
+    }
+}
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    /* CSS */
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    /* CSS */
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* CSS */
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* CSS */
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    /* CSS */
+    .titleTextMob{
+        font-size: 7vw!important;
+    }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .titleTextMob{
+        font-size: 7vw !important;
+    }
+    .cas-reg-btn {
+        max-width: 42.5vw;
+        margin: 6vw auto;
+        padding: 2vw 0;
+    }
+    .e-nav h5 {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 320px) {
+    .e-nav a svg {
+        font-size: 1.75rem !important;
+    }
+
+    .header {
+        font-size: 1.15rem !important;
+    }
+}
+
+
+.scroll-to-top {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 2rem;
+    background-color: #79c000 !important;
+    border-radius: 10rem !important;
+}
+
+/* .fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+} */
+
+.floating {
+    color: #fff;
+    left: 0;
+    /* line-height: 0.8; */
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    /* top: 7vw; */
+    margin-top: 1vw;
+    width: 32%;
+    z-index: 2;
+}
+
+.floating span {
+    font-family: Codere;
+    font-size: 5.5vw;
+    line-height: 1;
+}
+
+.floating a {
+    background-color: #0056fe;
+    margin-top: 0.75vw;
+    font-weight: 700;
+    font-size: 1.65rem;
+    border-radius: 10rem;
+    padding: 0.55vw 2.15rem;
+}
+
+.seotable {
+    width: 100%;
+    margin: unset !important;
+}
+
+.content-table {
+    margin: auto;
+    color: #fff;
+    padding: 1.25rem;
+    width: 100%;
+    /* box-shadow: #7ac00049 0px 2px 6px, #7ac00017 0px 1px 4px,
+      #7ac00013 0px 0px 12px; */
+    background-color: #333;
+    border-radius: 0.45rem;
+    overflow: auto;
+}
+
+.content-table i {
+    background: #333f48;
+    border-radius: 50px;
+    display: inline-block;
+    height: 1.5vw;
+    margin-right: 1vw;
+    position: relative;
+    top: 0.4vw;
+    width: 1.5vw;
+}
+
+.content-table i:after,
+.content-table i:before {
+    border-style: solid;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    top: 0.5vw;
+    width: 0;
+}
+
+.content-table i:before {
+    border-color: transparent transparent transparent #fff;
+    border-width: 0.3vw 0 0.3vw 0.3vw;
+    left: 0.7vw;
+}
+
+.content-table i:after {
+    border-color: transparent transparent transparent #333f48;
+    border-width: 0.3vw 0 0.3vw 0.3vw;
+    left: 0.6vw;
+}
+
+.content-table .subtitle {
+    border-left: 3px solid #79c000;
+    border-radius: 0;
+    padding-left: 0.75rem;
+    color: #79c000;
+    margin-left: 1.5rem;
+}
+
+.content-table svg {
+    padding: 0.25rem;
+    margin-right: 1rem;
+    background-color: #333f48;
+    text-align: center;
+    border-radius: 1.5rem;
+}
+
+.flexed-centered {
+    display: flex;
+    align-items: center;
+}
+
+.container > div > ._tx.flexed-centered,
+.container > ._tx.flexed-centered {
+    width: 48%;
+    display: inline-block;
+    float: left;
+}
+
+.container.formulaTable > ._tx.flexed-centered {
+    width: 100%;
+}
+
+.tabla {
+    display: flex;
+}
+
+._tx {
+    margin: 0.35rem;
+}
+
+._tx a {
+    text-decoration: underline;
+    color: #fff;
+}
+._tx {
+    transition: all 0.3s ease;
+}
+
+
+.content-table a:hover,
+.content-table a:active,
+.content-table a:focus {
+    color: #4b7502 !important;
+}
+
+#tipos h2,
+#tipos h3 {
+    color: #79c000;
+}
+
+.para {
+    color: #79c000;
+    padding-top: 4.1rem;
+}
+
+.h3,
+h3 {
+    font-size: 1.4rem;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+    color: #79c000;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.blink {
+    animation: blink 1s linear 3; /* 1 second duration, linear timing function, 3 iterations */
+}
+
+
+@media screen and (max-width: 767px) {
+    .cas-seo h1 {
+         text-align: center;
+    }
+    .scroll-to-top {
+        right: 5vw !important;
+        bottom: 18vw !important;
+    }
+
+    .h3,
+    h3 {
+        font-size: calc(1.1rem + 0.6vw);
+    }
+
+    .scroll .fa-chevron-up {
+        font-size: 2rem;
+        padding: 0.7rem, 0.3rem, 0.7rem, 0.3rem;
+    }
+
+    .floating {
+        text-align: center;
+        display: flex;
+        height: 49vw;
+        width: 62%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .floating span {
+        font-size: 10.2vw !important;
+        line-height: 1;
+    }
+
+    .floating a {
+        margin-top: 1.15rem;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.55rem 1.65rem;
+        line-height: 1;
+    }
+
+    .content-table {
+        width: 100%;
+        display: block;
+        max-width: 450px;
+        min-width: 300px;
+        padding: 1.75rem;
+    }
+
+    .para {
+        color: #79c000;
+        padding-top: 0;
+    }
+
+    .seotable {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .content-table {
+        padding: 0.75rem;
+    }
+}
+/*.tplFilter78 {*/
+/*    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7423%) hue-rotate(306deg) brightness(118%) contrast(112%) !important;*/
+/*}*/
+
+/*.tplFilter78:hover {*/
+/*    filter: brightness(0) saturate(100%) invert(49%) sepia(89%) saturate(677%) hue-rotate(44deg) brightness(103%) contrast(106%) !important;*/
+/*}*/
+
+
+@media screen and (max-width: 600px) {
+    .codereInnerMenuSeoP {
+        margin-top: 3.5rem;
+        margin-bottom: .5rem;
+    }
+    .codereInnerMenuSeoPmenus {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .e-nav {
+        display: inline-block;
+    }
+    .codereInnerMenuItems {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .codereInnerMenuItemsT64 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navBarImage {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+
+    ul.codereInnerMenuSeoPmenus > li > a {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+}
