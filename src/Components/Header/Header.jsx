@@ -2,35 +2,25 @@ import {
 	Accordion,
 	Button,
 	Container,
-	Dropdown,
 	Nav,
 	Navbar,
 } from "react-bootstrap";
-import {isMobileContext} from "../App/App";
 import React, {useState} from "react";
-// import Axios from "axios";
 import {elastic as Menu} from "react-burger-menu";
-
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
-	faAngleDown,
 	faAngleRight,
 	faBullhorn,
 	faCirclePlay,
 	faCoins,
 	faCrosshairs,
-	faHeart,
-	faStar,
 } from "@fortawesome/free-solid-svg-icons";
-import {faCodeFork} from "@fortawesome/free-solid-svg-icons/faCodeFork";
 import {faList} from "@fortawesome/free-solid-svg-icons/faList";
 import {faCannabis} from "@fortawesome/free-solid-svg-icons/faCannabis";
-import {faFutbol} from "@fortawesome/free-solid-svg-icons/faFutbol";
-import {faBaseball} from "@fortawesome/free-solid-svg-icons/faBaseball";
 import "./Header.css";
-import {NavLink, Link} from "react-router-dom";
+import {NavLink,useLocation } from "react-router-dom";
 import DropdownMenuComponent from "../Parts/DropdownMenuComponent";
-
+import Secondarymenu from "../pages/parts/Secondarymenu";
 function Header(props)
 {
 	const regLink =
@@ -39,6 +29,7 @@ function Header(props)
 		      "https://m.codere.com.co/deportescolombia/#/HomePage?openlogin=true";
 	const LOGO =
 		      "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/SponsorsLogoGrey.png";
+	const location = useLocation();
 
 	// Hooks
 
@@ -109,7 +100,8 @@ function Header(props)
 	]
 
 	return (
-		<Navbar className="header_nav stroke" variant="dark">
+		<>
+			<Navbar className="header_nav stroke" variant="dark">
 			{props.flag ? (
 				<div id="father">
 					<div id="outer-container" onClick={hamburgerHandler}>
@@ -363,8 +355,17 @@ function Header(props)
 					</Button>
 				</Container>
 			)}
+
 		</Navbar>
+			{location.pathname.includes("casino") ? (
+				<Secondarymenu />
+			) : (
+				<></>
+			)}
+
+</>
 	);
+
 }
 
 export default Header;

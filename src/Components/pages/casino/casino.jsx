@@ -1,4 +1,4 @@
-import Navbar from "../parts/Navbar";
+import Secondarymenu from "../parts/Secondarymenu";
 import Floating from "../parts/Floating";
 import {
 	Container,
@@ -291,7 +291,6 @@ export default function Casino(props)
 				<script type="application/ld+json">{JSON.stringify(json)}</script>
 			</Helmet>
 
-			<Navbar />
 			<Floating text="¡El mejor Casino!" juega={true}/>
 			<div
 				className="top-bg-seo "

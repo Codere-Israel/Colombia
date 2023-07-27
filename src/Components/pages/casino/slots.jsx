@@ -1,4 +1,4 @@
-import Navigations from "../parts/Navigations";
+import Secondarymenu from "../parts/Secondarymenu";
 import Floating from "../parts/Floating";
 import {
 	Container,
@@ -15,7 +15,6 @@ import TableOfContents from "../parts/TableOfContents";
 import "./localCSS/casinoLocal.css";
 // import { regis } from "../../App/App";
 import {useEffect} from "react";
-import Navbar from "../parts/Navbar";
 
 export default function Slots(props)
 {
@@ -275,7 +274,6 @@ export default function Slots(props)
 				<script type="application/ld+json">{JSON.stringify(json)}</script>
 			</Helmet>
 
-			<Navbar/>
 			<Floating text="¡Los mejores Slots!" juega={true}/>
 			<div
 				className="top-bg-seo "

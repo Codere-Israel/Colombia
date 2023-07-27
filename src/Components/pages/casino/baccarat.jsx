@@ -1,4 +1,4 @@
-import Navigations from "../parts/Navigations";
+import Navigations from "../parts/Secondarymenu";
 import Floating from "../parts/Floating";
 import {
 	Container,
@@ -15,7 +15,7 @@ import TableOfContents from "../parts/TableOfContents";
 import "./localCSS/casinoLocal.css";
 // import { regis } from "../../App/App";
 import {useEffect} from "react";
-import Navbar from "../parts/Navbar";
+import Secondarymenu from "../parts/Secondarymenu";
 import DynamicAccordion from "../parts/DynamicAccordion";
 
 export default function Baccarat(props)
@@ -308,7 +308,6 @@ export default function Baccarat(props)
 				<script type="application/ld+json">{JSON.stringify(json)}</script>
 			</Helmet>
 
-			<Navbar />
 			<Floating text="¡Elegante y emociónate!" juega={true}/>
 			<div
 				className="top-bg-seo "

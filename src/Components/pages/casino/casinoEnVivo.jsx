@@ -1,4 +1,3 @@
-import Navigations from "../parts/Navigations";
 import Floating from "../parts/Floating";
 import {
 	Container,
@@ -14,7 +13,6 @@ import TableOfContents from "../parts/TableOfContents";
 import "./localCSS/casinoLocal.css";
 // import { regis } from "../../App/App";
 import {useEffect} from "react";
-import Navbar from "../parts/Navbar";
 import DynamicAccordion from "../parts/DynamicAccordion";
 export default function CasinoEnVivo(props)
 {
@@ -216,7 +214,7 @@ export default function CasinoEnVivo(props)
 				<script type="application/ld+json">{JSON.stringify(json)}</script>
 			</Helmet>
 
-			<Navbar />
+
 			<Floating text="¡El mejor Casino En Vivo!" juega={true}/>
 			<div
 				className="top-bg-seo "

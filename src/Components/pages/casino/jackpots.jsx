@@ -1,4 +1,4 @@
-import Navigations from "../parts/Navigations";
+import Navigations from "../parts/Secondarymenu";
 import Floating from "../parts/Floating";
 import {
 	Container,
@@ -13,9 +13,7 @@ import {LazyLoadImage} from "react-lazy-load-image-component";
 import DynamicTable from "../parts/DynamicTable"
 import TableOfContents from "../parts/TableOfContents";
 import "./localCSS/casinoLocal.css";
-// import { regis } from "../../App/App";
 import {useEffect} from "react";
-import Navbar from "../parts/Navbar";
 
 export default function Jackpots(props)
 {
@@ -312,7 +310,6 @@ export default function Jackpots(props)
 				{/*<script type="application/ld+json">{JSON.stringify(json)}</script>*/}
 			</Helmet>
 
-			<Navbar/>
 			<Floating text="¡Los mejores Jackpots!" juega={true}/>
 			<div
 				className="top-bg-seo "

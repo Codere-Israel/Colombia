@@ -1,4 +1,3 @@
-import Navigations from "../parts/Navigations";
 import Floating from "../parts/Floating";
 import {
 	Container,
@@ -14,7 +13,7 @@ import TableOfContents from "../parts/TableOfContents";
 import "./localCSS/casinoLocal.css";
 // import { regis } from "../../App/App";
 import {useEffect} from "react";
-import Navbar from "../parts/Navbar";
+import Secondarymenu from "../parts/Secondarymenu";
 
 export default function Blackjack(props)
 {
@@ -218,7 +217,9 @@ export default function Blackjack(props)
 				<script type="application/ld+json">{JSON.stringify(json)}</script>
 			</Helmet>
 
-			<Navbar />
+
+
+
 			<Floating text="¡El mejor BlackJack!" juega={true}/>
 			<div
 				className="top-bg-seo "

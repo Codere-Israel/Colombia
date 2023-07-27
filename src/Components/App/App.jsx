@@ -33,7 +33,6 @@ import Baccarat from "../pages/casino/baccarat";
 import casinoEnVivo from "../pages/casino/casinoEnVivo";
 import CasinoEnVivo from "../pages/casino/casinoEnVivo";
 import Bingo from "../pages/casino/bingo";
-
 export const isMobileContext = React.createContext();
 export const isMobileDT = isMobile;
 

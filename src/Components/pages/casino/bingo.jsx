@@ -1,4 +1,3 @@
-import Navigations from "../parts/Navigations";
 import Floating from "../parts/Floating";
 import {
 	Container,
@@ -14,7 +13,7 @@ import TableOfContents from "../parts/TableOfContents";
 import "./localCSS/casinoLocal.css";
 // import { regis } from "../../App/App";
 import {useEffect} from "react";
-import Navbar from "../parts/Navbar";
+import Secondarymenu from "../parts/Secondarymenu";
 import DynamicAccordion from "../parts/DynamicAccordion";
 
 export default function Bingo(props)
@@ -274,7 +273,6 @@ const preguntasFrecuentes = [
 				<script type="application/ld+json">{JSON.stringify(json)}</script>
 			</Helmet>
 
-			<Navbar />
 			<Floating text="¡La versión moderna!" juega={true}/>
 			<div
 				className="top-bg-seo "

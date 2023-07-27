@@ -8,7 +8,6 @@ import DynamicTable from "../parts/DynamicTable"
 import TableOfContents from "../parts/TableOfContents";
 import "./localCSS/casinoLocal.css";
 import {useEffect} from "react";
-import Navbar from "../parts/Navbar";
 
 export default function Ruleta(props)
 {
@@ -151,8 +150,6 @@ export default function Ruleta(props)
 			<meta name="description" content={description}/>
 			<script type="application/ld+json">{JSON.stringify(json)}</script>
 		</Helmet>
-
-		<Navbar />
 		<Floating text="¡Las mejores Ruletas!" juega={true}/>
 		<div
 			className="top-bg-seo "
