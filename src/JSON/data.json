@@ -1,13 +1,6 @@
 {
   "desktop_slide_list": [
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/girls-desktop.jpg",
-      "img_alt": "girls",
-      "tycLink": "https://m.codere.com.co/deportescolombia/#/PromotionsPage?url=https://www.codere.com.co/PromosCO/actives/Codere_Con_Ellas.aspx",
-      "scheduled": false,
-      "data": {}
-    },
-    {
       "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-desktop.jpg",
       "img_alt": "champions-league",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
@@ -101,13 +94,6 @@
     }
   ],
   "mobile_slide_list": [
-    {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/girls-mobile.jpg",
-      "img_alt": "girls",
-      "tycLink": "https://m.codere.com.co/deportescolombia/#/PromotionsPage?url=https://www.codere.com.co/PromosCO/actives/Codere_Con_Ellas.aspx",
-      "scheduled": false,
-      "data": {}
-    },
     {
       "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-mobile.jpg",
       "img_alt": "champions-league",

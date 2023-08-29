@@ -1,0 +1,24 @@
+{
+  "desktop_slide_list": [
+    {
+      "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-desktop.jpg",
+      "img_alt": "champions-league",
+      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
+      "scheduled": false,
+      "data": {
+        "display": false
+      }
+    }
+  ],
+  "mobile_slide_list": [
+    {
+      "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-mobile.jpg",
+      "img_alt": "champions-league",
+      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
+      "scheduled": false,
+      "data": {
+        "display": false
+      }
+    }
+  ]
+}

@@ -1,15 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color:#252a30 !important;
+/* For LOCAL env */
+
+@font-face {
+  font-family: Codere;
+  src: url(./Fonts/HighSchool-V3.1.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;   
+/* For PRODUCTION */
+@font-face {
+  font-family: Codere;
+  src: url(https://www.codere.com.co/Fonts/HighSchool-V3.1.c78c7153ed9023134905.ttf);
+  font-display: fallback;
 }
- 
+
+@font-face {
+  font-family: Codere-Roboto;
+  src: url(https://www.codere.com.co/Fonts/roboto-condensed-all-400-normal.242461da0ded06ef3693.woff);
+  font-display: fallback;
+}
