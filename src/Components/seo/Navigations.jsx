@@ -13,7 +13,7 @@ export default function Navigations(props) {
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    gap: "2rem",
+    gap: "1rem",
   };
   const eNavStyleMobile = {
     display: "flex",

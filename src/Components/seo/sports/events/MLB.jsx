@@ -307,7 +307,7 @@ const MLB = (props) => {
         <Button
           href="https://m.codere.com.co/deportescolombia/#/RegistroCONewPage"
           style={{ margin: "auto", fontSize: "1.35rem", padding: "10px 35px" }}
-          className="registrate-button mt-5"
+          className="seo-reg-btn mt-5"
         >
           Regístrate
         </Button>

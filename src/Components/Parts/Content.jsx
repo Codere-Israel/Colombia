@@ -1,7 +1,6 @@
 import { Zoom } from "react-awesome-reveal";
 import { Accordion, Button, Table } from "react-bootstrap";
 import React from "react";
-import BottomRegistrateButton from "./BottomRegistrateButton";
 
 var questions = [
   "¿Cuál es el mejor mercado para las apuestas deportivas?",
@@ -281,8 +280,7 @@ function Content(props) {
         bordered
         hover
         variant="dark"
-        style={{ width: "850px", maxWidth: "95%" }}
-        className="mt-4"
+        className="responsive-table mt-4"
       >
         <tbody>
           <tr>
@@ -358,8 +356,6 @@ function Content(props) {
         >
           Regístrate
         </Button>
-        {/* <BottomRegistrateButton />
-         */}
       </section>
     </div>
   );

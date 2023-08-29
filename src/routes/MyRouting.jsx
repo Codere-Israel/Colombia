@@ -78,7 +78,7 @@ export default function MyRouting(props) {
         />
       ) : null}
       <Routes>
-        {!cookieExist("xxx-seg-xxx-mented-xxx") ? (
+        {!cookieExist("xxx-segmented-xxx") ? (
           <Route exact path="/" element={<Inicio flag={props.flag} />} />
         ) : (
           <Route

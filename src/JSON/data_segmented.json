@@ -20,5 +20,27 @@
         "display": false
       }
     }
+  ],
+  "casino_games_list": [
+    {
+      "image": "https://www.codere.com.co/Colombia/images/seoCasinoImages/casino/PTPremiumBlackjack_Square.jpg",
+      "name": "PremiumBlackjack",
+      "supplier": "PT"
+    },
+    {
+      "image": "https://www.codere.com.co/Colombia/images/seoCasinoImages/casino/PTLiveQuantumRoulette_Square.jpg",
+      "name": "LiveQuantumRoulette",
+      "supplier": "PT"
+    },
+    {
+      "image": "https://www.codere.com.co/Colombia/images/seoCasinoImages/casino/PRPAviator_Square.jpg",
+      "name": "Aviator",
+      "supplier": "PRP"
+    },
+    {
+      "image": "https://www.codere.com.co/Colombia/images/seoCasinoImages/casino/PTPharaohsDaughter_Square.jpg",
+      "name": "PharaohsDaughter",
+      "supplier": "PT"
+    }
   ]
 }

@@ -2,7 +2,9 @@ import { Helmet } from "react-helmet";
 import "@fontsource/roboto-condensed";
 import { useState } from "react";
 import MySwiper from "./Parts/MySwiper";
-import banners from "../JSON/data_segmented.json";
+import data from "../JSON/data_segmented.json";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const InicioSegmented = (props) => {
   const regis = "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage";
@@ -101,12 +103,68 @@ const InicioSegmented = (props) => {
 
       <div id="first-section">
         <MySwiper
-          banners={banners}
+          banners={data}
           regis={regis}
           flag={props.flag}
           setShowTimer={setShowTimer}
         />
       </div>
+      <Container>
+        <div className="segmented-wrapper">
+          <h2 className="codere-green align-center uppercase">
+            Mejor juegos de casino
+          </h2>
+          <Row className="casino-row" style={{ margin: "-24px 0 12px 0" }}>
+            {data.casino_games_list.map((game, k) => (
+              <Col lg={2} md={4} xs={6} key={k}>
+                <LazyLoadImage className="casino-game-img" src={game.image} />
+              </Col>
+            ))}
+          </Row>
+        </div>
+        <div className="segmented-wrapper mt-4">
+          <Row>
+            <Col md={6}>
+              <h3 className="codere-green align-left uppercase">
+                Casa de apuestas oficial
+              </h3>
+              <p className="grey">
+                ¡Bienvenido a la mejor casa de apuestas en línea de Argentina!
+                Hace tiempo venimos disfrutando juntos de un mundo de
+                entretenimientos y ahora te brindamos la posibilidad de que te
+                diviertas de manera online.
+              </p>
+              <Button className="segmented-button uppercase">
+                Aposta en vivo &gt;
+              </Button>
+            </Col>
+            <Col md={6}>
+              <LazyLoadImage src={""} />
+            </Col>
+          </Row>
+        </div>
+        <div className="segmented-wrapper mt-4">
+          <Row style={{ flexDirection: "row-reverse" }}>
+            <Col md={6}>
+              <h3 className="codere-green align-left uppercase">
+                Casino En Vivo
+              </h3>
+              <p className="grey">
+                ¡Bienvenido a la mejor casa de apuestas en línea de Argentina!
+                Hace tiempo venimos disfrutando juntos de un mundo de
+                entretenimientos y ahora te brindamos la posibilidad de que te
+                diviertas de manera online.
+              </p>
+              <Button className="segmented-button uppercase">
+                Ver Mas &gt;
+              </Button>
+            </Col>
+            <Col md={6}>
+              <LazyLoadImage src={""} />
+            </Col>
+          </Row>
+        </div>
+      </Container>
     </>
   );
 };

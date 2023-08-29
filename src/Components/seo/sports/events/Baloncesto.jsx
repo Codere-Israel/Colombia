@@ -10,12 +10,6 @@ import {
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Floating from "../../Floating";
 
-// import "../pages.css";
-// import "../pagesMobile.css";
-// import "./apuestasMundialBaloncesto.css";
-// import articleStructuredData from "../../../pages/apuestasMundialBaloncesto/articleStructuredData.json";
-// import BottomRegistrateButton from "../../../Parts/BottomRegistrateButton";
-
 const Baloncesto = (props) => {
   const prefix =
     "https://www.codere.com.co/Colombia/images/seo-sport/eventos-dep/basketball";
@@ -470,8 +464,7 @@ const Baloncesto = (props) => {
 
         <Button
           href="https://m.codere.com.co/deportescolombia/#/RegistroCONewPage"
-          style={{ margin: "auto", fontSize: "1.35rem", padding: "10px 35px" }}
-          className="registrate-button mt-5"
+          className="mt-5 seo-reg-btn"
         >
           Regístrate
         </Button>

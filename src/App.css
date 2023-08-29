@@ -861,6 +861,10 @@ h1.bottomContentSubTitle {
     box-shadow: 1px 2px 11px 0px rgba(121, 192, 0, 0.51); */
 }
 
+.responsive-table {
+  width: 750px;
+}
+
 /* Table */
 .table {
   margin: auto;
@@ -938,8 +942,17 @@ h1.bottomContentSubTitle {
   color: #79c000;
 }
 
-.seo h1 {
-  /* text-align: left !important; */
+.seo-reg-btn {
+  border-radius: 30px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.55rem;
+  font-weight: 600;
+  padding: 4px 25px;
+  max-width: 200px;
+  background: linear-gradient(180deg, #0587f5, #0263b5);
 }
 
 .seo-questions {
@@ -954,6 +967,45 @@ h1.bottomContentSubTitle {
 }
 
 /* End Tabs */
+
+/* Segmented */
+.segmented-wrapper {
+  background-color: #00000015;
+  padding: 8px 10px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+
+.codere-green {
+  color: #79c000;
+}
+.grey {
+  color: #efefef;
+}
+
+.segmented-button {
+  border-radius: 1.15rem;
+  border: 2px #79c000 solid;
+  background-color: unset;
+  font-weight: 500;
+  padding: 5px 25px;
+}
+.segmented-button:hover,
+.segmented-button:active,
+.segmented-button:focus {
+  border-radius: 1.15rem;
+  border: 2px #79c000 solid;
+  background-color: unset;
+}
 
 /* Content Accordion */
 #acc-section {
@@ -1269,12 +1321,9 @@ footer.nb-footer .footer-info-single p {
 #legals img {
   position: relative;
   width: 2vw;
-
-  /* margin-left: 2vw; */
   margin-right: 1vw;
 }
 
-/* } */
 .kk93845l {
   text-align: center;
   margin-top: 2vw;
@@ -1304,6 +1353,9 @@ footer.nb-footer .footer-info-single p {
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
+  .responsive-table {
+    width: 90%;
+  }
   /* Cookie */
   .cookie-btn {
     width: 92vw;
