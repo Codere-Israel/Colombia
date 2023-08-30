@@ -5,6 +5,7 @@ import MySwiper from "./Parts/MySwiper";
 import data from "../JSON/data_segmented.json";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import SportGames from "./Parts/SportGames";
 
 const InicioSegmented = (props) => {
   const regis = "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage";
@@ -109,7 +110,9 @@ const InicioSegmented = (props) => {
           setShowTimer={setShowTimer}
         />
       </div>
+
       <Container>
+        <SportGames />
         <div className="segmented-wrapper">
           <h2 className="codere-green align-center uppercase">
             Mejor juegos de casino
@@ -157,6 +160,27 @@ const InicioSegmented = (props) => {
               </p>
               <Button className="segmented-button uppercase">
                 Ver Mas &gt;
+              </Button>
+            </Col>
+            <Col md={6}>
+              <LazyLoadImage src={""} />
+            </Col>
+          </Row>
+        </div>
+        <div className="segmented-wrapper mt-4">
+          <Row>
+            <Col md={6}>
+              <h3 className="codere-green align-left uppercase">
+                todos los deportes
+              </h3>
+              <p className="grey">
+                ¡Bienvenido a la mejor casa de apuestas en línea de Argentina!
+                Hace tiempo venimos disfrutando juntos de un mundo de
+                entretenimientos y ahora te brindamos la posibilidad de que te
+                diviertas de manera online.
+              </p>
+              <Button className="segmented-button uppercase">
+                ver mas &gt;
               </Button>
             </Col>
             <Col md={6}>
