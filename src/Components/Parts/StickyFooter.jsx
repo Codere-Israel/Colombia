@@ -1,5 +1,45 @@
+import { observer } from "mobx-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrophy, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+
 // Codere StickyFooter Footer \\
-function StickyFooter() {
+const StickyFooter = observer(() => {
+  const data = [
+    {
+      url: "",
+      text: "deportes",
+      icon: null,
+    },
+    {
+      url: "",
+      text: "directo",
+      icon: null,
+    },
+    {
+      url: "",
+      text: "casino",
+      icon: null,
+    },
+  ];
+
+  const segmented_data = [
+    {
+      url: "",
+      text: "deportes",
+      icon: {},
+    },
+    {
+      url: "",
+      text: "deportes",
+      icon: {},
+    },
+    {
+      url: "",
+      text: "deportes",
+      icon: {},
+    },
+  ];
+
   return (
     <div className="sticky-footer-contatiner">
       <a
@@ -25,6 +65,6 @@ function StickyFooter() {
       </a>
     </div>
   );
-}
+});
 
 export default StickyFooter;

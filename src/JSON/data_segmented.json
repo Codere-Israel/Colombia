@@ -1,8 +1,17 @@
 {
   "desktop_slide_list": [
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-desktop.jpg",
-      "img_alt": "champions-league",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/happy-monday-desktop.jpg",
+      "img_alt": "happy-monday",
+      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
+      "scheduled": false,
+      "data": {
+        "display": false
+      }
+    },
+    {
+      "image": "https://www.codere.com.co/Colombia/images/inisio/deposit-desktop.jpg",
+      "img_alt": "deposit",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "scheduled": false,
       "data": {
@@ -12,8 +21,17 @@
   ],
   "mobile_slide_list": [
     {
-      "image": "https://www.codere.com.co/Colombia/images/inisio/champions-league-mobile.jpg",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/happy-monday-mobile.jpg",
       "img_alt": "champions-league",
+      "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
+      "scheduled": false,
+      "data": {
+        "display": false
+      }
+    },
+    {
+      "image": "https://www.codere.com.co/Colombia/images/inisio/deposit-mobile.jpg",
+      "img_alt": "deposit",
       "tycLink": "https://www.codere.com.co/PromocionesTYC/Bono_hasta_100.000.html",
       "scheduled": false,
       "data": {
@@ -24,12 +42,12 @@
   "casino_games_list": [
     {
       "image": "https://www.codere.com.co/Colombia/images/seoCasinoImages/casino/PTPremiumBlackjack_Square.jpg",
-      "name": "PremiumBlackjack",
+      "name": "Premium Blackjack",
       "supplier": "PT"
     },
     {
       "image": "https://www.codere.com.co/Colombia/images/seoCasinoImages/casino/PTLiveQuantumRoulette_Square.jpg",
-      "name": "LiveQuantumRoulette",
+      "name": "Live Quantum Roulette",
       "supplier": "PT"
     },
     {
@@ -39,7 +57,7 @@
     },
     {
       "image": "https://www.codere.com.co/Colombia/images/seoCasinoImages/casino/PTPharaohsDaughter_Square.jpg",
-      "name": "PharaohsDaughter",
+      "name": "Pharaohs Daughter",
       "supplier": "PT"
     }
   ]

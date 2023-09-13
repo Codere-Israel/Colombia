@@ -11,9 +11,11 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
 import { useState } from "react";
+import { observer } from "mobx-react";
+import myStore from "../../mobX/Store";
 var imgs = [];
 
-function MySwiper(props) {
+const MySwiper = observer((props) => {
   const [regisButtonText, setRegisButtonText] = useState("");
   const [regis, setRegis] = useState("");
 
@@ -31,8 +33,13 @@ function MySwiper(props) {
   const day = weekday[cur.getDay()];
 
   const indexHandler = (swiper) => {
-    // if (swiper.realIndex === 0) props.setShowTimer(true);
-    // else props.setShowTimer(false);
+    if (myStore.segmented) {
+      setRegisButtonText("Acceder");
+      setRegis(
+        "https://m.codere.com.co/deportescolombia/#/HomePage?openlogin=true"
+      );
+      return;
+    }
 
     imgs[swiper.realIndex].ctaText
       ? setRegisButtonText(imgs[swiper.realIndex].ctaText)
@@ -48,16 +55,6 @@ function MySwiper(props) {
       new Date() <= new Date(banner.endDate)
     );
   }
-
-  //   function BannerFilter(banner) {
-  //   console.log(`${formated} ${banner.data.timeEnd}`);
-  //   if (!banner.scheduled) return banner;
-  //   else if (banner.data.days.includes(day) && banner.data.display) {
-  //     if (new Date(`${formated} ${banner.data.timeEnd}`) < cur) {
-  //       return banner;
-  //     }
-  //   } else if (!banner.data.display && dateInBetween(banner)) return banner;
-  // }
 
   function BannerFilter(banner) {
     if (banner.data.display === true) {
@@ -83,7 +80,8 @@ function MySwiper(props) {
     }
   }
 
-  if (!props.flag) imgs = props.banners.desktop_slide_list.filter(BannerFilter);
+  if (!myStore.flag)
+    imgs = props.banners.desktop_slide_list.filter(BannerFilter);
   else imgs = props.banners.mobile_slide_list.filter(BannerFilter);
 
   return (
@@ -105,10 +103,12 @@ function MySwiper(props) {
               <img rel="preload" src={item.image} alt={item.img_alt} />
             </a>
 
-            {!props.flag ? (
+            {!myStore.flag ? (
               <div id="des-reg">
                 <Button
-                  className="central-regis gl-effect"
+                  className={`central-regis gl-effect ${
+                    myStore.segmented ? "segmentedReactSwipeButton" : ""
+                  }`}
                   href={regis}
                   rel={"nofollow"}
                 >
@@ -135,12 +135,16 @@ function MySwiper(props) {
           </SwiperSlide>
         ))}
       </Swiper>
-      {props.flag ? (
+      {myStore.flag ? (
         <>
-          <SlideButton regis={regis} regisButtonText={regisButtonText} />
+          <SlideButton
+            regis={regis}
+            regisButtonText={myStore.segmented ? "Acceder" : regisButtonText}
+            segmented={myStore.segmented}
+          />
         </>
       ) : null}
     </div>
   );
-}
+});
 export default MySwiper;

@@ -81,7 +81,7 @@
     {
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/casino-retail-desktop.webp",
       "img_alt": "NearestLocalPage",
-      "tycLink": "https://m.codere.com.co/deportescolombia/#/NearestLocalPage",
+      "tycLink": "",
       "scheduled": false,
       "data": {
         "display": false,
@@ -176,6 +176,7 @@
       "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/casino-retail-mobile.webp",
       "img_alt": "Codere casa de apuestas movil",
       "scheduled": false,
+      "tycLink": "",
       "data": {
         "display": false,
         "timeStart": "09:15",

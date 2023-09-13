@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import sportCSS from "../../CSS/games.module.css";
+import sportCSS from "../../CSS/sportgames.module.css";
 
 // import { sortByDate } from "../App";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,9 +10,11 @@ import axios from "axios";
 import { BarLoader } from "react-spinners";
 import "swiper/css/navigation";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import myStore from "../../mobX/Store";
+import { observer } from "mobx-react";
 
 const URL =
-  "https://coderesbgonlinesbsbanners.azurewebsites.net/api/feeds/leagues/3069005120/1/GetEventsByLeagueAndMarketId";
+  "https://coderesbgonlinesbsbannersco.azurewebsites.net/api/feeds/leagues/3069005120/1/GetEventsByLeagueAndMarketId";
 const headers = {
   CodereAffiliateApiKey: process.env.REACT_APP_KEY,
   CodereAffiliateApiSecret: process.env.REACT_APP_SECRET,
@@ -20,9 +22,15 @@ const headers = {
 
 const spinnerCss = { margin: "auto", marginTop: "4rem", marginBottom: "2vw" };
 
-function SportGames() {
+const SportGames = observer(() => {
   const [data, setData] = useState([]);
   const [showSpinner, setShowSpinner] = useState(true);
+
+  function americanOddsConvert(odd) {
+    return odd;
+    if (odd >= 2) return (odd - 1) * 100;
+    else return -100 / (odd - 1);
+  }
 
   function fixTeamName(str) {
     return str
@@ -30,6 +38,18 @@ function SportGames() {
       .replace(/[\u0300-\u036f]/g, "")
       .replace(/[^\x00-\x7F]/g, "")
       .replaceAll(" ", "-");
+  }
+
+  function shorthenTeamName(str) {
+    switch (str) {
+      case "Atlético Bucaramanga":
+        str = "Atl. Bucaramanga";
+        break;
+      case "Independiente Medellin":
+        str = "Ind. Medellin";
+        break;
+    }
+    return str;
   }
 
   // revoke the 1X2 from server side
@@ -42,11 +62,9 @@ function SportGames() {
         res.data
           .sort((a, b) => new Date(a.StartDate) - new Date(b.StartDate))
           .filter((item) => item.Games.length > 0)
-          .slice(0, 6)
+        // .slice(0, 6)
       );
       setShowSpinner(false);
-      // setData(res.data);
-      // console.log(data);
     });
   }, []);
 
@@ -75,9 +93,7 @@ function SportGames() {
       {showSpinner ? (
         <>
           <BarLoader color="#79c000" cssOverride={spinnerCss} />
-          <p style={{ textAlign: "center", color: "#fff" }}>
-            Copa del Mundo is Loading
-          </p>
+          <p style={{ textAlign: "center", color: "#fff" }}>Loading ...</p>
         </>
       ) : (
         <div className={sportCSS.sport_games_slider}>
@@ -85,21 +101,20 @@ function SportGames() {
             <h2
               style={{
                 color: "#79c000",
-                fontWeight: 500,
                 textTransform: "uppercase",
-                marginBottom: "2vw",
               }}
             >
-              Copa del Mundo
+              Primiera A
             </h2>
             <Swiper
+              id="sportgames"
               modules={[Autoplay, Lazy, Navigation]}
               lazy={{ loadPrevNext: true, loadPrevNextAmount: 1 }}
               autoplay={{ delay: 9400 }}
-              spaceBetween={25}
-              // slidesPerView={isMobile ? 1 : data.length < 2 ? 1 : 2}
-              slidesPerView={5}
-              loop={data.length > 1 ? true : false}
+              spaceBetween={15}
+              slidesPerView={myStore.flag ? 1.2 : data.length < 2 ? 1 : 3.1}
+              // slidesPerView={1}
+              // loop={data.length > 1 ? true : false}
             >
               {data.map((item, key) => (
                 <SwiperSlide
@@ -113,101 +128,120 @@ function SportGames() {
                         <span>{getGameHour(item.StartDate)}</span>
                       </div>
                     </Card.Header>
-                    <Row>
-                      <Col>
-                        <img
-                          style={{
-                            width: "auto",
-                            padding: "8px",
-                            marginBottom: ".25rem",
-                          }}
-                          src={
-                            "https://www.codere.com.co/landingpages/assets/shirts/" +
-                            fixTeamName(item.Games[0].Results[0].Name) +
-                            ".png"
-                          }
-                          alt={fixTeamName(item.Games[0].Results[0].Name)}
-                          width="66"
-                          height="66"
-                        />
-                        <Card.Link
-                          className={sportCSS.url}
-                          href={
-                            "https://m.codere.com.co/deportescolombia/#/HomePage?addbet=" +
-                            item.Games[0].Results[0].NodeId
-                          }
-                        >
-                          <div className={sportCSS.frame}>
-                            <div>{item.Games[0].Results[0].Name}</div>
-
-                            <div>
-                              {parseFloat(item.Games[0].Results[0].Odd).toFixed(
-                                2
-                              )}
+                    <Card.Body
+                      style={{ width: "100%", justifyContent: "center" }}
+                    >
+                      <Row className={sportCSS.row}>
+                        <Col className={sportCSS.col}>
+                          <img
+                            style={{
+                              width: "auto",
+                              padding: "8px",
+                              marginBottom: ".25rem",
+                            }}
+                            src={
+                              "https://www.codere.com.co/landingpages/assets/shirts/" +
+                              fixTeamName(item.Games[0].Results[0].Name) +
+                              ".png"
+                            }
+                            alt={fixTeamName(item.Games[0].Results[0].Name)}
+                            width="66"
+                            height="66"
+                          />
+                          <Card.Link
+                            className={sportCSS.url}
+                            href={
+                              "https://m.codere.com.co/deportescolombia/#/HomePage?addbet=" +
+                              item.Games[0].Results[0].NodeId
+                            }
+                          >
+                            <div
+                              className={`${sportCSS.frame} ${sportCSS.framed}`}
+                            >
+                              <div className={sportCSS.overflowed}>
+                                {shorthenTeamName(
+                                  item.Games[0].Results[0].Name
+                                )}
+                              </div>
+                              <div>
+                                {americanOddsConvert(
+                                  parseFloat(item.Games[0].Results[0].Odd)
+                                )
+                                  .toFixed(2)
+                                  .replaceAll(".", ",")}
+                              </div>
                             </div>
-                          </div>
-                        </Card.Link>
-                      </Col>
-                      <Col>
-                        vs
-                        <Card.Link
-                          className={sportCSS.url}
-                          href={
-                            "https://m.codere.com.co/deportescolombia/#/HomePage?addbet=" +
-                            item.Games[0].Results[1].NodeId
-                          }
-                        >
-                          <div className={sportCSS.frame}>
-                            <div>X</div>
-                            <div style={{ fontSize: "1.2rem" }}>
-                              {parseFloat(item.Games[0].Results[1].Odd).toFixed(
-                                2
-                              )}
+                          </Card.Link>
+                        </Col>
+                        <Col className={sportCSS.col}>
+                          vs
+                          <Card.Link
+                            className={sportCSS.url}
+                            href={
+                              "https://m.codere.com.co/deportescolombia/#/HomePage?addbet=" +
+                              item.Games[0].Results[1].NodeId
+                            }
+                          >
+                            <div className={sportCSS.frame}>
+                              <div>X</div>
+                              <div style={{ fontSize: "1.2rem" }}>
+                                {americanOddsConvert(
+                                  parseFloat(item.Games[0].Results[1].Odd)
+                                )
+                                  .toFixed(2)
+                                  .replaceAll(".", ",")}
+                              </div>
                             </div>
-                          </div>
-                        </Card.Link>
-                      </Col>
+                          </Card.Link>
+                        </Col>
 
-                      <Col>
-                        <LazyLoadImage
-                          style={{
-                            width: "auto",
-                            padding: "8px",
-                            marginBottom: ".25rem",
-                            transform: "scaleX(-1)",
-                          }}
-                          src={
-                            "https://www.codere.com.co/landingpages/assets/shirts/" +
-                            fixTeamName(item.Games[0].Results[2].Name) +
-                            ".png"
-                          }
-                          alt={item.Games[0].Results[2].Name.replaceAll(
-                            " ",
-                            "-"
-                          )}
-                          width="66"
-                          height="66"
-                        />
-                        <Card.Link
-                          className={sportCSS.url}
-                          href={
-                            "https://m.codere.com.co/deportescolombia/#/HomePage?addbet=" +
-                            item.Games[0].Results[2].NodeId
-                          }
-                        >
-                          <div>
-                            {item.Games[0].Results[2].Name.includes("Sur")
-                              ? "Corea Rep."
-                              : item.Games[0].Results[2].Name}
-                          </div>
-                          <div>
-                            {parseFloat(item.Games[0].Results[2].Odd).toFixed(
-                              2
+                        <Col className={sportCSS.col}>
+                          <LazyLoadImage
+                            style={{
+                              width: "auto",
+                              padding: "8px",
+                              marginBottom: ".25rem",
+                              transform: "scaleX(-1)",
+                            }}
+                            src={
+                              "https://www.codere.com.co/landingpages/assets/shirts/" +
+                              fixTeamName(item.Games[0].Results[2].Name) +
+                              ".png"
+                            }
+                            alt={item.Games[0].Results[2].Name.replaceAll(
+                              " ",
+                              "-"
                             )}
-                          </div>
-                        </Card.Link>
-                      </Col>
-                    </Row>
+                            width="66"
+                            height="66"
+                          />
+                          <Card.Link
+                            className={sportCSS.url}
+                            href={
+                              "https://m.codere.com.co/deportescolombia/#/HomePage?addbet=" +
+                              item.Games[0].Results[2].NodeId
+                            }
+                          >
+                            <div
+                              className={`${sportCSS.frame} ${sportCSS.framed}`}
+                            >
+                              <div className={sportCSS.overflowed}>
+                                {shorthenTeamName(
+                                  item.Games[0].Results[2].Name
+                                )}
+                              </div>
+                              <div>
+                                {americanOddsConvert(
+                                  parseFloat(item.Games[0].Results[2].Odd)
+                                )
+                                  .toFixed(2)
+                                  .replaceAll(".", ",")}
+                              </div>
+                            </div>
+                          </Card.Link>
+                        </Col>
+                      </Row>
+                    </Card.Body>
                   </Card>
                 </SwiperSlide>
               ))}
@@ -217,6 +251,6 @@ function SportGames() {
       )}
     </>
   );
-}
+});
 
 export default SportGames;

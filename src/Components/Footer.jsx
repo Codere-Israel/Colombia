@@ -4,13 +4,10 @@ import {
   faFacebookF,
   faInstagram,
   faXTwitter,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons/faHeadset";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube";
-import ScrollToTopButton from "./pages/parts/ScrollToTopButton";
-// import BottomBanner from "./pages/parts/BottomBanner";
-import React from "react";
-// Codere Footer \\
+
 function Footer() {
   return (
     <footer className="nb-footer mt-5">
@@ -119,9 +116,8 @@ function Footer() {
               <ul className="list-unstyled">
                 <li>
                   <a
-                    href="/ayuda/juego-responsable"
+                    href="https://www.codere.com.co/ayuda/juego-responsable"
                     target="_blank"
-                    title=""
                     rel="nofollow"
                   >
                     Juego Responsable
@@ -129,9 +125,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/ayuda/politica-de-cookies"
-                    target="_blank"
-                    title=""
+                    href="https://www.codere.com.co/ayuda/politica-de-cookies"
                     rel="nofollow"
                   >
                     Política de cookies
@@ -141,7 +135,6 @@ function Footer() {
                   <a
                     href="https://m.codere.com.co/csbgonline/condicionesgenerales/ContratoColombia.pdf"
                     target="_blank"
-                    title=""
                     rel="nofollow"
                   >
                     Contrato
@@ -151,7 +144,6 @@ function Footer() {
                   <a
                     href="http://condiciones.apuestas.codere.es/colombia/Condiciones_Colombia.html"
                     target="_blank"
-                    title=""
                     rel="nofollow"
                   >
                     Reglas Apuestas
@@ -161,7 +153,6 @@ function Footer() {
                   <a
                     href="https://m.codere.com.co/csbgonline/condicionesgenerales/politicaPrivacidadColombia.pdf"
                     target="_blank"
-                    title=""
                     rel="nofollow"
                   >
                     Política de Privacidad
@@ -171,7 +162,6 @@ function Footer() {
                   <a
                     href="https://m.codere.com.co/csbgonline/condicionesgenerales/Acuerdo_08_2020.pdf"
                     target="_blank"
-                    title=""
                     rel="nofollow"
                   >
                     Reglamentos de los juegos de <br /> suerte y azar -
@@ -182,10 +172,8 @@ function Footer() {
                   <a
                     href="https://www.codere-partners.com/"
                     target="_blank"
-                    title=""
                     rel="nofollow"
                   >
-                    {" "}
                     Afiliados de Codere
                   </a>
                 </li>
@@ -199,68 +187,50 @@ function Footer() {
               <ul className="list-unstyled">
                 <li>
                   <a
-                    href="/ayuda/resultados-y-estadisticas"
-                    target="_blank"
-                    title=""
+                    href="https://www.codere.com.co/ayuda/resultados-y-estadisticas"
                     rel="nofollow"
                   >
-                    Resultados y estadísticas{" "}
+                    Resultados y estadísticas
                   </a>
                 </li>
+                <li>
+                  <a href="https://www.codere.com.co/casino">Casino</a>
+                </li>
+                <li>
+                  <a href="https://www.codere.com.co/casino/casino-en-vivo">
+                    Casino en Vivo
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.codere.com.co/casino/ruleta">Ruleta</a>
+                </li>
+                <li>
+                  <a href="https://www.codere.com.co/casino/slots">Slots</a>
+                </li>
+                <li>
+                  <a href="https://www.codere.com.co/casino/blackjack">
+                    Blackjack
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.codere.com.co/casino/jackpots">
+                    Jackpots
+                  </a>
+                </li>
+
                 <li>
                   <a
                     href="https://m.codere.com.co/deportescolombia/#/DownloadApp"
-                    target="_blank"
-                    title=""
                     rel="nofollow"
                   >
-                    Descarga App{" "}
+                    Descarga App
                   </a>
                 </li>
                 <li>
-                  <a href="https://blog.codere.com.co" target="_blank" title="">
-                    Blog Codere{" "}
+                  <a href="https://blog.codere.com.co" target="_blank">
+                    Blog Codere
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="https://blog.codere.com.co/lo-que-viene/"
-                    target="_blank"
-                    title=""
-                    rel="nofollow"
-                  >
-                    Lo Que Viene{" "}
-                  </a>
-                </li>
-                <ul className={"footerList34u"}>
-                  <li>
-                    <a href="/casino">Casino</a>
-                  </li>
-                  <li>
-                    <a href="/casino/casino-en-vivo">Casino en Vivo</a>
-                  </li>
-                  <li>
-                    <a href="/casino/ruleta">Ruleta</a>
-                  </li>
-                  <li>
-                    <a href="/casino/slots">Slots</a>
-                  </li>
-                  <li>
-                    <a href="/casino/blackjack">Blackjack</a>
-                  </li>
-                  <li>
-                    <a href="/casino/jackpots">Jackpots</a>
-                  </li>
-                  <li>
-                    <a href="/casino/baccarat">Baccarat</a>
-                  </li>
-                  <li>
-                    <a href="/casino/video-bingo">Video Bingo</a>
-                  </li>
-                  <li>
-                    <a href="/eventos-deportivos">Eventos deportivos</a>
-                  </li>
-                </ul>
               </ul>
             </div>
           </div>
@@ -270,25 +240,27 @@ function Footer() {
 
               <ul className="list-unstyled">
                 <li>
-                  <a href="/ayuda/deposito-online" title="">
+                  <a href="https://www.codere.com.co/ayuda/deposito-online">
                     Info depósitos y cobros
                   </a>
                 </li>
                 <li>
-                  <a href="/ayuda/como-y-donde-apostar" title="">
+                  <a href="https://www.codere.com.co/ayuda/como-y-donde-apostar">
                     Cómo y dónde apostar
                   </a>
                 </li>
                 <li>
                   <a
+                    rel="nofollow"
                     href="https://m.codere.com.co/deportescolombia/#/CuotaTypePage"
-                    title=""
                   >
                     Opciones de apuesta
                   </a>
                 </li>
                 <li>
-                  <a href="/eventos-deportivos">Eventos deportivos</a>
+                  <a href="https://www.codere.com.co/eventos-deportivos">
+                    Eventos deportivos
+                  </a>
                 </li>
               </ul>
             </div>
@@ -300,14 +272,13 @@ function Footer() {
 
               <ul className="list-unstyled">
                 <li>
-                  <a href="/ayuda" title="">
+                  <a href="https://wwww.codere.com.co/ayuda" rel="nofollow">
                     Área de ayuda
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://m.codere.com.co/deportescolombia/#/ContactPage"
-                    title=""
                     target="_blank"
                   >
                     Área de contacto
@@ -316,7 +287,6 @@ function Footer() {
                 <li>
                   <a
                     href="https://api.whatsapp.com/send?phone=573112025833&amp;text=Hola%20Coderista,%0D%0A%20Bienvenido%20a%20nuestro%20soporte%20online%20al%20usuario%20%0D%0A%C2%BFEn%20que%20podemos%20ayudarte?"
-                    title=""
                     rel="nofollow"
                     target="_blank"
                     className="whatsapp"
@@ -326,19 +296,13 @@ function Footer() {
                 </li>
 
                 <li>
-                  <a
-                    href="tel:018000834313"
-                    title=""
-                    rel="nofollow"
-                    target="_blank"
-                  >
+                  <a href="tel:018000834313" rel="nofollow" target="_blank">
                     Teléfono: 01-8000-934313
                   </a>
                 </li>
                 <li>
                   <a
                     href="mailto:apuestas@codere.com"
-                    title=""
                     rel="nofollow"
                     target="_blank"
                   >
@@ -351,7 +315,7 @@ function Footer() {
         </div>
       </div>
 
-      <hr style={{ marginBottom: "2vw" }} />
+      <hr className="mb-5" />
 
       <div className="payments">
         <img
@@ -503,8 +467,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <ScrollToTopButton />
-      {/*<BottomBanner />*/}
+      {/* <ScrollToTopButton /> */}
     </footer>
   );
 }

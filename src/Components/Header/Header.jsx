@@ -2,6 +2,7 @@ import {
   Accordion,
   Button,
   Container,
+  Image,
   InputGroup,
   Nav,
   Navbar,
@@ -22,8 +23,10 @@ import {
 // import "./Header.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import DropdownMenuComponent from "../Parts/DropdownMenuComponent";
+import { observer } from "mobx-react";
+import myStore from "../../mobX/Store";
 
-function Header(props) {
+const Header = observer(() => {
   const regLink =
     "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage";
   const acceder =
@@ -82,7 +85,7 @@ function Header(props) {
   return (
     <>
       <Navbar className="header_nav stroke" variant="dark">
-        {props.flag ? (
+        {myStore.flag ? (
           <div id="father">
             <div id="outer-container">
               <Menu
@@ -182,13 +185,13 @@ function Header(props) {
               href="https://m.codere.com.co/deportescolombia/#/HomePage"
               rel="nofollow"
             >
-              <img
+              <Image
                 src={LOGO}
+                style={myStore.segmented ? { left: "-9vw" } : { left: "15px" }}
                 alt="Logo Casa de Apuestas Codere - Real Madrid "
               />
             </a>
             <div id="header_buttons">
-              {/* onClick={handleShow} */}
               <Button
                 href={acceder}
                 className="acceder-button header_btn"
@@ -196,13 +199,17 @@ function Header(props) {
               >
                 Acceder
               </Button>
-              <Button
-                href={regLink}
-                className="registrate-button header_btn"
-                rel="nofollow"
-              >
-                Regístrate
-              </Button>
+              {!myStore.segmented ? (
+                <Button
+                  href={regLink}
+                  className="registrate-button header_btn"
+                  rel="nofollow"
+                >
+                  Regístrate
+                </Button>
+              ) : (
+                <></>
+              )}
             </div>
           </div>
         ) : (
@@ -278,19 +285,21 @@ function Header(props) {
               >
                 Acceder
               </Button>
-              <Button
-                href={regLink}
-                className="registrate-button header_btn"
-                rel="nofollow"
-              >
-                Regístrate
-              </Button>
+              {!myStore.segmented ? (
+                <Button
+                  href={regLink}
+                  className="registrate-button header_btn"
+                  rel="nofollow"
+                >
+                  Regístrate
+                </Button>
+              ) : null}
             </div>
           </Container>
         )}
       </Navbar>
     </>
   );
-}
+});
 
 export default Header;
