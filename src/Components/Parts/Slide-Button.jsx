@@ -107,7 +107,11 @@ export default class SlideButton extends Component {
   render() {
     return (
       <>
-        <div className="ReactSwipeButton mobile_regis">
+        <div
+          className={`ReactSwipeButton mobile_regis ${
+            this.props.segmented ? "segmentedReactSwipeButton" : ""
+          }`}
+        >
           <a href={this.props.regis} rel={"nofollow"}>
             <div
               className={
@@ -123,7 +127,11 @@ export default class SlideButton extends Component {
                 onTouchStart={this.startDrag}
               >
                 {/* <span className="rsbcSliderArrow"></span> */}
-                <span className="rsbcSliderCircle">
+                <span
+                  className={`rsbcSliderCircle ${
+                    this.props.segmented ? "segmentedCircle" : ""
+                  }`}
+                >
                   <FontAwesomeIcon icon={faChevronRight} />
                 </span>
               </div>

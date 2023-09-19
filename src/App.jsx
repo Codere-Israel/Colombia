@@ -7,11 +7,13 @@ import Header from "./Components/Header/Header";
 import StickyFooter from "./Components/Parts/StickyFooter";
 import MyRouting from "./routes/MyRouting";
 import { Outlet } from "react-router-dom";
+import { observer } from "mobx-react";
+import myStore from "./mobX/Store";
 
 export const isMobileContext = React.createContext();
 export const isMobileDT = isMobile;
 
-const App = () => {
+const App = observer(() => {
   let fontUrl;
   switch (window.location.hostname) {
     case "localhost":
@@ -38,9 +40,9 @@ const App = () => {
   });
 
   useEffect(() => {
-    if (windowSize.width <= 768 || isMobile) setFlag(true);
-    else setFlag(false);
-    // console.log("isMobile");
+    if (windowSize.width <= 768 || isMobile) {
+      myStore.updateFlag(true);
+    } else myStore.updateFlag(false);
   }, [windowSize]);
 
   useEffect(() => {
@@ -71,9 +73,9 @@ const App = () => {
                         `}
           </style>
         </Helmet>
-        <Header flag={flag} />
+        <Header />
         <main className="mainSeoPagesColombia">
-          <MyRouting flag={flag} />
+          <MyRouting />
           <Outlet />
         </main>
         <CookieConsent
@@ -104,6 +106,6 @@ const App = () => {
       </div>
     </>
   );
-};
+});
 
 export default App;

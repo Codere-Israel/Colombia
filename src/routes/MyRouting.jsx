@@ -17,8 +17,10 @@ import Ruleta from "../Components/seo/casino/Ruleta";
 import CasinoEnVivo from "../Components/seo/casino/CasinoEnVivo";
 import AQueApostar from "../Components/seo/aQueApostar/AQueApostar";
 import InicioSegmented from "../Components/InicioSegmented";
+import { observer } from "mobx-react";
+import myStore from "../mobX/Store";
 
-export default function MyRouting(props) {
+const MyRouting = observer(() => {
   const location = useLocation();
   const [activated, setActivated] = useState(0);
 
@@ -35,6 +37,11 @@ export default function MyRouting(props) {
 
     return null;
   };
+
+  // console.log(location);
+  if (location.search.includes("tlv-segmented"))
+    document.cookie = "tlv-segmented=true";
+  myStore.updateSegmentedValue(cookieExist("tlv-segmented"));
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -78,71 +85,71 @@ export default function MyRouting(props) {
         />
       ) : null}
       <Routes>
-        {!cookieExist("xxx-segmented-xxx") ? (
-          <Route exact path="/" element={<Inicio flag={props.flag} />} />
+        {!myStore.segmented ? (
+          <Route exact path="/" element={<Inicio flag={myStore.flag} />} />
         ) : (
           <Route
             exact
             path="/"
-            element={<InicioSegmented flag={props.flag} />}
+            element={<InicioSegmented flag={myStore.flag} />}
           />
         )}
         <Route exact path="eventos-deportivos">
           <Route
             exact
             path=""
-            element={<EventosDeportivos flag={props.flag} />}
+            element={<EventosDeportivos flag={myStore.flag} />}
           />
           <Route
             exact
             path="apuestas-mundial-fifa"
-            element={<Mundial flag={props.flag} />}
+            element={<Mundial flag={myStore.flag} />}
           />
           <Route
             exact
             path="apuestas-mundial-baloncesto"
-            element={<Baloncesto flag={props.flag} />}
+            element={<Baloncesto flag={myStore.flag} />}
           />
           <Route
             exact
             path="apuestas-juego-de-las-estrellas"
-            element={<MLB flag={props.flag} />}
+            element={<MLB flag={myStore.flag} />}
           />
           <Route
             exact
             path="apuestas-superbowl"
-            element={<Superbowl flag={props.flag} />}
+            element={<Superbowl flag={myStore.flag} />}
           />
         </Route>
         {/*SEO Casino */}
         <Route exact path="casino">
-          <Route exact path="" element={<Casino flag={props.flag} />} />
+          <Route exact path="" element={<Casino flag={myStore.flag} />} />
           <Route
             exact
             path="casino-en-vivo"
-            element={<CasinoEnVivo flag={props.flag} />}
+            element={<CasinoEnVivo flag={myStore.flag} />}
           />
           <Route
             exact
             path="blackjack"
-            element={<Blackjack flag={props.flag} />}
+            element={<Blackjack flag={myStore.flag} />}
           />
-          <Route exact path="ruleta" element={<Ruleta flag={props.flag} />} />
-          <Route exact path="slots" element={<Slots flag={props.flag} />} />
+          <Route exact path="ruleta" element={<Ruleta flag={myStore.flag} />} />
+          <Route exact path="slots" element={<Slots flag={myStore.flag} />} />
           <Route
             exact
             path="jackpots"
-            element={<Jackpots flag={props.flag} />}
+            element={<Jackpots flag={myStore.flag} />}
           />
           <Route
             exact
             path="baccarat"
-            element={<Baccarat flag={props.flag} />}
+            element={<Baccarat flag={myStore.flag} />}
           />
           <Route
             exact
             path="video-bingo"
-            element={<Bingo flag={props.flag} />}
+            element={<Bingo flag={myStore.flag} />}
           />
         </Route>
 
@@ -153,4 +160,6 @@ export default function MyRouting(props) {
       </Routes>
     </>
   );
-}
+});
+
+export default MyRouting;

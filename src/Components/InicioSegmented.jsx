@@ -3,11 +3,14 @@ import "@fontsource/roboto-condensed";
 import { useState } from "react";
 import MySwiper from "./Parts/MySwiper";
 import data from "../JSON/data_segmented.json";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, NavLink, Row } from "react-bootstrap";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import SportGames from "./Parts/SportGames";
+import myStore from "../mobX/Store";
 
 const InicioSegmented = (props) => {
+  const GAME_PREFIX = "https://m.codere.com.co/deportes/#/CasinoPage?playgame=";
+
   const regis = "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage";
   const [showTimer, setShowTimer] = useState(true);
   const organization = {
@@ -19,19 +22,22 @@ const InicioSegmented = (props) => {
       "codere.co",
       "codere.com.co",
       "codere co",
+      "codere online",
+      "codere sa",
+      "codere s.a.",
     ],
     legalName: "Codere Online Colombia S.A.S.",
     url: "https://www.codere.com.co/",
     logo: "https://upload.wikimedia.org/wikipedia/commons/0/06/Codere_Logo.svg",
-    foundingDate: "1980",
+    foundingDate: "1984",
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
-      telephone: "[01-8000-975827]",
+      telephone: "[01-8000-934313]",
       email: "apuestas@codere.com",
     },
     description:
-      "Codere es la casa de apuestas deportivas y casino online #1 en Colombia. Blackjack, ruleta online, slots y muchos tipos de deporte.",
+      "La casa de apuestas deportivas y casino online #1 en Colombia. Juega en línea Blackjack, ruleta, slots y apuesta en tus deportes favoritos ⚽.",
     sameAs: [
       "https://www.facebook.com/CodereColombia",
       "https://twitter.com/CodereCO",
@@ -117,18 +123,27 @@ const InicioSegmented = (props) => {
           <h2 className="codere-green align-center uppercase">
             Mejor juegos de casino
           </h2>
-          <Row className="casino-row" style={{ margin: "-24px 0 12px 0" }}>
+          <Row className="casino-row" style={{ margin: "-10px 0 12px 0" }}>
             {data.casino_games_list.map((game, k) => (
               <Col lg={2} md={4} xs={6} key={k}>
-                <LazyLoadImage className="casino-game-img" src={game.image} />
+                <NavLink
+                  rel="nofollow"
+                  href={`${GAME_PREFIX}${game.supplier} ${game.name}`}
+                >
+                  <LazyLoadImage className="casino-game-img" src={game.image} />
+                </NavLink>
               </Col>
             ))}
           </Row>
         </div>
         <div className="segmented-wrapper mt-4">
-          <Row>
-            <Col md={6}>
-              <h3 className="codere-green align-left uppercase">
+          <Row style={myStore.flag ? { flexDirection: "column-reverse" } : {}}>
+            <Col md={6} sm={12} className="segmented_col">
+              <h3
+                className={`codere-green ${
+                  !props.flag ? "align-left" : "align-center"
+                } uppercase`}
+              >
                 Casa de apuestas oficial
               </h3>
               <p className="grey">
@@ -141,15 +156,30 @@ const InicioSegmented = (props) => {
                 Aposta en vivo &gt;
               </Button>
             </Col>
-            <Col md={6}>
-              <LazyLoadImage src={""} />
+            <Col md={6} sm={12}>
+              <LazyLoadImage
+                style={{ maxWidth: "100%" }}
+                src={
+                  "https://www.codere.com.co/assets/RiverSponsorshipImage.png"
+                }
+              />
             </Col>
           </Row>
         </div>
         <div className="segmented-wrapper mt-4">
-          <Row style={{ flexDirection: "row-reverse" }}>
-            <Col md={6}>
-              <h3 className="codere-green align-left uppercase">
+          <Row
+            style={
+              myStore.flag
+                ? { flexDirection: "column-reverse" }
+                : { flexDirection: "row-reverse" }
+            }
+          >
+            <Col md={6} sm={12} className="segmented_col">
+              <h3
+                className={`codere-green ${
+                  !props.flag ? "align-left" : "align-center"
+                } uppercase`}
+              >
                 Casino En Vivo
               </h3>
               <p className="grey">
@@ -162,15 +192,22 @@ const InicioSegmented = (props) => {
                 Ver Mas &gt;
               </Button>
             </Col>
-            <Col md={6}>
-              <LazyLoadImage src={""} />
+            <Col md={6} sm={12}>
+              <LazyLoadImage
+                style={{ maxWidth: "100%" }}
+                src={"https://www.codere.com.co/assets/LiveDealerImage.png"}
+              />
             </Col>
           </Row>
         </div>
         <div className="segmented-wrapper mt-4">
-          <Row>
-            <Col md={6}>
-              <h3 className="codere-green align-left uppercase">
+          <Row style={myStore.flag ? { flexDirection: "column-reverse" } : {}}>
+            <Col md={6} sm={12} className="segmented_col">
+              <h3
+                className={`codere-green ${
+                  !props.flag ? "align-left" : "align-center"
+                } uppercase`}
+              >
                 todos los deportes
               </h3>
               <p className="grey">
@@ -183,8 +220,11 @@ const InicioSegmented = (props) => {
                 ver mas &gt;
               </Button>
             </Col>
-            <Col md={6}>
-              <LazyLoadImage src={""} />
+            <Col md={6} sm={12}>
+              <LazyLoadImage
+                style={{ maxWidth: "100%" }}
+                src={"https://www.codere.com.co/assets/MultisportImage.png"}
+              />
             </Col>
           </Row>
         </div>
