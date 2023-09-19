@@ -49,7 +49,7 @@ export default function CasinoEnVivo(props) {
   };
 
   const top_par = {
-    h1: "Diviértete en el Casino en Vivo de Codere Colombia:\n",
+    h1: "Diviértete en el Casino en Vivo de Codere Colombia:",
     p: [],
   };
 
@@ -111,16 +111,12 @@ export default function CasinoEnVivo(props) {
 
   const como_juega = {
     id: "como_juega",
-    title1: "¿Cómo jugar en vivo en Casino Codere?\n",
+    title1: "¿Cómo jugar en vivo en Casino Codere?",
     p1: "¿Jugar en vivo? es la mejor experiencia que podrás tener, si te encanta estar en casa, pero… sin que te falte la diversión. Para jugar casino en vivo, lo primero que debes hacer es iniciar sesión en Codere, la casa de apuestas más bacana de Colombia, luego tendrás que dirigirte a la pestaña que dice “Casino en vivo”, y allá encontrarás gran variedad de juegos como: ruletas en vivo, black jack, baccarat, Hold’em, Dragon Tiger y muchas más, juegos que te harán vivir una experiencia real con croupiers que estarán ahí girando la ruleta o repartiéndose las cartas. ¡Es increíble! No esperes para vivirla.",
-    title2: "Chatea en vivo con croupiers y jugadores\n",
-    p2:
-      "Lo mejor de nuestro casino en vivo, es que es muy fácil chatear con croupiers profesionales, además, siempre podrás encontrar una sección de chat habilitado donde te emocionarás al interactuar y compartir la diversión del juego con otros usuarios / jugadores. ¡Es súper sencillo! Selecciona la opción de chat y listo, la ventana de conversación la encuentras en la parte superior derecha ¿Te animas a jugar?\n" +
-      "\n",
-    title3: "Juegos de casino en vivo\n",
-    p3:
-      "La diversión no tiene fin, y más con nuestros 49 juegos en vivo: distribuidos en 14 Ruletas, 7 Black jack, 6 Baccarat y otros 22 juegos que te pondrán a prueba. El casino online de Codere te abre las puertas a un mundo de emociones fuertes donde podrás disfrutar de los mejores juegos de Ruleta Casino online. Antes de que gire la ruleta tendrás que elegir entre la gran variedad de títulos. ¿Cuál vas a elegir hoy? ¿Ruleta americana? ¿Ruleta Europea? ¿Ruleta Francesa? Estás a un clic de disfrutar todo esto.\n" +
-      "\n",
+    title2: "Chatea en vivo con croupiers y jugadores",
+    p2: "Lo mejor de nuestro casino en vivo, es que es muy fácil chatear con croupiers profesionales, además, siempre podrás encontrar una sección de chat habilitado donde te emocionarás al interactuar y compartir la diversión del juego con otros usuarios / jugadores. ¡Es súper sencillo! Selecciona la opción de chat y listo, la ventana de conversación la encuentras en la parte superior derecha ¿Te animas a jugar?",
+    title3: "Juegos de casino en vivo",
+    p3: "La diversión no tiene fin, y más con nuestros 49 juegos en vivo: distribuidos en 14 Ruletas, 7 Black jack, 6 Baccarat y otros 22 juegos que te pondrán a prueba. El casino online de Codere te abre las puertas a un mundo de emociones fuertes donde podrás disfrutar de los mejores juegos de Ruleta Casino online. Antes de que gire la ruleta tendrás que elegir entre la gran variedad de títulos. ¿Cuál vas a elegir hoy? ¿Ruleta americana? ¿Ruleta Europea? ¿Ruleta Francesa? Estás a un clic de disfrutar todo esto.",
   };
 
   const floor2 = {
@@ -130,10 +126,8 @@ export default function CasinoEnVivo(props) {
         b1: {
           title: "21 Blackjack",
           text: [
-            "Blackjack: Seguro que muchos recordamos la mítica frase: “Ganaré, ganaré y gallinas cenaré”. Los que lograron recordarlo aprobaron el examen como cinéfilos. Ya que esta legendaria frase es una de las películas de casino más exitosas y que trata de manera diferente el hermoso juego del Blackjack. Por eso, Codere te quiere invitar a vivir la aventura de este popular juego disfrutando del blackjack online. Pero esta aventura no debe ser solo un momento de suerte. Sino que además, disfrutar y celebrar cada truco, estrategia y forma de jugar este emocionante juego. ¿Qué esperas para vivirlo?\n" +
-              "\n",
-            "Blackjack Colombia: Diviértete con uno de los juegos de cartas más populares, pero lo mejor, es que disfrutarás de una mesa hablada en español, así que: ¡Siente el sabor latino!\n" +
-              "\n",
+            "Blackjack: Seguro que muchos recordamos la mítica frase: “Ganaré, ganaré y gallinas cenaré”. Los que lograron recordarlo aprobaron el examen como cinéfilos. Ya que esta legendaria frase es una de las películas de casino más exitosas y que trata de manera diferente el hermoso juego del Blackjack. Por eso, Codere te quiere invitar a vivir la aventura de este popular juego disfrutando del blackjack online. Pero esta aventura no debe ser solo un momento de suerte. Sino que además, disfrutar y celebrar cada truco, estrategia y forma de jugar este emocionante juego. ¿Qué esperas para vivirlo?" +
+              "Blackjack Colombia: Diviértete con uno de los juegos de cartas más populares, pero lo mejor, es que disfrutarás de una mesa hablada en español, así que: ¡Siente el sabor latino!",
           ],
         },
         b2: {
@@ -153,21 +147,17 @@ export default function CasinoEnVivo(props) {
           title: "Juegode Dados",
           text: [
             "Craps Live: Un juego de dados bastante popular, atractivo tanto para los profesionales como para los novatos, Es un juego animado y de ritmo rápido con muchas formas de apostar y aún más formas de gana, y lo mejor, es que está ambientado en un estudio clandestino ¿te le medirías?",
-            "SicBo Deluxe: El juego consiste en tres dados que ruedas y cada uno se detiene al azar en uno de los números del 1 al 6, y el jugador que adivine correctamente los resultados propuestos ¡GANA! Así que anímate porque ¡Podrías estar celebrando!\\n",
+            "SicBo Deluxe: El juego consiste en tres dados que ruedas y cada uno se detiene al azar en uno de los números del 1 al 6, y el jugador que adivine correctamente los resultados propuestos ¡GANA! Así que anímate porque ¡Podrías estar celebrando!",
           ],
         },
         b5: {
           title: "Otros Juegos",
           text: [
-            'Bufalo Blitz Live: Existen más de 4.000 formas de ganar en este juego en vivo, es bastante sencillo, está dedicado a todos los animales salvajes del planeta, una máquina tragamonedas de 6 carretes, puedes obtener grandes ganancias de manera rápida ¿puedes creerlo? ¡No lo pienses más!\\n" +\n' +
-              '\t\t\t\t\t\t"\\n",\n' +
-              '\t\t\t\t\t\t"Deal or no deal: Es un juego que está de moda, es un juego multidimensional que se basa en el programa de juegos súper exitoso, compite contra otros jugadores y muestra tu suerte, para clasificar, deberás hacer girar la rueda de la bóveda del banco. ¿Quieres vivir esta emoción?\\n" +\n' +
-              '\t\t\t\t\t\t"\\n",\n' +
-              '\t\t\t\t\t\t"Crazy time: Es un juego en el que el anfitrión hace girar la gran ruedade dinero de 54 segmentos, aquí puedes ganar uno de los cuatro números o una de las cuatro caractarísticas, puedes apostar en una o varias opciones al mismo tiempo. ¿Te le medirías a descubrir este misterio?\\n" +\n' +
-              '\t\t\t\t\t\t"\\n",\n' +
-              '\t\t\t\t\t\t"Sette e Mezzo Live: Este es un emocionante juego de cartas italiano, bastante popular, un juego de siete cartas y media en línea.El objetivo del juego es tratar de hacer una puntuación de siete y medio o acercarse a ese número sumando el valor de sus cartas. ¿Estás listo (a) para emprender el viaje?\\n" +\n' +
-              '\t\t\t\t\t\t"\\n",\n' +
-              '\t\t\t\t\t\t"Spin a Win: Este es un apasionante juego interactivo que contiene una ruleta, dividida en 54 secciones iguales, marcadas con los números 1, 2, 5, 10, 20, 40, x2 o x7. Los jugadores realizarán apuestas en la sección en la que crean que se detendrá, un cursor indicará la sección ganadora en la parte superior de la ruleta cuando esta deje de girar. Aquí las apuestas paralelas como Par, Impar y Multiplicador te dan aún más posibilidades de ganar con cada tirada. ¡Haz parte de este espectáculo!',
+            "Bufalo Blitz Live: Existen más de 4.000 formas de ganar en este juego en vivo, es bastante sencillo, está dedicado a todos los animales salvajes del planeta, una máquina tragamonedas de 6 carretes, puedes obtener grandes ganancias de manera rápida ¿puedes creerlo? ¡No lo pienses más! Deal or no deal: Es un juego que está de moda, es un juego multidimensional que se basa en el programa de juegos súper exitoso, compite contra otros jugadores y muestra tu suerte, para clasificar, deberás hacer girar la rueda de la bóveda del banco. ",
+            "¿Quieres vivir esta emoción? Crazy time: Es un juego en el que el anfitrión hace girar la gran ruedade dinero de 54 segmentos, aquí puedes ganar uno de los cuatro números o una de las cuatro caractarísticas, puedes apostar en una o varias opciones al mismo tiempo. ¿Te le medirías a descubrir este misterio? Sette e Mezzo Live: Este es un emocionante juego de cartas italiano, bastante popular, un juego de siete cartas y media en línea.",
+            "El objetivo del juego es tratar de hacer una puntuación de siete y medio o acercarse a ese número sumando el valor de sus cartas.",
+            "¿Estás listo (a) para emprender el viaje? Spin a Win: Este es un apasionante juego interactivo que contiene una ruleta, dividida en 54 secciones iguales, marcadas con los números 1, 2, 5, 10, 20, 40, x2 o x7. Los jugadores realizarán apuestas en la sección en la que crean que se detendrá, un cursor indicará la sección ganadora en la parte superior de la ruleta cuando esta deje de girar. ",
+            "Aquí las apuestas paralelas como Par, Impar y Multiplicador te dan aún más posibilidades de ganar con cada tirada. ¡Haz parte de este espectáculo!",
           ],
         },
         b6: {
