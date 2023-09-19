@@ -291,13 +291,13 @@ function Footer() {
                     target="_blank"
                     className="whatsapp"
                   >
-                    WhatsApp: +573 1120 25833
+                    WhatsApp: +57 311 202 5833
                   </a>
                 </li>
 
                 <li>
-                  <a href="tel:018000834313" rel="nofollow" target="_blank">
-                    Teléfono: 01-8000-934313
+                  <a href="tel:018000975827" rel="nofollow" target="_blank">
+                    Teléfono: 01-8000-975827
                   </a>
                 </li>
                 <li>
