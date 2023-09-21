@@ -7,6 +7,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons/faHeadset";
+import { Col, Container, Row } from "react-bootstrap";
 
 function Footer() {
   return (
@@ -416,9 +417,8 @@ function Footer() {
           </a>
         </div>
       </div>
-
-      <div className="row lass7858a">
-        <div id="legals" className="col-  legalsFooterComCo ">
+      <Container className="legals-container">
+        <div id="legals">
           <img
             alt="Mayores 18 años"
             className="more18"
@@ -439,9 +439,8 @@ function Footer() {
             </a>
           </span>
         </div>
-        <div className="col- fd089">
+        <div className="aenor-wrapper">
           <a
-            className=""
             href="https://m.codere.com.co/csbgonline/condicionesgenerales/politicaseguridadinformacion.pdf"
             rel="nofollow"
           >
@@ -466,8 +465,7 @@ function Footer() {
             </span>
           </div>
         </div>
-      </div>
-      {/* <ScrollToTopButton /> */}
+      </Container>
     </footer>
   );
 }

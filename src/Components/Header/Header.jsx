@@ -181,35 +181,37 @@ const Header = observer(() => {
               </Menu>
               <main id="page-wrap"></main>
             </div>
-            <a
-              href="https://m.codere.com.co/deportescolombia/#/HomePage"
-              rel="nofollow"
-            >
-              <Image
-                src={LOGO}
-                style={myStore.segmented ? { left: "-9vw" } : { left: "15px" }}
-                alt="Logo Casa de Apuestas Codere - Real Madrid "
-              />
-            </a>
-            <div id="header_buttons">
-              <Button
-                href={acceder}
-                className="acceder-button header_btn"
+            <div className="header-menu">
+              <a
+                href="https://m.codere.com.co/deportescolombia/#/HomePage"
                 rel="nofollow"
               >
-                Acceder
-              </Button>
-              {!myStore.segmented ? (
+                <Image
+                  src={LOGO}
+                  style={myStore.segmented ? { left: "0" } : { left: "25px" }}
+                  alt="Logo Casa de Apuestas Codere - Real Madrid "
+                />
+              </a>
+              <div id="header_buttons">
                 <Button
-                  href={regLink}
-                  className="registrate-button header_btn"
+                  href={acceder}
+                  className="acceder-button header_btn"
                   rel="nofollow"
                 >
-                  Regístrate
+                  Acceder
                 </Button>
-              ) : (
-                <></>
-              )}
+                {!myStore.segmented ? (
+                  <Button
+                    href={regLink}
+                    className="registrate-button header_btn"
+                    rel="nofollow"
+                  >
+                    Regístrate
+                  </Button>
+                ) : (
+                  <></>
+                )}
+              </div>
             </div>
           </div>
         ) : (
