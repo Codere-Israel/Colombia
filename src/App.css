@@ -135,11 +135,7 @@ body {
 
 .header_nav img {
   position: relative;
-
-  /* height: 3vw; */
   width: 9.5rem;
-
-  /* height: auto; */
   margin-right: 1vw;
   left: 0;
   cursor: pointer;
@@ -257,10 +253,10 @@ body {
   background: 0 0;
   border: 1px solid #333f48;
   color: #333f48;
-  /* font-size: 0.95vw; */
-  /* line-height: 2.25vw; */
   max-height: 2rem;
   display: flex;
+  display: flex;
+  align-items: center;
   align-items: center;
   padding: 17px 11px;
   border-radius: 30px;
@@ -1331,11 +1327,27 @@ footer.nb-footer .footer-info-single p {
   color: #aaa;
 }
 
+.legals-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.aenor-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.aenor-wrapper img {
+  width: 50px;
+}
+
 #legals {
   margin: auto;
   display: flex;
   font-size: 0.7vw;
-  line-height: 1.25rem;
   text-align: left;
   color: #a1a4a6;
   justify-content: center;
@@ -1491,24 +1503,30 @@ footer.nb-footer .footer-info-single p {
 
   #header_buttons {
     display: flex;
-
+    justify-content: space-around;
     /* margin-right: 2vw; */
   }
 
   #father {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     float: right;
     align-items: center;
     /* justify-content: space-between; */
-    justify-content: space-around;
     /* margin-right: 10px; */
   }
 
+  .header-menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   #outer-container > div {
-    margin-left: -15vw;
+    /* margin-left: -15vw; */
   }
 
   .bm-item-list a {
@@ -1888,17 +1906,6 @@ footer.nb-footer .footer-info-single p {
     padding-right: 3vw;
   }
 
-  #legals {
-    display: flex;
-    font-size: 0.5rem;
-    line-height: 12px;
-    margin-bottom: 5vw;
-    text-align: center;
-    width: 82%;
-    padding-left: 0;
-    margin: auto;
-    padding-right: 0;
-  }
   span.legalFooter {
     display: block;
     width: 96%;
@@ -1917,10 +1924,6 @@ footer.nb-footer .footer-info-single p {
     font-size: 0.9rem;
     line-height: initial;
     margin: 1rem 0;
-  }
-
-  .fd089 {
-    max-width: 88%;
   }
 
   .logoColjuegos {
@@ -2123,16 +2126,6 @@ footer.nb-footer .footer-info-single p {
   height: 2.79vw !important;
   margin-right: 1vw;
 }
-.fd089 {
-  display: flex;
-  max-width: 50%;
-}
-
-.fd089 img {
-  margin-right: 1vw;
-  position: relative;
-  width: 2vw;
-}
 
 .lazyloadimg {
   margin-top: 1.5rem;
@@ -2227,25 +2220,6 @@ footer.nb-footer .footer-info-single p {
     border: unset;
     height: auto;
     width: 10rem;
-  }
-
-  #root
-    > div
-    > div:nth-child(5)
-    > footer
-    > div.row.lass7858a
-    > div.col-.fd089
-    > div {
-    padding-right: 3vw;
-  }
-
-  #legals {
-    display: flex;
-    width: 95%;
-    font-size: 0.65rem;
-    line-height: 12px;
-    text-align: center;
-    margin-bottom: 5vw;
   }
 
   .fd089 img {
