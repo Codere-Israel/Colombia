@@ -7,7 +7,7 @@ import TableOfContents from "../TableOfContents";
 export default function Slots(props) {
   const game_prefix = "https://m.codere.com.co/deportes/#/CasinoPage?playgame=";
 
-  const title = "Slots Online » Bono De $100.000 en Tragamonedas | Codere®";
+  const title = "Slots Online » Bono de $100.000 en Tragamonedas | Codere®";
   const description =
     "Disfruta en línea de las mejores máquinas tragamonedas 🎰, juega en las Slots de Casino en Codere Colombia, ¡prueba tu suerte y diviértete!";
 
