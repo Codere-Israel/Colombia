@@ -251,6 +251,11 @@ function Footer() {
                   </a>
                 </li>
                 <li>
+                  <a href="https://www.codere.com.co/ayuda/como-obtener-freebets">
+                    Cómo obtener freebets
+                  </a>
+                </li>
+                <li>
                   <a
                     rel="nofollow"
                     href="https://m.codere.com.co/deportescolombia/#/CuotaTypePage"
