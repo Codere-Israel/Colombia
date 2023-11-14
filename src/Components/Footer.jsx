@@ -221,7 +221,7 @@ function Footer() {
 
                 <li>
                   <a
-                    href="https://m.codere.com.co/deportescolombia/#/DownloadApp"
+                    href="https://www.codere.com.co/ayuda/apuesta-en-tu-movil"
                     rel="nofollow"
                   >
                     Descarga App
