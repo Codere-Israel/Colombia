@@ -4,48 +4,44 @@ import { isMobile } from "react-device-detect";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Navigations(props) {
-  const prefix = !props.type
-    ? "https://www.codere.com.co/Colombia/images/seo-sport/icons/"
-    : "https://www.codere.com.co/Colombia/images/casinoIcons/";
+  const prefix = "https://www.codere.es/Spain/assets/seoPages/icons/";
 
   const eNavStyleDesktop = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    gap: "1rem",
+    gap: "2rem",
   };
   const eNavStyleMobile = {
     display: "flex",
+    justifyContent: "center",
     alignItems: "center",
-    justifyContent: `${props.type ? "unset" : "center"}`,
     textAlign: "center",
-    paddingLeft: "1.25rem",
-    paddingRight: "1.25rem",
     gap: "1rem",
   };
 
   const navs = [
     [
       {
-        icon: "mundial",
-        title: "Mundial",
-        url: "/eventos-deportivos/apuestas-mundial-fifa",
-      },
-      {
         icon: "baloncesto",
         title: "Baloncesto",
         url: "/eventos-deportivos/apuestas-mundial-baloncesto",
       },
       {
-        icon: "mlb",
-        title: "MLB",
-        url: "/eventos-deportivos/apuestas-juego-de-las-estrellas",
+        icon: "formula1",
+        title: "Grand Prix",
+        url: "/eventos-deportivos/apuestas-grand-prix",
       },
       {
-        icon: "superbowl",
-        title: "Superbowl",
-        url: "/eventos-deportivos/apuestas-superbowl",
+        icon: "mundial",
+        title: "Mundial",
+        url: "/eventos-deportivos/apuestas-mundial-fifa",
+      },
+      {
+        icon: "esports",
+        title: "Esports",
+        url: "/eventos-deportivos/apuestas-esport",
       },
     ],
     [
@@ -79,15 +75,37 @@ export default function Navigations(props) {
         title: "Jackpots",
         url: "/casino/jackpots",
       },
+    ],
+    [
       {
-        icon: "baccarat",
-        title: "Baccarat",
-        url: "/casino/baccarat",
+        icon: "soccer",
+        title: "Futbol",
+        url: "/cuotas-deportivas/apuestas-futbol",
       },
       {
-        icon: "bingo",
-        title: "Bingo",
-        url: "/casino/video-bingo",
+        icon: "baloncesto",
+        title: "Baloncesto",
+        url: "/cuotas-deportivas/apuestas-baloncesto",
+      },
+      {
+        icon: "tenis",
+        title: "Tenis",
+        url: "/cuotas-deportivas/apuestas-tenis",
+      },
+      {
+        icon: "cycling",
+        title: "Ciclismo",
+        url: "/cuotas-deportivas/apuestas-ciclismo",
+      },
+      {
+        icon: "formula1",
+        title: "F1",
+        url: "/cuotas-deportivas/apuestas-formula1",
+      },
+      {
+        icon: "boxeo",
+        title: "UFC",
+        url: "/cuotas-deportivas/apuestas-ufc",
       },
     ],
   ];

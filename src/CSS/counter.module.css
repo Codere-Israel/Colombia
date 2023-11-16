@@ -1,24 +1,25 @@
 /* For STG env */
 
-/*@font-face {*/
-/*  font-family: Codere;*/
-/*  src: url(../fonts/HighSchool-V3.1.ttf);*/
-/*}*/
+@font-face {
+  font-family: Codere;
+  src: url(../fonts/HighSchool-V3.1.ttf);
+}
 
 /* https://www.codere.com.co/Fonts/HighSchool-V3.1.c78c7153ed9023134905.ttf */
-
 /* For PRD */
-/*@font-face {*/
-/*  font-family: Codere;*/
-/*  src: url(https://www.codere.com.co/Fonts/HighSchool-V3.1.c78c7153ed9023134905.ttf);*/
-/*  font-display: fallback;*/
-/*}*/
+@font-face {
+  font-family: Codere;
+  src: url(https://www.codere.com.co/Fonts/HighSchool-V3.1.c78c7153ed9023134905.ttf);
+  font-display: fallback;
+}
 
-/*@font-face {*/
-/*  font-family: Codere-Roboto;*/
-/*  src: url(https://www.codere.com.co/Fonts/roboto-condensed-all-400-normal.242461da0ded06ef3693.woff);*/
-/*  font-display: fallback;*/
-/*}*/
+@font-face {
+  font-family: Codere-Roboto;
+  src: url(https://www.codere.com.co/Fonts/roboto-condensed-all-400-normal.242461da0ded06ef3693.woff);
+  font-display: fallback;
+}
+
+
 
 .banner_info:hover,
 .banner_info span,
@@ -44,7 +45,7 @@
   border-radius: 8px;
 }
 
-div:first-child > .banner_title {
+div:first-child>.banner_title {
   font-family: Codere;
   font-size: 2vw;
   font-weight: 400;
@@ -52,7 +53,7 @@ div:first-child > .banner_title {
   margin-top: 0.75vw;
 }
 
-div:nth-child(2) > .banner_title {
+div:nth-child(2)>.banner_title {
   font-family: Codere;
   font-size: 2.5vw;
   font-weight: 400;
@@ -60,7 +61,7 @@ div:nth-child(2) > .banner_title {
   color: #79c000;
 }
 
-div:nth-child(3) > .banner_title {
+div:nth-child(3)>.banner_title {
   font-family: Codere;
   font-size: 2.7vw;
   font-weight: 400;
@@ -71,7 +72,7 @@ div:nth-child(4) {
   opacity: 1;
 }
 
-div:nth-child(4) > .banner_title {
+div:nth-child(4)>.banner_title {
   font-size: 0.9vw;
   font-weight: 400;
   line-height: 1.85vw;
@@ -113,7 +114,6 @@ div:nth-child(4) > .banner_title {
   line-height: 3.2vw;
   text-align: center;
   font-family: Codere-Roboto;
-
   /* font-family: "Roboto Condensed"; */
 }
 
@@ -122,16 +122,15 @@ div:nth-child(4) > .banner_title {
   margin-top: -0.5vw;
 }
 
-.show_counter .countdown > p {
+.show_counter .countdown>p {
   margin: 0;
 }
 
-.show_counter .countdown > span {
+.show_counter .countdown>span {
   text-transform: uppercase;
   font-size: 0.75rem;
   line-height: 1rem;
 }
-
 
 /* End Counter */
 
@@ -173,7 +172,7 @@ div:nth-child(4) > .banner_title {
     font-size: 1.5rem;
   }
 
-  div:first-child > .banner_title {
+  div:first-child>.banner_title {
     font-family: Codere;
     font-size: 6vw;
     font-weight: 400;
@@ -181,7 +180,7 @@ div:nth-child(4) > .banner_title {
     margin-top: 3vw;
   }
 
-  div:nth-child(2) > .banner_title {
+  div:nth-child(2)>.banner_title {
     font-family: Codere;
     font-size: 8.5vw;
     font-weight: 400;
@@ -190,7 +189,7 @@ div:nth-child(4) > .banner_title {
     margin-top: 4vw;
   }
 
-  div:nth-child(3) > .banner_title {
+  div:nth-child(3)>.banner_title {
     font-family: Codere;
     font-size: 7.5vw;
     font-weight: 400;
@@ -202,7 +201,7 @@ div:nth-child(4) > .banner_title {
     opacity: 1;
   }
 
-  div:nth-child(4) > .banner_title {
+  div:nth-child(4)>.banner_title {
     font-size: 3vw;
     font-weight: 400;
     line-height: 1.85vw;

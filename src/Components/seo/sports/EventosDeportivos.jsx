@@ -1,36 +1,93 @@
-import { Link, Outlet } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import { Zoom } from "react-awesome-reveal";
-import { Button, Card, Col, Container, Image, Row } from "react-bootstrap";
+import { Button, Container, Card, Row, Col } from 'react-bootstrap';
+import './eventos-styles.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import ScrollToTop from 'react-scroll-to-top';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import Navigations from '../Navigations';
+import Floating from '../Floating';
+import { useEffect } from 'react';
 
-import "../CSS/sports.css";
-// import articleStructuredData from "./articleStructuredData.json";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import Floating from "../Floating";
+export const backTopTop = () => {
+  return (
+    <div className='scroll'>
+      <ScrollToTop
+        smooth
+        component={<FontAwesomeIcon icon={faChevronUp} />}
+      />
+    </div>
+  );
+};
 
-const EventosDeportivos = (props) => {
-  const prefix = "https://www.codere.com.co/SEOpagesImg/EventosDeportivos/";
+export default function EventosDeportivos(props) {
+  const directions = ['left', 'down', 'right', 'left'];
+  const prefix = 'https://www.codere.es/Spain/assets/seoPages/sports/';
+
+  const title = 'Apuesta en los mejores eventos desde España | Codere®';
+  const description =
+    'Encuentra aquí las guías para apostar en línea a tus eventos deportivos favoritos al rededor del mundo. Juega con Codere.';
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const data = {
+    top_games: [
+      {
+        img: 'Soccer/soccer-promo',
+        url: '/eventos-deportivos/apuestas-mundial-fifa',
+        h2: 'consejos para apostar en el Mundial',
+        game: 'Mundial',
+      },
+      {
+        img: 'Basketball/balenco-promo',
+        url: '/eventos-deportivos/apuestas-mundial-baloncesto',
+        h2: 'apuestas de la Copa del Rey Baloncesto​',
+        game: 'Basketball',
+      },
+      {
+        img: 'F1/f1-promo',
+        url: '/eventos-deportivos/apuestas-grand-prix',
+        h2: 'apuestas de Gran Premio de España',
+        game: 'Formula1',
+      },
+      {
+        img: 'Esport/esports-promo',
+        url: '/eventos-deportivos/apuestas-esport',
+        h2: 'Guía de apuestas para Esports',
+        game: 'Esports',
+      },
+    ],
+  };
 
   const cardGenerator = (g, i) => {
     return (
-      <Col md={6} xs={6} key={i}>
-        <Card style={{ maxWidth: "500px" }} className={`eventos_card`}>
-          <Link style={{ textDecoration: "unset" }} to={g.url}>
-            <Card.Header as={"h2"}>{!props.flag ? g.h2 : g.game}</Card.Header>
+      <Col
+        md={6}
+        xs={6}
+        key={i}>
+        <Card className={`eventos_card`}>
+          <Link
+            style={{ textDecoration: 'unset' }}
+            to={g.url}>
+            <Card.Header as={'h2'}>{!props.flag ? g.h2 : g.game}</Card.Header>
           </Link>
           <Card.Body>
-            <LazyLoadImage src={prefix + g.img + ".webp"} />
+            <LazyLoadImage src={`${prefix}${g.img}.jpg`} />
           </Card.Body>
           <Card.Footer>
-            <Link rel="nofollow" to={g.url}>
+            <Link
+              rel='nofollow'
+              to={g.url}>
               <Button
-                as="span"
+                as='span'
                 style={{
-                  width: "100%",
+                  width: '100%',
                   fontWeight: 600,
-                  borderRadius: "1rem",
-                }}
-              >
+                  borderRadius: '1rem',
+                }}>
                 VER INFORMACIÓN
               </Button>
             </Link>
@@ -40,65 +97,32 @@ const EventosDeportivos = (props) => {
     );
   };
 
-  const data = {
-    top_games: [
-      {
-        img: "banner-eventos-mundial",
-        url: "/eventos-deportivos/apuestas-mundial-fifa",
-        h2: "Apuestas para el Mundial",
-        game: "Mundial",
-      },
-      {
-        img: "banner-eventos-basket",
-        url: "/eventos-deportivos/apuestas-mundial-baloncesto",
-        h2: "Apuestas Mundial de Baloncesto",
-        game: "Baloncesto",
-      },
-      {
-        img: "banner-eventos-mlb",
-        url: "/eventos-deportivos/apuestas-juego-de-las-estrellas",
-        h2: "Apuestas Juego de las Estrellas MLB",
-        game: "MLB",
-      },
-      {
-        img: "banner-eventos-superbowl",
-        url: "/eventos-deportivos/apuestas-superbowl",
-        h2: "Apuestas para el Superbowl",
-        game: "Superbowl",
-      },
-    ],
-  };
-
   return (
     <>
       <Helmet>
-        <title>Apuestas de Eventos Deportivos en Colombia | Codere®</title>
+        <title>{title}</title>
         <link
-          rel="canonical"
-          href="https://www.codere.com.co/eventos-deportivos"
+          rel='canonical'
+          href='https://www.codere.es/eventos-deportivos'
         />
         <meta
-          name="description"
-          content="Conoce más acerca del mundo de los eventos deportivos y pon a prueba tu suerte en Codere, la casa de apuestas deportivas y casino online #1 en Colombia."
-        ></meta>
+          name='description'
+          content={description}
+        />
       </Helmet>
-
-      <div id="eventos">
-        <Floating text="Vive la Experiencia" juega={false} />
+      <div id='eventos'>
+        <Floating text='Deportes En Vivo' />
         <div
-          className="top-bg-seo"
+          className='top-bg-seo'
           style={{
-            backgroundImage: `url(${prefix}general-${
-              !props.flag ? "desktop" : "mobile"
-            }.jpg)`,
-            backgroundSize: "cover",
-          }}
-        ></div>
+            backgroundImage: `url(${prefix}general-${!props.flag ? 'desktop' : 'mobile'}.jpg)`,
+            backgroundSize: 'cover',
+          }}></div>
 
-        <h1 style={{ color: "#fff", textAlign: "center", padding: "1.5rem" }}>
+        <h1 style={{ color: '#fff', textAlign: 'center', padding: '1.5rem' }}>
           Los mejores Eventos Deportivos estan en Codere
         </h1>
-        <Container className="eventos-container">
+        <Container className='eventos-container'>
           <Row>
             {data.top_games.map((g, i) => {
               return cardGenerator(g, i);
@@ -108,6 +132,4 @@ const EventosDeportivos = (props) => {
       </div>
     </>
   );
-};
-<Outlet />;
-export default EventosDeportivos;
+}

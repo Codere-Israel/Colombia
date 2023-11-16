@@ -1,351 +1,427 @@
-import {
-  Container,
-  Accordion,
-  Row,
-  Col,
-  NavLink,
-  Button,
-} from "react-bootstrap";
-import { Helmet } from "react-helmet";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import Floating from "../Floating";
-import TableOfContents from "../TableOfContents";
-import DynamicTable from "../DynamicTable";
+import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import { Accordion, Col, NavLink, Row, Table } from 'react-bootstrap';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import games from './JSON/games.json';
+import TableOfContents from '../TableOfContents';
+import Floating from '../Floating';
 
-export default function Ruleta(props) {
-  const game_prefix = "https://m.codere.com.co/deportes/#/CasinoPage?playgame=";
-
-  const title = "Juega Ruleta Online en Vivo » Bono hasta $100.000 | Codere®";
-  const description =
-    "¿Cuál vas a elegir hoy? La Ruleta Coderista, Ruleta Europea, o Ruleta Francesa. Estás a un solo clic. Juega en las mejores mesas de casino en vivo de Codere";
-
+const Ruleta = (props) => {
   const json = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
     mainEntity: [
       {
-        "@type": "Question",
-        name: "¿Hay una apuesta mínima?",
+        '@type': 'Question',
+        name: '¿Cuántos tipos de ruleta online existen?',
         acceptedAnswer: {
-          "@type": "Answer",
-          text: "Los mini juegos de ruleta y las mesas de casino típicamente tienen un mínimo de apuestas, pero la apuesta mínima puede variar ampliamente dependiendo de la mesa. Cuando juegas en ruleta en vivo la apuesta mínima será de $2.500. En las demás ruletas la apuesta mínima será de $400. La mínima apuesta siempre se mostrará en la mesa. Ahora que sabes cómo participar, ¡es tiempo de jugar! Prepárate para probar tu suerte y usar tu nueva estrategia de ruleta para ganar dinero a lo grande.",
+          '@type': 'Answer',
+          text: 'Existen varios tipos de Ruleta dentro de nuestra oferta de juegos en Codere, puedes elegir la que te traiga más suerte entre: Ruleta Francesa, Ruleta Americana, Ruleta Quantum y muchas más.',
         },
       },
       {
-        "@type": "Question",
-        name: "¿Qué hace único jugar a la Ruleta en Codere?",
+        '@type': 'Question',
+        name: '¿Existe un mínimo de apuesta?',
         acceptedAnswer: {
-          "@type": "Answer",
-          text: "En el casino online de Codere encuentras la mayor cantidad de opciones en juegos de ruleta de primera línea y, además, solo por ser cliente vas a poder disfrutar de nuestras promociones constantes en Casino y en los juegos de ruleta online para ganar aún más. Además, puedes acceder a los diferentes tipos de juegos de ruleta, incluido la ruleta LIVE, desde tu smartphone, donde podrás obtener bonificaciones especiales, realizar depósitos y solicitar tus pagos, todo desde la comodidad de tu casa. ¡Piensa en tu mejor estrategia, acepta el reto y empieza apostar!",
+          '@type': 'Answer',
+          text: 'Normalmente sí, pero este mínimo puede variar ampliamente dependiendo de la mesa. Algunas mesas de ruleta tendrán un mínimo de 1€, mientras otras fijan su mínimo en 5€.',
         },
       },
     ],
   };
 
-  const top_par = {
-    h1: "Ruleta Online: Juega y diviértete en Codere",
-    p: ["En este artículo aprenderás sobre el juego de casino de la ruleta:"],
-  };
-
-  // Table of Contents  \\
   const table_of_contents_list = [
     {
-      title: "¿Cómo Jugar a la Ruleta Online?",
-      id: "anchor-1",
+      title: 'Juegos de Ruleta en Codere',
+      id: 'anchor1',
     },
     {
-      title: "Reseña de los Diferente Juegos de Ruleta",
-      id: "anchor-2",
+      title: 'Conoce las reglas para jugar a la ruleta',
+      id: 'anchor2',
     },
     {
-      title: "Estrategias y trucos para saber Cómo Ganar en la Ruleta",
-      id: "anchor-3",
+      title: 'Opciones de apuestas en la ruleta',
+      id: 'anchor3',
     },
     {
-      title: "¿Cómo es la Ruleta en Vivo?",
-      id: "anchor-4",
-    },
-    {
-      title: "Una Guía en los diferentes Tipos de Apuesta",
-      id: "anchor-5",
+      title: 'Preguntas frecuentes',
+      id: 'anchor4',
     },
   ];
 
-  // Table
-
-  const tableData = {
-    headers: ["Juego de Ruleta\t", "Bolsillos", "Ceros", "Descripción"],
-    rows: [
-      {
-        id: 1,
-        a1: "Ruleta Europea\t",
-        a2: "37",
-        a3: "1",
-        a4: "Se juega comúnmente en todo el mundo, excepto en Estados Unidos.\n",
-      },
-      {
-        id: 2,
-        a1: "Ruleta Americana\t",
-        a2: "38",
-        a3: "2",
-        a4: "Los números se encuentran ubicados en diferentes posiciones.\n",
-      },
-      {
-        id: 3,
-        a1: "Ruleta Francesa\t",
-        a2: "37",
-        a3: "1",
-        a4: "El diseño de la mesa difiere significativamente.\n",
-      },
-    ],
-  };
-
-  // Games Data
-  const live_games = [
+  const juegos = [
     {
-      name: "EVGInstantRoulette_Square",
-      img: "EVGInstantRoulette_Square",
-      urlImageTitle: "EVG%20Instant%20Roulette",
-      sponsor: "MGS",
+      h3: 'Ruleta Coderista',
+      p: 'Es la ruleta propia, exclusiva y completamente en Español de Codere. Una ruleta en la que contarás con los crupiers más amables con un chat en directo con el que podrás comunicarte con ellos para tener la mejor experiencia.',
     },
     {
-      name: "EVGLightningRoulette_Square",
-      img: "EVGLightningRoulette_Square",
-      urlImageTitle: "EVG%20Lightning%20Roulette",
-      sponsor: "MGS",
+      h3: 'Ruleta Americana',
+      p: 'La gran diferencia entre las ruletas europeas y la americana es que esta última cuenta con un doble cero entre sus números posibles de apostar.',
     },
     {
-      name: "PTLiveQuantumRoulette_Square",
-      img: "PTLiveQuantumRoulette_Square",
-      urlImageTitle: "PT%20Live%20Quantum%20Roulette",
-      sponsor: "MGS",
+      h3: 'Ruleta Europea',
+      p: 'La ruleta europea viene a ser lo mismo que la ruleta francesa. Una ruleta en la que también contarás con un crupier que te ayudará en todas tus apuestas.',
     },
     {
-      name: "EVGDoubleBallRoulette_Square",
-      img: "EVGDoubleBallRoulette_Square",
-      urlImageTitle: "EVG%20Double%20Ball%20Roulette",
-      sponsor: "MGS",
+      h3: 'Ruleta Francesa',
+      p: 'Disfruta de la verdadera ruleta jugando en Codere. La emoción te está esperando.',
     },
     {
-      name: "PTPremiumAmericanRoulette_Square",
-      img: "PTPremiumAmericanRoulette_Square",
-      urlImageTitle: "PT%20Premium%20American%20Roulette",
-      sponsor: "MGS",
+      h3: 'Ruleta Quantum',
+      p: 'La Ruleta Quantum es aquel tipo de ruleta en vivo que cuenta con multiplicadores, pudiendo obtener un bonus de hasta x500 en tu apuesta. Cada vez que la bola se pone a girar se eligen al azar dos multiplicadores con el que podemos obtener un premio superior al que nos llevaríamos haciendo una apuesta en una ruleta normal.',
     },
     {
-      name: "EVGRNGLightningRoulette_Square",
-      img: "EVGRNGLightningRoulette_Square",
-      urlImageTitle: "EVG%20RNG%20Lightning%20Roulette",
-      sponsor: "MGS",
+      h3: 'Ruleta Age of Gods ',
+      p: 'La Ruleta Age of Gods es una ruleta en vivo exclusiva que funciona de la misma manera que la ruleta americana, quitando que, la casilla del doble cero se convierte en BONUS.',
     },
   ];
 
-  const como_juega = {
-    id: "como_juega",
-
-    p: [
-      "El casino online de Codere te abre las puertas a un mundo de emociones fuertes donde podrás disfrutar de los mejores juegos de Ruleta online. Antes de que la rueda gire tendrás que elegir entre la gran variedad de títulos de los que disponemos ¿Cuál vas a elegir hoy? ¿Ruleta americana? ¿Ruleta Europea? ¿Ruleta Francesa? Estás a un clic de disfrutar todo esto. Si eres de los jugadores que les gusta ver las cosas en vivo, ¡el juego de la Ruleta LIVE es para ti! Disfruta la rapidez y facilidad de jugar a la ruleta online con la última incorporación a nuestro catálogo en línea. Cuando las personas visitan los casinos, lo primero que normalmente hacen es sentarse a jugar en las máquinas de tragamonedas, el póker o blackjack. Por alguna extraña razón, la ruleta virtual queda en segundo plano, lo cual es una lástima porque girar la rueda de ruleta es una de las experiencias de casino más emocionantes que uno puede vivir como jugador. No nos malinterpretes. Las máquinas tragamonedas y los juegos de mesa son populares por una buena razón, pero ningún otro juego combina habilidades, suerte y suspenso, como jugar a la ruleta en vivo. En este artículo te vamos a enseñar cómo jugar a la ruleta online y a mostrarte opciones y variedades que puedes combinar para crear la mejor experiencia de ruleta online.",
-    ],
-  };
-
-  const reglas = {
-    id: "anchor-1",
-    h2: "¿Cómo Jugar a la Ruleta Online?\n",
-    p: {
-      pi: [
-        "Las reglas básicas para jugar juegos de ruleta oficiales online son muy simples. Primero, hablemos sobre la rueda de la ruleta de casino como tal. La rueda de la ruleta europea tradicional está compuesta de 37 casillas enumeradas, llamadas bolsillos de colores rojos, negros y verdes. Los números pueden variar dependiendo del estilo de la ruleta que estés jugando, pero profundizaremos sobre esto más adelante.",
-
-        "Antes de que la ruleta gire, los jugadores realizan sus apuestas, colocando sus fichas, en algún número, grupo de números o color que ellos creen será el ganador. Cada grupo de números tiene un pago diferente, dependiendo de la probabilidad del resultado. Una vez que se han colocado todas las apuestas, el croupier hace girar una pequeña pelota blanca en la rueda de la ruleta. Una vez que ésta para de girar, la pelota se asentará en uno de las casillas. Quien haya elegido el número y/o color correcto de la casilla, gana la apuesta.\n" +
-          "\n",
-      ],
+  const preguntas = [
+    {
+      h3: '¿Cuántos tipos de ruleta online existen? ',
+      p: 'Existen varios tipos de Ruleta dentro de nuestra oferta de juegos en Codere, puedes elegir la que te traiga más suerte entre: Ruleta Francesa, Ruleta Americana, Ruleta Quantum y muchas más.',
     },
-
-    inner: [
-      {
-        h2: "Reseña de los Diferente Juegos de Ruleta\n",
-        id: "anchor-2",
-      },
-    ],
-  };
-
-  const estrategias = {
-    id: "anchor-3",
-    h2: "Estrategias y trucos para saber Cómo Ganar en la Ruleta\n",
-    p: [
-      "Muchos jugadores nuevos en el juego quieren saber cómo ganar en la ruleta. Preguntarse cómo ganar dinero en la ruleta es una pregunta perfectamente lógica. Si bien la ruleta está basada mayormente en habilidades, hay ciertos trucos y estrategias que un jugador puede usar para mejorar sus probabilidades de salir ganador e ir aumentando sus ganancias.",
-      "Algunas estrategias se centran en las apuestas. Uno de los métodos más comunes se llama la estrategia de Martingale. Cuando se usa Martingale, los jugadores realizan la misma apuesta en cada giro hasta que ganen. Cada vez que pierden un giro, doblan sus apuestas perdidas. Por ejemplo, una apuesta de $10.000 se convierte en una apuesta de $20.000 Martingale se basa en la teoría de que, si continuas apostando en los mismos números, la probabilidad dice que deberías ganar eventualmente.",
-    ],
-  };
-
-  const floor1 = {
-    id: "anchor-4",
-    h2: "¿Cómo es la Ruleta en Vivo?\n",
-    p: [
-      "Hay algunos jugadores que evitan jugar a la ruleta en vivo simplemente porque temen que las plataformas de apuestas online junten las probabilidades en contra de ellos. Algunas personas también prefieren la emoción creada cuando juegan a la ruleta con un dealer de la vida real.",
-      "La ruleta en vivo combina lo mejor de ambos mundos: los amantes de la ruleta pueden jugar online con dealer en vivo desde la comodidad de sus propias casas. La ruleta en vivo permite a los jugadores ver al croupier girar la rueda de ruleta en tiempo real, agregando un nivel adicional de inmersión y confianza. Cuando estés buscando tu ruleta favorita, un juego en vivo podría ser la perfecta elección.",
-    ],
-    dropdownSection: [
-      {
-        title: "Una Guía en los diferentes Tipos de Apuesta",
-        id: "",
-        data: {
-          p1: [
-            "Las apuestas de ruleta se pueden dividir en dos categorías: apuestas externas (outside bets) y apuestas internas (inside bets)\n",
-            "Las apuestas internas son apuestas que podes colocar en los números como tales. Las apuestas exteriores incluyen las apuestas directas, división, fila, seis líneas, trio, esquina y canasta.\n",
-            "Las apuestas externas se refieren a los sectores externos por fuera de la casilla del número. Hay cinco tipos de apuestas externas: rojo o negro, par o impar, 1-18 o 19-36, docenas y columnas. Las apuestas externas generalmente tienen probabilidades más altas y pagos más bajos.\n",
-          ],
-          t1: "¿Hay una apuesta mínima?",
-          p2: [
-            "Los mini juegos de ruleta y las mesas de casino típicamente tienen un mínimo de apuestas, pero la apuesta mínima puede variar ampliamente dependiendo de la mesa. Cuando juegas en ruleta en vivo la apuesta mínima será de $2.500. En las demás ruletas la apuesta mínima será de $400. La mínima apuesta siempre se mostrará en la mesa.\n",
-            "Ahora que sabes cómo participar, ¡es tiempo de jugar! Prepárate para probar tu suerte y usar tu nueva estrategia de ruleta para ganar dinero a lo grande.\n",
-          ],
-          t2: "¿Qué hace único jugar a la Ruleta en Codere?\n",
-          p3: [
-            "En el casino online de Codere encuentras la mayor cantidad de opciones en juegos de ruleta de primera línea y, además, solo por ser cliente vas a poder disfrutar de nuestras promociones constantes en Casino y en los juegos de ruleta online para ganar aún más.\n",
-            "Además, puedes acceder a los diferentes tipos de juegos de ruleta, incluido la ruleta LIVE, desde tu smartphone, donde podrás obtener bonificaciones especiales, realizar depósitos y solicitar tus pagos, todo desde la comodidad de tu casa.\n",
-            "¡Piensa en tu mejor estrategia, acepta el reto y empieza apostar!\n",
-          ],
-        },
-      },
-    ],
-  };
+    {
+      h3: '¿Existe un mínimo de apuesta? ',
+      p: 'Normalmente sí, pero este puede variar ampliamente dependiendo de la mesa. Algunas mesas de ruleta tendrán un mínimo de 1€, mientras otras fijan su mínimo en 5€.',
+    },
+  ];
 
   return (
-    <div className="cas-seo">
+    <>
       <Helmet>
-        <title>{title}</title>
-        <link rel="canonical" href="https://www.codere.com.co/casino/ruleta" />
-
-        <meta name="description" content={description} />
-        <script type="application/ld+json">{JSON.stringify(json)}</script>
+        <title>Juega a la mejor Ruleta Online de España | Codere® </title>
+        <meta
+          name='description'
+          content='¿Te gusta jugar ruleta online?, conoce todos los tipos de ruleta de nuestro casino, aprende estrategias y comienza a jugar en línea en el Casino de Codere.'
+        />
+        <link
+          rel='canonical'
+          href='https://www.codere.es/casino/ruleta'
+        />
+        <script type='application/ld+json'>{JSON.stringify(json)}</script>
       </Helmet>
-      <Floating text="¡Las mejores Ruletas!" juega={true} />
+      {/* End of SEO block */}
+
+      <Floating
+        text='¡Las mejores Ruletas!'
+        juega={true}
+      />
       <div
-        className="top-bg-seo "
+        className='top-bg-seo'
         style={{
-          backgroundImage: `url(https://www.codere.com.co/Colombia/images/seoCasinoImages/ruleta/${
-            props.flag ? "Roulette_mob" : "Roulette"
-          }.jpg)`,
-          backgroundSize: "cover",
-        }}
-      ></div>
+          backgroundImage: `url(https://www.codere.es/Spain/assets/seoPages/roulette/Roulette${
+            props.flag ? 'Mobile' : ''
+          }.webp)`,
+          backgroundSize: 'cover',
+        }}></div>
+      <div className='col-12  posRelative '>{/* <SeoPagesTopBunner data={TopBunnerData} /> */}</div>
+      <div className='container'>
+        <div className='row mb-2 mt-3'>
+          <div className='col-12'>
+            <h1 className='PageH1TitleSeoPages923'>
+              Juega a la Ruleta en vivo con crupieres de verdad
+            </h1>
+          </div>
+        </div>
 
-      <Container style={{ color: "#fff" }}>
-        <h1 className="header mt-4 mb-3">{top_par.h1}</h1>
-
-        {/* Table */}
-        {!props.flag ? (
-          <TableOfContents table={table_of_contents_list} />
-        ) : null}
-
-        {como_juega.p.map((p, k) => (
-          <p key={k}>{p}</p>
-        ))}
-
-        {/* Games */}
-        <Row className="casino-row">
-          {live_games
-            .slice(0, !props.flag ? live_games.length : 4)
-            .map((game, k) => (
-              <Col lg={2} md={4} xs={6} key={k}>
-                <NavLink href={`${game_prefix}${game.urlImageTitle}`}>
-                  <div className="cas-game-wrapper">
+        <div className='row mb-5 mt-3'>
+          <div className='col-12'>
+            <p className='text982T'>
+              No dejes de vivir la emoción de la ruleta online y disfruta en Codere de mesas en
+              vivo, y de los juegos de casino que más incluyen el uso de habilidades, suerte y
+              suspense.
+            </p>
+            {/* <p className='text982T'>En este artículo aprenderás a jugar ruleta en casino online:</p> */}
+            {!props.flag ? <TableOfContents table={table_of_contents_list} /> : null}{' '}
+          </div>
+          <a name='anchor1'></a>
+          <h2 className='PageH2TitleSeoPages923 mt-4'>Juegos de Ruleta en Codere</h2>
+          <p className=''>
+            El mejor casino online te está esperando en Codere, con todo tipo de ruletas que te
+            harán saltar de emoción. Lo que hace especial es que en las mesas de ruleta en vivo al
+            jugar continúas disfrutando la presencia e interacción con crupier y jugadores en
+            directo para que nunca pierdas la sensación de estar jugando en un Casino. Y solo te
+            preocupes por ¿Qué tipo de ruleta prefieres para jugar hoy?:
+          </p>
+          <Row className='casino-row'>
+            {games.ruleta.slice(0, !props.flag ? games.slots.length : 4).map((game, k) => (
+              <Col
+                lg={2}
+                md={4}
+                xs={6}
+                key={k}>
+                <NavLink href={game.link}>
+                  <div className='cas-game-wrapper'>
                     <LazyLoadImage
-                      className="casino-game-img shining"
-                      src={
-                        "https://www.codere.com.co/Colombia/images/seoCasinoImages/ruleta/" +
-                        game.img +
-                        ".jpg"
-                      }
+                      className='casino-game-img shining'
+                      src={game.img}
                     />
-                    <div className="hvr">
+                    <div className='hvr'>
                       <p>{game.name}</p>
-                      <LazyLoadImage src="https://www.codere.com.co/Colombia/images/casinoIcons/playHoverLogo.svg" />
+                      <LazyLoadImage src='https://www.codere.bet.ar/assets/seo/jackpotsPlayHoverLogo.svg' />
                     </div>
                   </div>
                 </NavLink>
               </Col>
             ))}
-        </Row>
-
-        <div id={reglas.id}>
-          <h2 className="mt-4 mb-3">{reglas.h2}</h2>
-          <p>{reglas.p.p5} </p>
-
-          {reglas.p.pi.map((p, k) => (
-            <p key={k}>{p}</p>
-          ))}
-        </div>
-
-        {reglas.inner.map((game, k) => (
-          <div key={k}>
-            <h2 id={game.id} className={"mt-4"}>
-              {game.h2}
-            </h2>
-            <DynamicTable table={tableData} />
-          </div>
-        ))}
-
-        <div id={estrategias.id} className="mt-4 mb-3">
-          <h2>{estrategias.h2}</h2>
-          <div className="estrategias_container">
-            {estrategias.p.map((pi, k) => (
-              <p key={k}>{pi}</p>
+          </Row>
+          <Accordion>
+            {juegos.map((j, k) => (
+              <Accordion.Item
+                eventKey={k}
+                key={k}>
+                <Accordion.Header
+                  className='PageH3TitleSeoPages923 accordionT454'
+                  as={'h3'}>
+                  {j.h3}
+                </Accordion.Header>
+                <Accordion.Body>{j.p}</Accordion.Body>
+              </Accordion.Item>
             ))}
-          </div>
-          <Button
-            href={
-              "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage"
-            }
-            className="cas-reg-btn"
-            rel="nofollow"
-          >
-            Registrate
-          </Button>
-        </div>
-
-        <div id={floor1.id}>
-          <h2 className="mt-4 mb-3">{floor1.h2}</h2>
-          <div className="estrategias_container">
-            {floor1.p.map((pi, k) => (
-              <p key={k}>{pi}</p>
+          </Accordion>
+          <a name='anchor2'></a>
+          <h2 className='PageH2TitleSeoPages923'>
+            Conoce las reglas para jugar a la ruleta en línea
+          </h2>
+          <p className='text982T'>
+            La ruleta es un juego de azar en el que los jugadores apuestan a qué número, al grupo de
+            números o al color en el que caerá la bola en el cilindro giratorio. El cilindro tiene
+            36 números (del 1 al 36) alternando en color entre rojo y negro, además de un número 0
+            (y en la ruleta americana, un 00 adicional).
+          </p>
+          <p>Hay dos categorías principales de apuestas en la ruleta: </p>
+          <Table
+            style={{ width: '100%' }}
+            striped
+            bordered
+            hover
+            variant='dark'
+            className='mb-5'>
+            <thead>
+              <tr>
+                <th>Categorias</th>
+                <th>Descripción:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Internas</td>
+                <td>
+                  Se colocan en números específicos (pleno) o en combinaciones de números adyacentes
+                </td>
+              </tr>
+              <tr>
+                <td>Externas</td>
+                <td>
+                  Mientras que las apuestas externas se realizan en áreas más amplias, como colores,
+                  docenas o números pares/impares.
+                </td>
+              </tr>
+            </tbody>
+          </Table>
+          <h3 className='PageH2TitleSeoPages923'>Tipos de apuestas </h3>
+          <p className='text982T'>
+            Existen varios tipos de apuesta existentes y en Codere en línea te los vamos a explicar
+            todos:
+          </p>
+          <Table
+            style={{ width: '100%' }}
+            striped
+            bordered
+            hover
+            variant='dark'
+            className='mb-6'>
+            <thead>
+              <tr>
+                <th>Apuesta</th>
+                <th>Descripción</th>
+                <th>Pago</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Rojo/Negro</td>
+                <td>
+                  Se apuesta si será rojo o negro, el color del número ganador. En esta apuesta se
+                  juega a 18 números (en la ruleta hay 18 números rojos y 18 números negros.)
+                </td>
+                <td>1x1</td>
+              </tr>
+              <tr>
+                <td>Par/Impar </td>
+                <td>
+                  Se apuesta si el número ganador será par o impar. Aquí apuestas a 18 opciones para
+                  o 18 opciones impar
+                </td>
+                <td>1x1</td>
+              </tr>
+              <tr>
+                <td>Pasa/Falta </td>
+                <td>
+                  Consiste en apostar si el número estará entre los números del 1 al 18 (falta) o
+                  entre los números del 19 al 36 (pasa). Jugando así con 18 números.
+                </td>
+                <td>1x1</td>
+              </tr>
+              <tr>
+                <td>Docena </td>
+                <td>
+                  Puede apostar a un conjunto de doce números al colocar una ficha en un área
+                  marcada para cada fila. Si gana uno de los 12 números de la línea que usted
+                  seleccionó, recibirá un pago de 2:1. Tenga en cuenta que usted pierde su apuesta
+                  si el resultado es cero(0).
+                </td>
+                <td>1x1</td>
+              </tr>
+              <tr>
+                <td> Columna </td>
+                <td>
+                  El tapete se divide en 3 columnas, cada una de ellas alberga 12 números. Por lo
+                  cual, al apostar por una columna se juega a 12 números.
+                </td>
+                <td>2x1</td>
+              </tr>
+              <tr>
+                <td>Dos docenas </td>
+                <td>
+                  Se trata de apostar en qué columna estará el número ganador. El tapete se divide
+                  en 3 columnas, cada una de ellas alberga 12 números. Así que, al apostar por una
+                  columna se juega a 12 números
+                </td>
+                <td>0.5x1</td>
+              </tr>
+              <tr>
+                <td>Dos columnas </td>
+                <td>
+                  Se trata de apostar con una sola apuesta a dos columnas, esta apuesta solo se
+                  puede realizar para dos columnas contiguas. Recuerda, con la apuesta de dos
+                  columnas se podrá apostar a las columnas 1 y 2 o a las columnas 2 y 3. Se juega a
+                  24 números.
+                </td>
+                <td>0.5x1</td>
+              </tr>
+              <tr>
+                <td>Seisena </td>
+                <td>
+                  Se trata de apostar a 6 números con una sola apuesta. Los 6 números sobre los que
+                  se realiza este tipo de apuesta se encuentran en dos filas contiguas.
+                </td>
+                <td>5x1</td>
+              </tr>
+              <tr>
+                <td>Cuadro </td>
+                <td>
+                  Se trata de apostar a 4 números con una sola apuesta. Esta apuesta se realiza
+                  sobre 4 números que forman un cuadrado en el tapete.
+                </td>
+                <td>8x1</td>
+              </tr>
+              <tr>
+                <td>Transversal </td>
+                <td>
+                  Se trata de apostar a 3 números con una sola apuesta, con la apuesta se apuesta a
+                  los 3 números de una fila. Por ejemplo, apostar al 0, 1 y 2 o a los números 0, 2 y
+                  3.
+                </td>
+                <td>11x1</td>
+              </tr>
+              <tr>
+                <td>Caballo </td>
+                <td>
+                  Se trata de apostar a 2 números con una sola apuesta, los 2 números deberán estar
+                  contiguos en el tapete de manera horizontal o vertical.
+                </td>
+                <td>17x1</td>
+              </tr>
+              <tr>
+                <td>Pleno </td>
+                <td>
+                  Puede apostar a cualquier número, incluyendo el cero (0) colocando su ficha en el
+                  centro de un número. La apuesta máxima para esta jugada aparece bajo el panel
+                  Límites.
+                </td>
+                <td>35x1</td>
+              </tr>
+            </tbody>
+          </Table>
+          <a name='anchor3' />
+          <h2 className='PageH2TitleSeoPages923 mt-4 mb-4'>Opciones de apuestas en la ruleta</h2>
+          <h3 className='PageH3TitleSeoPages923'>Voisins du Zéro.</h3>
+          <p className='text982T'>
+            Esta apuesta abarca cada número en la rueda entre el 22 y el 25, abarca casi la mitad de
+            la rueda e incluye al cero (0).
+          </p>
+          className='accordionT454'
+          <h3 className='PageH3TitleSeoPages923 accordionT454'>Tiers du Cylindre. </h3>
+          <p className='text982T'>
+            Tiers du Cylindre o Tercios significan <strong>"un tercio de la ruleta"</strong>, esto
+            es lo más próximo posible a 1/3 de la rueda. Esta apuesta cubre los doce números que se
+            encuentran al lado opuesto de la rueda, entre el 27 y el 33, inclusive. La serie es
+            27,13,36,11,30,8,23,10,5,24,16,33 (en la ruleta de un solo cero).
+          </p>
+          <p className='text982T'>
+            La apuesta usa seis fichas en total, y se coloca una ficha en las siguientes seis
+            divisiones: 5/8; 10/11; 13/16; 23/24; 27/30; 33/36.
+          </p>
+          <h3 className='PageH3TitleSeoPages923'>Orphelins (Huérfanos).</h3>
+          <p className='text982T'>
+            Estos números representan las dos porciones de la ruleta que no abarcan las apuestas
+            Tiers y Voisins. Esta apuesta abarca ocho números en total, incluyendo 17, 34 y 6 así
+            como 1, 20, 14, 31 y 9.
+          </p>
+          <ul className='seo_list'>
+            <li>
+              <p className='text982T'>
+                <strong>- Orphelins en Plein:</strong>
+                se coloca una apuesta <strong>a un pleno (1 número)</strong> en cada posición de
+                Orphelins (huérfanos).
+              </p>
+            </li>
+            <li>
+              <p className='text982T'>
+                <strong>- Orphelins a Cheval: </strong>se coloca una ficha sobre el número 1 y una
+                ficha en cada una de las siguientes divisiones: 6/9; 14/17; 17/20 y 31/34.
+              </p>
+            </li>
+          </ul>
+          <h3 className='PageH3TitleSeoPages923 accordionT454'>Jeu 0 - Zéro</h3>
+          <p className='text982T'>
+            Es una versión más pequeña de la apuesta Voisins du Zéro. Esta apuesta cubre los números
+            entre 12 y 15, inclusive, en la ruleta. Se coloca una ficha sobre el número 26 y una
+            ficha en cada una de las siguientes divisiones: 0/3; 12/15; 32/35.
+          </p>
+          <h3 className='PageH3TitleSeoPages923 accordionT454'>Jeu 7/9</h3>
+          <p className='text982T'>
+            Esta apuesta cubre todos los números que terminan en los dígitos 7, 8 o 9. Se coloca una
+            ficha como apuestas A un Número sobre 19 y 27, así como una ficha en cada una de las
+            siguientes divisiones: 7/8; 8/9; 17/18 y 28/29.
+          </p>
+          <a name='anchor4' />
+          <h2 className='PageH2TitleSeoPages923 mt-4'>Preguntas frecuentes sobre la Ruleta </h2>
+          <Accordion className='content-accordion'>
+            {preguntas.map((p, k) => (
+              <Accordion.Item
+                eventKey={k}
+                key={k}>
+                <Accordion.Header as={'h3'}>{p.h3}</Accordion.Header>
+                <Accordion.Body>{p.p}</Accordion.Body>
+              </Accordion.Item>
             ))}
+          </Accordion>
+          <div className='col-12  RegistrateMobBtn mb-5 mt-5'>
+            <a
+              rel='nofollow'
+              className='registrate-button  bottomContentPromoButton btn btn-primary'
+              href='https://m.apuestas.codere.es/deportes/#/RegistroESPage'>
+              Regístrate
+            </a>
           </div>
-
-          <div className={"invisible"} id={"anchor-5"}></div>
-          {floor1.dropdownSection.map((t, k) => (
-            <div key={k} id={floor1.dropdownSection.id}>
-              <Accordion>
-                <Accordion.Item key={k} eventKey={k}>
-                  <Accordion.Header as={"h3"}>{t.title}</Accordion.Header>
-                  <Accordion.Body as={"div"}>
-                    {t.data.p1.map((pi, k) => (
-                      <p key={k}>{pi}</p>
-                    ))}
-                    <h3>{t.data.t1} </h3>
-                    {t.data.p2.map((pi, k) => (
-                      <p key={k}>{pi}</p>
-                    ))}
-                    <h3>{t.data.t2} </h3>
-                    {t.data.p3.map((pi, k) => (
-                      <p key={k}>{pi}</p>
-                    ))}
-                    <Button
-                      href={
-                        "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage"
-                      }
-                      className="cas-reg-btn"
-                      rel="nofollow"
-                    >
-                      Registrate
-                    </Button>
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            </div>
-          ))}
+          {/* end */}
         </div>
-      </Container>
-    </div>
+      </div>
+    </>
   );
-}
+};
+
+export default Ruleta;

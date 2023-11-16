@@ -1,74 +1,48 @@
 {
-  "spanish_games": [
-    {
-      "name": "VIP Blackjack Espanol 7",
-      "alt": "VIP Blackjack Espanol 7",
-      "logo_alt": "VIP Blackjack Espanol 7 Logo",
-      "image": "https://www.codere.com.co/Colombia/images/inisio/vip-blackjack.jpg",
-      "logo": "https://www.codere.com.co/Colombia/images/inisio/vip-blackjack-logo.png",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=EVG VIP Blackjack Espanol 7"
-    },
-    {
-      "name": "Ruleta Relampago En Vivo",
-      "alt": "Ruleta Relampago En Vivo",
-      "logo_alt": "Ruleta Relampago En Vivo Logo",
-      "image": "https://www.codere.com.co/Colombia/images/inisio/lightning.jpg",
-      "logo": "https://www.codere.com.co/Colombia/images/inisio/lightning-logo.png",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=EVG%20Ruleta%20Relampago%20En%20Vivo"
-    },
-    {
-      "name": "Bacara Rapido Espanol",
-      "alt": "Bacara Rapido Espanol",
-      "logo_alt": "Bacara Rapido Espanol Logo",
-      "image": "https://www.codere.com.co/Colombia/images/inisio/baccarat.jpg",
-      "logo": "https://www.codere.com.co/Colombia/images/inisio/baccarat-logo.png",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=EVG%20Bacara%20Rapido%20Espanol"
-    }
-  ],
   "top_games": [
     {
-      "name": "Blue Wizard",
-      "alt": "Juega European Roulette High Stakes en casino online",
-      "logo_alt": "Logo juego European Roulette",
-      "sponsor": "Playtech",
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/topGameLeft.webp",
-      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/topGameLeftLogo.webp",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/CasinoPage?Playgame=PT%20Blue%20Wizard"
+      "name": "Mummy: Books Of Amun Ra",
+      "alt": "Juega Mummy: Books Of Amun Ra en casino online",
+      "logo_alt": "Logo Juego Mummy: Books Of Amun Ra ",
+      "sponsor": "PlayTech",
+      "image": "https://www.codere.es/_catalogs/masterpage/codere/images/splash/mummy_game.jpg",
+      "logo": "https://www.codere.es/_catalogs/masterpage/codere/images/splash/mummy_logo.png",
+      "gamelink": "https://m.apuestas.codere.es/deportes/index.htm#/CasinoPage?playgame=PT%20The%20Mummy%20Book%20Of%20Amun%20Ra"
     },
     {
-      "name": "Live Roulette",
-      "alt": "Juega Live Roulette en casino online",
-      "logo_alt": "Live Roulette",
-      "sponsor": "Evolution",
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/topGameRight.webp",
-      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/topGameRightLogo.webp",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/CasinoPage?Playgame=PT%20Live%20Roulette"
+      "name": "Big Bass Splash",
+      "alt": "Juega Big Bass Splash en casino online",
+      "logo_alt": "Logo Big Bass Splash",
+      "sponsor": "PragmaticPlay",
+      "image": "https://www.codere.es/assets1/games/Big_bass_Splash.jpg",
+      "logo": "https://www.codere.es/assets1/games/LOGO_Big_bass_Splash.png",
+      "gamelink": "https://m.apuestas.codere.es/deportes/index.htm#/SlotsPage?playgame=PGP%20Big%20Bass%20Splash"
     }
   ],
   "bottom_games": [
     {
-      "name": "AGE OF THE GODS EPIC TROY",
-      "alt": "AGE OF THE GODS EPIC TROY",
-      "logo_alt": "Logo AGE OF THE GODS EPIC TROY",
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/newGamesLeft.webp",
-      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/newGamesLeftLogo.webp",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/CasinoPage?playgame=PT%20Age%20of%20the%20Gods%20Epic%20Troy"
+      "name": "Starburst XXXtreme",
+      "alt": "Juega aquí Starburst XXXtreme en casino online",
+      "logo_alt": "Logo Starburst XXXtreme",
+      "image": "https://www.codere.es/_catalogs/masterpage/codere/images/splash/starburst_sq.jpg",
+      "logo": "https://www.codere.es/_catalogs/masterpage/codere/images/splash/starburstxxxtreme-logo.png",
+      "gamelink": "https://m.apuestas.codere.es/deportes/index.htm#/SlotsPage?playgame=Starburst%20XXXtreme"
     },
     {
-      "name": "5 MARIACHIS",
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/newGamesMiddle.webp",
-      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/newGamesMiddleLogo.webp",
-      "alt": "5 MARIACHIS en casino online",
-      "logo_alt": "Logo 5 MARIACHIS",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=HAB%205%20MARIACHIS"
+      "name": "Khonsu God of Moon",
+      "image": "https://www.codere.es/_catalogs/masterpage/codere/images/splash/khonsu_game.jpg",
+      "alt": "Juega Khonsu God of Moon en casino online",
+      "logo_alt": "Logo Khonsu God of Moon",
+      "logo": "https://www.codere.es/_catalogs/masterpage/codere/images/splash/khonsu_logo.png",
+      "gamelink": "https://m.apuestas.codere.es/deportes/index.htm#/CasinoPage?playgame=PT%20Khonsu%20God%20of%20Moon%20Mega%20Fire%20Blaze"
     },
     {
-      "name": "AVIATOR",
-      "image": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/BIRDOFTHUNDER.webp",
-      "logo": "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/BIRDOFTHUNDERLOGO2.webp",
-      "alt": "AVIATOR en casino online",
-      "logo_alt": "Logo AVIATOR",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=PRP%20Aviator"
+      "name": "Sugar Rush",
+      "alt": "Juega Sugar Rush en casino online",
+      "logo_alt": "Logo Sugar Rush",
+      "image": "https://www.codere.es/assets1/games/Sugar_Rush.jpg",
+      "logo": "https://www.codere.es/assets1/games/Logo_Sugar_Rush.png",
+      "gamelink": "https://m.apuestas.codere.es/deportes/index.htm#/SlotsPage?playgame=PGP Sugar Rush"
     }
   ]
 }
