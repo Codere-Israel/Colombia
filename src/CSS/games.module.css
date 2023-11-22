@@ -54,6 +54,13 @@
   width: 35vw;
 }
 
+.top_new1 img {
+  position: relative;
+  top: 0;
+  width: 15rem;
+  height: auto !important;
+}
+
 .topGameImage,
 .game_logo {
   transition: 0.3s;
@@ -80,8 +87,8 @@ img.topGameImage {
   left: 0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  -webkit-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.78);
-  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.78);
+  -webkit-box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.78);
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.78);
 }
 
 img.game_logo {
@@ -215,15 +222,18 @@ img.game_logo:hover {
 }
 
 .bottom_conatiner > a:nth-child(1) .logo,
-.bottom_conatiner > a:nth-child(3) .logo{
+.bottom_conatiner > a:nth-child(3) .logo {
   top: 3rem;
 }
+
 .bottom_conatiner > a:nth-child(2) .logo {
   top: 0.75rem;
 }
+
 .bottom_conatiner > a:nth-child(1) .logo img {
   height: 3vw;
 }
+
 .bottom_conatiner > a:nth-child(2) .logo img {
   height: 8vw;
 }
@@ -324,10 +334,13 @@ img.game_logo:hover {
   height: 100%;
   background: rgba(255, 255, 255, 0.4);
   transform: skewX(155deg);
+
   /* transform: scale(1.2); */
+
   /* animation-name: slide; */
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
+
   /* animation-delay: 2.2s; */
   animation-iteration-count: infinite;
   animation-direction: normal;
@@ -340,11 +353,13 @@ img.game_logo:hover {
   );
   z-index: 1;
 }
+
 @keyframes slide {
   0% {
     left: -20vw;
     top: 0;
   }
+
   100% {
     left: 30vw;
     top: 0;

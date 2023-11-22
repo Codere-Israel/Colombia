@@ -299,7 +299,7 @@ export default function Baccarat(props) {
             .slice(0, !props.flag ? live_games.length : 4)
             .map((game, k) => (
               <Col lg={2} md={4} xs={6} key={k}>
-                <NavLink href={`${game_prefix}${game.urlText}`}>
+                <NavLink href={`${game_prefix}${game.urlText}`} rel="nofollow">
                   <div className="cas-game-wrapper">
                     <LazyLoadImage
                       className="casino-game-img shining"
@@ -334,16 +334,6 @@ export default function Baccarat(props) {
           {reglas.p.p3.map((i, k) => (
             <p key={k}>{i}</p>
           ))}
-
-          <Button
-            href={
-              "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage"
-            }
-            className="cas-reg-btn"
-            rel="nofollow"
-          >
-            Registrate
-          </Button>
         </div>
 
         <div id={floor1.id}>

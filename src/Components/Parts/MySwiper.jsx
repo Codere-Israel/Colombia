@@ -3,36 +3,40 @@ import { Autoplay, Pagination, EffectFade, Lazy } from "swiper";
 import SlideButton from "./Slide-Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "react-bootstrap";
+import { Button, Modal, Table } from "react-bootstrap";
+import terms from "../../JSON/tyc.json";
 
 import "swiper/css";
 import "swiper/css/lazy";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
-import { useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react";
 import myStore from "../../mobX/Store";
 var imgs = [];
 
 const MySwiper = observer((props) => {
+  const [swiper, setSwiper] = useState(null);
+
+  const [currentTycType, setCurrentTycType] = useState(null);
+  const [currentBannerName, setCurrentBannerName] = useState("");
+  const [showTycModal, setShowTycModal] = useState(false);
+
   const [regisButtonText, setRegisButtonText] = useState("");
   const [regis, setRegis] = useState("");
 
-  const weekday = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  const cur = new Date();
-  const day = weekday[cur.getDay()];
+  useEffect(() => {
+    if (swiper) {
+      if (showTycModal) swiper.autoplay.pause();
+      else swiper.autoplay.run();
+    }
+  }, [showTycModal]);
 
   const indexHandler = (swiper) => {
+    setSwiper(swiper);
+
     if (myStore.segmented) {
       setRegisButtonText("Acceder");
       setRegis(
@@ -40,6 +44,13 @@ const MySwiper = observer((props) => {
       );
       return;
     }
+
+    if (imgs[swiper.realIndex].tycType) {
+      setCurrentTycType(imgs[swiper.realIndex].tycType);
+    }
+    if (imgs[swiper.realIndex].name) {
+      setCurrentBannerName(imgs[swiper.realIndex].name);
+    } else setCurrentBannerName("");
 
     imgs[swiper.realIndex].ctaText
       ? setRegisButtonText(imgs[swiper.realIndex].ctaText)
@@ -57,30 +68,105 @@ const MySwiper = observer((props) => {
   }
 
   function BannerFilter(banner) {
-    if (banner.data.display === true) {
-      if (banner.data.days.includes(day)) {
-        let eventDate = new Date();
-        let jsonDate = eventDate.toJSON();
-        let jsonDatea = new Date().toISOString().split("T")[0];
-        if (banner.data.timeStart != "" || banner.data.timeStart != undefined) {
-          banner.startDate = jsonDatea + "T" + banner.data.timeStart + ":00Z";
-        } else if (
-          banner.data.timeEnd != "" ||
-          banner.data.timeEnd != undefined
-        ) {
-          banner.endDate = jsonDatea + "T" + banner.data.timeEnd + ":00Z";
-        }
-        return banner;
-      }
-    } else {
-      if (!banner.scheduled) return banner;
-      else {
-        if (dateInBetween(banner)) return banner;
-      }
+    if (!banner.scheduled) return banner;
+    else {
+      if (dateInBetween(banner)) return banner;
     }
   }
 
-  if (!myStore.flag)
+  const modalGenerator = () => {
+    return (
+      <>
+        <Modal
+          centered
+          show={showTycModal}
+          onHide={() => setShowTycModal(false)}
+          contentClassName="terms-tyc"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>
+              <div className="test">
+                <h5>Términos y condiciones</h5>
+                <h5>{currentBannerName}</h5>
+              </div>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {currentTycType ? tycGenerator(currentTycType) : null}
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              onClick={() => setShowTycModal(false)}
+              className="accept-btn"
+            >
+              Aceptar
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </>
+    );
+  };
+
+  const tycGenerator = (type) => {
+    let term = null;
+
+    // console.log(terms);
+    for (let i = 0; i < terms.length; i++) {
+      if (terms[i].type === type) term = terms[i];
+    }
+    // console.log(term);
+    return (
+      <ol style={{ maxHeight: "50vh", overflowY: "scroll" }}>
+        {term.ol.map((li, k) => (
+          <li key={k}>
+            {li.bolded ? <strong>{li.bolded}</strong> : null}
+            {li.text}
+            {li.inner ? (
+              <ul>
+                {li.inner.map((li2, k2) => (
+                  <li key={k2}>{li2}</li>
+                ))}
+              </ul>
+            ) : null}
+            {li.table ? (
+              <Table bordered className="mt-2">
+                <thead>
+                  <tr>
+                    {li.table.th.map((h, k) => (
+                      <th key={k}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {li.table.tr.map((tr, i) => (
+                    <tr key={i}>
+                      {tr.map((td, j) => (
+                        <React.Fragment key={j}>
+                          {Array.isArray(td) ? (
+                            <td>
+                              <ul>
+                                {td.map((tds, k) => (
+                                  <li key={k}>{tds}</li>
+                                ))}
+                              </ul>
+                            </td>
+                          ) : (
+                            <td>{td}</td>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            ) : null}
+          </li>
+        ))}
+      </ol>
+    );
+  };
+
+  if (myStore.flag === false)
     imgs = props.banners.desktop_slide_list.filter(BannerFilter);
   else imgs = props.banners.mobile_slide_list.filter(BannerFilter);
 
@@ -115,19 +201,19 @@ const MySwiper = observer((props) => {
                   {regisButtonText}
                   <FontAwesomeIcon icon={faAngleRight} />
                 </Button>
-                {item.tycLink ? (
-                  <a className="tyc" href={item.tycLink}>
+                {item.tycType ? (
+                  <span className="tyc" onClick={() => setShowTycModal(true)}>
                     Términos y condiciones
-                  </a>
+                  </span>
                 ) : null}
               </div>
             ) : (
               <>
-                {item.tycLink ? (
+                {item.tycType ? (
                   <div className="mob-tyc">
-                    <a className="tyc" href={item.tycLink}>
+                    <span className="tyc" onClick={() => setShowTycModal(true)}>
                       Términos y condiciones
-                    </a>
+                    </span>
                   </div>
                 ) : null}
               </>
@@ -144,6 +230,7 @@ const MySwiper = observer((props) => {
           />
         </>
       ) : null}
+      {modalGenerator()}
     </div>
   );
 });

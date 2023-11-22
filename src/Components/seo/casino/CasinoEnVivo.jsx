@@ -1,231 +1,286 @@
-import { useEffect } from 'react';
-import { React } from 'react';
-import { Helmet } from 'react-helmet';
-import { Accordion, Col, NavLink, Container, Row, Table, Nav } from 'react-bootstrap';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import games from './JSON/games.json';
-import TableOfContents from '../TableOfContents';
-import Floating from '../Floating';
-import { Link } from 'react-router-dom';
+import Floating from "../Floating";
+import TableOfContents from "../TableOfContents";
+import DynamicAccordion from "../DynamicAccordion";
+import {
+  Container,
+  Accordion,
+  Row,
+  Col,
+  NavLink,
+  Button,
+} from "react-bootstrap";
+import { Helmet } from "react-helmet";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const CasinoEnVivo = (props) => {
+export default function CasinoEnVivo(props) {
+  const game_prefix = "https://m.codere.com.co/deportes/#/CasinoPage?playgame=";
+
+  const title = "Casino Live con Crupieres en Vivo » Bono $100Mil | Codere®";
+  const description =
+    "¿Jugar casino en vivo online?, Codere Colombia es la mejor experiencia para jugar en línea. Acá hay variedad de juegos como ruletas, blackjack o póker.";
+
   const json = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
     mainEntity: [
       {
-        '@type': 'Question',
-        name: '¿Puedo jugar en un casino en vivo en mi dispositivo móvil?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Sí. Puedes disfrutar de todo el Casino en vivo de desde tu móvil y cualquier dispositivo en la app de o en Codere.es.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '¿En qué consisten los juegos de Casino en vivo?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Los juegos de Casino en vivo son una experiencia única y real en la que puedes vivir la sensación de un casino real',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '¿Cómo jugar en Casino en vivo en Codere?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Simplemente tienes que tener una cuenta en Codere y confiar en tu ritual para jugar en nuestro casino en vivo.',
-        },
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "¿Puedo jugar en un casino en vivo en mi dispositivo móvil?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Claro que si, en el casino en vivo de Codere, te puedes divertir desde donde estés, con cualquiera de tus dispositivos móviles. ¿Qué esperas para ingresar?",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "¿En qué consisten los juegos de casino en vivo?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Los juegos de casino en vivo son una sección donde los jugadores pueden apostar y disfrutar desde donde estés, de una sesión de juego que será transmitida en vivo. ¡Disfruta de la experiencia!",
+            },
+          },
+        ],
       },
     ],
   };
 
+  const top_par = {
+    h1: "Diviértete en el Casino en Vivo de Codere Colombia:",
+    p: [],
+  };
+
+  // Table of Contents  \\
   const table_of_contents_list = [
     {
-      title: 'Juegos de casino en Vivo',
-      id: 'juegos',
+      title: "¿Cómo jugar en vivo en Casino Codere?",
+      id: "anchor-1",
     },
     {
-      title: 'Chatea en directo con crupiers y jugadores',
-      id: 'chatea',
+      title: "Chatea en vivo con croupiers y jugadores",
+      id: "anchor-2",
     },
     {
-      title: 'Preguntas frecuentes sobre el Casino en vivo',
-      id: 'preguntas',
+      title: "Juegos de casino en vivo",
+      id: "anchor-3",
     },
   ];
 
-  const juegos = {
-    id: 'juegos',
-    h2: 'Juegos de casino en Vivo',
+  // Games Data
+  const live_games = [
+    {
+      name: "PTLiveQuantumRoulette_Square",
+      img: "PTLiveQuantumRoulette_Square",
+      link_name: "PT%20Live%20Quantum%20Roulette",
+      sponsor: "MGS",
+    },
+    {
+      name: "PTLiveMajorityRulesSpeedBlackjack_Square",
+      img: "PTLiveMajorityRulesSpeedBlackjack_Square",
+      link_name: "PT%20Live%20All%20Bets%20Blackjack",
+      sponsor: "EVG",
+    },
+    {
+      name: "PTLiveAmericanRoulette_Square",
+      img: "PTLiveAmericanRoulette_Square",
+      link_name: "PT%20Live%20American%20Roulette",
+      sponsor: "EVG",
+    },
+    {
+      name: "PTLiveAllBetsBlackjack_Square",
+      img: "PTLiveAllBetsBlackjack_Square",
+      link_name: "PT%20Live%20Majority%20Rules%20Speed%20Blackjack",
+      sponsor: "EVG",
+    },
+    {
+      name: "PTLiveBuffaloBlitz_Square",
+      img: "PTLiveBuffaloBlitz_Square",
+      link_name: "PT%20Live%20Buffalo%20Blitz",
+      sponsor: "EVG",
+    },
+    {
+      name: "PTLiveRoulette_Square",
+      img: "PTLiveRoulette_Square",
+      link_name: "PT%20Live%20Roulette",
+      sponsor: "EVG",
+    },
+  ];
+
+  const como_juega = {
+    id: "como_juega",
+    title1: "¿Cómo jugar en vivo en Casino Codere?",
+    p1: "¿Jugar en vivo? es la mejor experiencia que podrás tener, si te encanta estar en casa, pero… sin que te falte la diversión. Para jugar casino en vivo, lo primero que debes hacer es iniciar sesión en Codere, la casa de apuestas más bacana de Colombia, luego tendrás que dirigirte a la pestaña que dice “Casino en vivo”, y allá encontrarás gran variedad de juegos como: ruletas en vivo, black jack, baccarat, Hold’em, Dragon Tiger y muchas más, juegos que te harán vivir una experiencia real con croupiers que estarán ahí girando la ruleta o repartiéndose las cartas. ¡Es increíble! No esperes para vivirla.",
+    title2: "Chatea en vivo con croupiers y jugadores",
+    p2: "Lo mejor de nuestro casino en vivo, es que es muy fácil chatear con croupiers profesionales, además, siempre podrás encontrar una sección de chat habilitado donde te emocionarás al interactuar y compartir la diversión del juego con otros usuarios / jugadores. ¡Es súper sencillo! Selecciona la opción de chat y listo, la ventana de conversación la encuentras en la parte superior derecha ¿Te animas a jugar?",
+    title3: "Juegos de casino en vivo",
+    p3: "La diversión no tiene fin, y más con nuestros 49 juegos en vivo: distribuidos en 14 Ruletas, 7 Black jack, 6 Baccarat y otros 22 juegos que te pondrán a prueba. El casino online de Codere te abre las puertas a un mundo de emociones fuertes donde podrás disfrutar de los mejores juegos de Ruleta Casino online. Antes de que gire la ruleta tendrás que elegir entre la gran variedad de títulos. ¿Cuál vas a elegir hoy? ¿Ruleta americana? ¿Ruleta Europea? ¿Ruleta Francesa? Estás a un clic de disfrutar todo esto.",
+  };
+
+  const floor2 = {
+    id: "floor2",
+    h2: "Juegos de casino en vivo",
+    text: "La diversión no tiene fin, y más con nuestros 49 juegos en vivo: distribuidos en 14 Ruletas, 7 Black jack, 6 Baccarat y otros 22 juegos que te pondrán a prueba. El casino online de Codere te abre las puertas a un mundo de emociones fuertes donde podrás disfrutar de los mejores juegos de Ruleta Casino online. Antes de que gire la ruleta tendrás que elegir entre la gran variedad de títulos. ¿Cuál vas a elegir hoy? ¿Ruleta americana? ¿Ruleta Europea? ¿Ruleta Francesa? Estás a un clic de disfrutar todo esto.",
     inner: [
       {
-        h3: 'Ruleta Coderista',
-        text: 'Es la ruleta propia y exclusiva de Codere.es. Una ruleta en la que contarás con los crupieres de habla hispana más amables y un chat en vivo con otros jugadores que son una auténtica familia.',
+        h3: "21 Blackjack",
+        text: [
+          "Blackjack: Seguro que muchos recordamos la mítica frase: “Ganaré, ganaré y gallinas cenaré”. Los que lograron recordarlo aprobaron el examen como cinéfilos. Ya que esta legendaria frase es una de las películas de casino más exitosas y que trata de manera diferente el hermoso juego del Blackjack. Por eso, Codere te quiere invitar a vivir la aventura de este popular juego disfrutando del blackjack online. Pero esta aventura no debe ser solo un momento de suerte. Sino que además, disfrutar y celebrar cada truco, estrategia y forma de jugar este emocionante juego. ¿Qué esperas para vivirlo?" +
+            "Blackjack Colombia: Diviértete con uno de los juegos de cartas más populares, pero lo mejor, es que disfrutarás de una mesa hablada en español, así que: ¡Siente el sabor latino!",
+        ],
       },
       {
-        h3: 'Quantum Roulette',
-        text: 'Es un juego de apuestas de cuotas fijas y con una ruleta en 3D. Además, añade una función de multiplicador de premios pero solo para las apuestas directas.',
+        h3: "Monopoly",
+        text: [
+          "Monopoly Live: Es un juego de mesa clásico, no lo pienses y haz parte del mundo mágico del Monopolio, uno de los juegos más conocidos del mundo, y lo mejor es que Mr. Monopoly camina por el tablero y acumula premios para ti, una posibilidad de ganancias multiplicadoras masivas. ¡Te transportarás años atrás!,",
+        ],
       },
       {
-        h3: 'Casiopea Ruleta',
-        text: 'Es una de las ruletas más famosas del mundo. Una ruleta con un único cero en su mesa: la más clásica y popular',
+        h3: "Póker",
+        text: [
+          "Póker Texas Hold’em: Es una versión estándar del juego de cartas de poker, sin duda, se encuentra en el top de los más jugados, tiene una estrategia de juego compleja, pero las reglas son muy sencillas ¿Estás listo (a) para dominarlas?",
+        ],
       },
       {
-        h3: 'Express Ruleta',
-        text: 'Descubre las características especiales de esta ruleta en la que vivirás la experiencia de un casino online.',
+        h3: "Juegode Dados",
+        text: [
+          "Craps Live: Un juego de dados bastante popular, atractivo tanto para los profesionales como para los novatos, Es un juego animado y de ritmo rápido con muchas formas de apostar y aún más formas de gana, y lo mejor, es que está ambientado en un estudio clandestino ¿te le medirías?",
+          "SicBo Deluxe: El juego consiste en tres dados que ruedas y cada uno se detiene al azar en uno de los números del 1 al 6, y el jugador que adivine correctamente los resultados propuestos ¡GANA! Así que anímate porque ¡Podrías estar celebrando!",
+        ],
       },
       {
-        h3: 'Slingshot Roulette',
-        text: 'Es una ruleta que no cuenta con un crupier de carne y hueso. En su lugar se usa una mesa automatizada que puede hacer girar el cilindro hasta 100 veces cada hora.',
+        h3: "Otros Juegos",
+        text: [
+          "Bufalo Blitz Live: Existen más de 4.000 formas de ganar en este juego en vivo, es bastante sencillo, está dedicado a todos los animales salvajes del planeta, una máquina tragamonedas de 6 carretes, puedes obtener grandes ganancias de manera rápida ¿puedes creerlo? ¡No lo pienses más! Deal or no deal: Es un juego que está de moda, es un juego multidimensional que se basa en el programa de juegos súper exitoso, compite contra otros jugadores y muestra tu suerte, para clasificar, deberás hacer girar la rueda de la bóveda del banco. ",
+          "¿Quieres vivir esta emoción? Crazy time: Es un juego en el que el anfitrión hace girar la gran ruedade dinero de 54 segmentos, aquí puedes ganar uno de los cuatro números o una de las cuatro caractarísticas, puedes apostar en una o varias opciones al mismo tiempo. ¿Te le medirías a descubrir este misterio? Sette e Mezzo Live: Este es un emocionante juego de cartas italiano, bastante popular, un juego de siete cartas y media en línea.",
+          "El objetivo del juego es tratar de hacer una puntuación de siete y medio o acercarse a ese número sumando el valor de sus cartas.",
+          "¿Estás listo (a) para emprender el viaje? Spin a Win: Este es un apasionante juego interactivo que contiene una ruleta, dividida en 54 secciones iguales, marcadas con los números 1, 2, 5, 10, 20, 40, x2 o x7. Los jugadores realizarán apuestas en la sección en la que crean que se detendrá, un cursor indicará la sección ganadora en la parte superior de la ruleta cuando esta deje de girar. ",
+          "Aquí las apuestas paralelas como Par, Impar y Multiplicador te dan aún más posibilidades de ganar con cada tirada. ¡Haz parte de este espectáculo!",
+        ],
       },
+      // {
+      //   title: "Preguntas Frecuentes Sobre El Casino En Vivo",
+      // },
     ],
   };
 
-  const chatea = {
-    id: 'chatea',
-    h2: 'Chatea en directo con crupiers y jugadores ',
-    p: 'En la experiencia única del Casino en vivo de Codere podrás chatear con crupieres como si estuvieras en un casino real. Podrás tener conversaciones, oír sus consejos e incluso chatear junto a ellos.',
-    p2: 'En el Casino en vivo de Codere también tendrás la oportunidad de chatear en directo con el resto de jugadores que están en tu partida. Podrás escribir mensajes y comentarios que, además de ser leídos por los demás usuarios, también serán respondidos por los crupieres.',
-  };
-
-  const preguntas = {
-    id: 'preguntas',
-    h2: 'Preguntas frecuentes sobre el Casino en vivo ',
-    inner: [
-      {
-        h3: '¿Puedo jugar en un casino en vivo en mi dispositivo móvil?',
-        text: 'Sí. Puedes disfrutar de todo el Casino en vivo de desde tu móvil y cualquier dispositivo en la app de o en Codere.es.',
+  const acc = [
+    {
+      title: "¿Puedo jugar en un casino en vivo en mi dispositivo móvil?",
+      data: {
+        p1: "Claro que si, en el casino en vivo de Codere, te puedes divertir desde donde estés, con cualquiera de tus dispositivos móviles. ¿Qué esperas para ingresar?",
       },
-      {
-        h3: '¿En qué consisten los juegos de Casino en vivo?',
-        text: 'Los juegos de Casino en vivo son una experiencia única y real en la que puedes vivir la sensación de un casino real',
+    },
+    {
+      title: "¿En qué consisten los juegos de casino en vivo?",
+      data: {
+        p1: "Los juegos de casino en vivo son una sección donde los jugadores pueden apostar y disfrutar desde donde estés, de una sesión de juego que será transmitida en vivo. ¡Disfruta de la experiencia!",
       },
-      {
-        h3: '¿Cómo jugar en Casino en vivo en Codere? ',
-        text: 'Simplemente tienes que tener una cuenta en Codere y confiar en tu ritual para jugar en nuestro casino en vivo. ',
-      },
-    ],
-  };
+    },
+  ];
 
   return (
-    <>
+    <div className="cas-seo">
       <Helmet>
-        <title>El mejor Casino en Vivo de España » Juega Online | Codere®</title>
-
-        <meta
-          name='description'
-          content='Codere España tiene la mejor experiencia de casino online en vivo Participa en la gran variedad de juegos como Ruleta o BlackJack ¡Juega y diviértete!'
-        />
+        <title>{title}</title>
         <link
-          rel='canonical'
-          href='https://www.codere.es/casino/casino-en-vivo'
+          rel="canonical"
+          href="https://www.codere.com.co/casino/casino-en-vivo"
         />
-        <script type='application/ld+json'>{JSON.stringify(json)}</script>
+        <meta name="description" content={description} />
+        <script type="application/ld+json">{JSON.stringify(json)}</script>
       </Helmet>
 
-      <Floating
-        text='Gran Diversión en Vivo'
-        juega={true}
-      />
+      <Floating text="¡El mejor Casino En Vivo!" juega={true} />
       <div
-        className='top-bg-seo'
+        className="top-bg-seo "
         style={{
-          backgroundImage: `url(https://www.codere.es/Spain/assets/seoPages/casino-en-vivo/casinoEnVivo${
-            props.flag ? 'Mobile' : ''
-          }.webp)`,
-          backgroundSize: 'cover',
-        }}></div>
+          backgroundImage: `url(https://www.codere.com.co/Colombia/images/seoCasinoImages/casinoEnVivo/${
+            props.flag ? "CASINO%20EN%20VIVO_mob" : "CASINO%20EN%20VIVO"
+          }.jpg)`,
+          backgroundSize: "cover",
+        }}
+      ></div>
 
-      <Container>
-        <div>
-          <h1 className='PageH1TitleSeoPages923 mt-3'>
-            El Casino en Vivo #1 de España está en Codere
-          </h1>
-          <p>
-            Los juegos de mesas de <Link to={'/casino'}>casino</Link> en vivo brindan una
-            experiencia más inmersiva y realista. Puedes disfrutar de todas las ruletas en directo,
-            blackjack y mucho más, con tu dispositivo móvil, en tu Tablet u ordenador.
-          </p>
-        </div>
-        {!props.flag ? <TableOfContents table={table_of_contents_list} /> : null}
+      <Container style={{ color: "#fff" }}>
+        <h1 className="header mt-4 mb-3">{top_par.h1}</h1>
+        {top_par.p.map((par, k) => (
+          <p key={k}>{par}</p>
+        ))}
 
-        <div
-          id={juegos.id}
-          className='mt-4'>
-          <h2>{juegos.h2}</h2>
-          <Row className='casino-row'>
-            {games.casino_live
-              .slice(0, !props.flag ? games.casino_live.length : 4)
+        {/* Table */}
+        {!props.flag ? (
+          <TableOfContents table={table_of_contents_list} />
+        ) : null}
+
+        <div id={como_juega.id}>
+          <h2 className="mt-4 mb-3" id={"anchor-1"}>
+            {como_juega.title1}
+          </h2>
+          <p>{como_juega.p1} </p>
+          {/* Games */}
+          <Row className="casino-row">
+            {live_games
+              .slice(0, !props.flag ? live_games.length : 4)
               .map((game, k) => (
-                <Col
-                  lg={2}
-                  md={4}
-                  xs={6}
-                  key={k}>
-                  <NavLink href={game.link}>
-                    <div className='cas-game-wrapper'>
+                <Col lg={2} md={4} xs={6} key={k}>
+                  <NavLink
+                    href={`${game_prefix}${game.link_name}`}
+                    rel="nofollow"
+                  >
+                    <div className="cas-game-wrapper">
                       <LazyLoadImage
-                        className='casino-game-img shining'
-                        src={game.img}
+                        className="casino-game-img shining"
+                        src={
+                          "https://www.codere.com.co/Colombia/images/seoCasinoImages/casinoEnVivo/" +
+                          game.img +
+                          ".jpg"
+                        }
                       />
-                      <div className='hvr'>
+                      <div className="hvr">
                         <p>{game.name}</p>
-                        <LazyLoadImage src='https://www.codere.bet.ar/assets/seo/jackpotsPlayHoverLogo.svg' />
+                        <LazyLoadImage src="https://www.codere.com.co/Colombia/images/casinoIcons/playHoverLogo.svg" />
                       </div>
                     </div>
                   </NavLink>
                 </Col>
               ))}
           </Row>
-          <Accordion>
-            {juegos.inner.map((game, k) => (
-              <Accordion.Item
-                key={k}
-                eventKey={k}>
-                <Accordion.Header as='h3'>{game.h3}</Accordion.Header>
-                <Accordion.Body>{game.text}</Accordion.Body>
-              </Accordion.Item>
-            ))}
-          </Accordion>
+
+          <h2 className="mt-4 mb-3" id={"anchor-2"}>
+            {como_juega.title2}
+          </h2>
+          <p>{como_juega.p2} </p>
+          <h2 className="mt-4 mb-3" id={"anchor-3"}>
+            {como_juega.title3}
+          </h2>
+          <p>{como_juega.p3} </p>
         </div>
 
-        <div
-          id={chatea.id}
-          className='mt-4'>
-          <h2>{chatea.h2}</h2>
-          <p>{chatea.p}</p>
-          <p>{chatea.p2}</p>
+        <div className="mt-4" id={floor2.id}>
+          <h2>{floor2.h2}</h2>
+          <p>{floor2.text}</p>
+          {floor2.inner.map((f, k) => (
+            <div key={k}>
+              <h3>{f.h3}</h3>
+              {f.text.map((t, k2) => (
+                <p key={k2}>{t}</p>
+              ))}
+            </div>
+          ))}
         </div>
 
-        <div
-          id={preguntas.id}
-          className='mt-4'>
-          <h2>{preguntas.h2}</h2>
-          <Accordion>
-            {preguntas.inner.map((question, k) => (
-              <Accordion.Item
-                key={k}
-                eventKey={k}>
-                <Accordion.Header as='h3'>{question.h3}</Accordion.Header>
-                <Accordion.Body>{question.text}</Accordion.Body>
-              </Accordion.Item>
-            ))}
-          </Accordion>
-        </div>
-
-        <div className='mt-4 RegistrateMobBtn'>
-          <NavLink
-            rel='nofollow'
-            style={{ color: '#fff', width: '250px', maxWidth: '80%', margin: 'auto' }}
-            className='registrate-button btn btn-primary'
-            href='https://m.apuestas.codere.es/deportes/#/RegistroESPage'>
-            Regístrate
-          </NavLink>
-        </div>
+        <DynamicAccordion data={acc} />
+        <Button
+          href={"https://m.codere.com.co/deportescolombia/#/RegistroCONewPage"}
+          className="cas-reg-btn"
+          rel="nofollow"
+        >
+          Registrate
+        </Button>
       </Container>
-    </>
+    </div>
   );
-};
-
-export default CasinoEnVivo;
+}
