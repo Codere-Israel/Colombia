@@ -1,19 +1,20 @@
-import { Button } from 'react-bootstrap';
+import { Button } from "react-bootstrap";
 
 export default function Floating(props) {
   return (
-    <div className='floating'>
+    <div className="floating">
       <span>{props.text}</span>
       <br />
       <Button
         href={
           props.juega
-            ? 'https://m.apuestas.codere.es/deportes/#/CasinoPage'
-            : 'https://m.apuestas.codere.es/deportes/#/RegistroESPage'
+            ? "https://m.codere.com.co/deportes/#/CasinoPage"
+            : "https://m.codere.com.co/deportescolombia/#/RegistroCONewPage"
         }
-        rel='nofollow'
-        className='floating-btn'>
-        {props.juega ? 'Juega ahora' : 'Registrate'}
+        rel="nofollow"
+        className="floating-btn"
+      >
+        {props.juega ? "Juega ahora" : "Regístrate"}
       </Button>
     </div>
   );

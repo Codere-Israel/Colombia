@@ -1,7 +1,7 @@
 import { observable, action, makeObservable } from "mobx";
 
 class MyStore {
-  flag = false;
+  flag = null;
   segmented = false;
 
   constructor() {

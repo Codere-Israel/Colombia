@@ -1,0 +1,19 @@
+/* For LOCAL env */
+
+@font-face {
+  font-family: Codere;
+  src: url(./Fonts/HighSchool-V3.1.ttf);
+}
+
+/* For PRODUCTION */
+@font-face {
+  font-family: Codere;
+  src: url(https://www.codere.com.co/Fonts/HighSchool-V3.1.c78c7153ed9023134905.ttf);
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Codere-Roboto;
+  src: url(https://www.codere.com.co/Fonts/roboto-condensed-all-400-normal.242461da0ded06ef3693.woff);
+  font-display: fallback;
+}

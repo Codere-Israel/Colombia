@@ -1,310 +1,401 @@
-import { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
-import { Accordion, Col, Container, NavLink, Row, Table } from 'react-bootstrap';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import games from './JSON/games.json';
-import TableOfContents from '../TableOfContents';
-import Floating from '../Floating';
-import { Link } from 'react-router-dom';
+import "../CSS/casinos.css";
+import { Container, Row, Col, NavLink, Button } from "react-bootstrap";
+import { Helmet } from "react-helmet";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import Floating from "../Floating";
+import TableOfContents from "../TableOfContents";
+import DynamicTable from "../DynamicTable";
 
-const Casino = (props) => {
+export default function Casino(props) {
+  const game_prefix = "https://m.codere.com.co/deportes/#/CasinoPage?playgame=";
+
+  const title = "Juega Casino Online en Colombia » Bono $100.000 | Codere®";
+  const description =
+    "Jugar en un Casino Online es muy fácil y con consejos básicos para empezar puedes iniciar una aventura en el mejor casino de Colombia.";
+
   const json = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
     mainEntity: [
       {
-        '@type': 'Question',
-        name: '¿Es seguro jugar en un Casino Online?',
+        "@type": "Question",
+        name: "¿Qué es un ‘Bono Casino sin Deposito’?",
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Siempre y cuando se juegue en un casino regulado en España, estos incorporan las medidas de seguridad necesarias para jugar de manera segura, y que además, no nos estafen.',
+          "@type": "Answer",
+          text: "Una vez has elegido un casino en línea de Codere, estás listo para elegir todas las opciones de juegos casino y bonos de juego. Una vez empieces a navegar, podrás notar que el sitio ofrece un bono casino sin depósito. ¿Qué significa esto exactamente? Algunos sitios de casino ofrecen bonos que no requieren que el usuario realice cualquier depósito adicional, lo que significa que no se requiere de dinero para depositar. El bono casino sin depósito puede incluir giros gratis o incluso dinero gratis en el balance de tu cuenta. Algunos casinos online incluso ofrecen bonos sin depósito cuando los usuarios registran una cuenta por primera vez en sus sitios.",
         },
       },
       {
-        '@type': 'Question',
-        name: '¿Cuáles son los tipos de juego en el Casino más populares?',
+        "@type": "Question",
+        name: "¿Por qué Codere es el mejor casino en línea?",
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Existe una gran variedad increíble de juegos casino como blackjack, ruleta, ruleta en vivo, slots y mucho más.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '¿Cómo se retira las ganancias en Codere?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Entra en la sección de cobros de Codere y, siempre que tengas saldo retirable, podrás usar cualquiera de nuestros métodos de cobro. ',
+          "@type": "Answer",
+          text: "Encuentra en el Casino Online de Codere una variedad increíble de juegos casino como blackjack, ruleta, ruleta en vivo y la última incorporación a nuestro catálogo, ¡el videobingo! Recuerda que en todos los juegos de casino tus ganancias no serán en bono y podrás retirarlas en cualquier momento sin problemas para tener tus premios en efectivo. Encuentra en el Casino Online de Codere, el mejor casino en línea, un gran número de títulos de juegos que te están esperando. Muchos slots tendrán premio extra y contarán con unos “jackpots” espectaculares. Gracias al buscador será fácil encontrarlos y podrás filtrar por tipo de juego, nombre, compañía, pagos… ¡e incluso hacer tu propia lista de slots favoritas! Además, sorpréndete con la rapidez de nuestra plataforma, tanto en tu ordenador como en tu aplicación móvil.",
         },
       },
     ],
   };
+
+  const top_par = {
+    h1: "El Casino en Colombia con los Mejores Juegos en Línea",
+    p: [""],
+  };
+
+  // Table of Contents  \\
   const table_of_contents_list = [
     {
-      title: 'Los Juegos de Casino más increíbles ahora online',
-      id: 'juegos',
+      title: "Crown Casino: La emoción de los juegos de azar ahora en línea",
+      id: "anchor-1",
     },
     {
-      title: 'Diviértete en las transmisiones en directo con Crupieres reales',
-      id: 'transmisiones',
+      title: "¿Cuáles son los beneficios de jugar Juegos de Casino en línea?",
+      id: "anchor-2",
     },
     {
-      title: 'Lleva el Casino en tus manos con la app de Codere.es',
-      id: 'leva',
+      title: "Reseña de los Juegos Más Populares de Casino Online",
+      id: "anchor-3",
     },
     {
-      title: 'Ventajas de jugar en un Casino Online Regulado',
-      id: 'ventajas',
+      title: "¿Primeros Pasos: ¿Cómo Jugar en un Casino Online en Colombia?",
+      id: "anchor-4",
     },
     {
-      title: 'Preguntas frecuentes sobre el Casino Online',
-      id: 'preguntas',
+      title: "¿Por qué Codere es el mejor casino en línea?",
+      id: "anchor-5",
     },
   ];
 
-  const juegos = {
-    id: 'juegos',
-    h2: 'Los Juegos de Casino más increíbles ahora online ',
-    p: '¡Únete ahora y comienza a apostar en tus juegos favoritos!',
-    inner: [
+  // Table
+
+  const tableData = {
+    headers: [],
+    rows: [
       {
-        h3: 'Age of the Gods',
-        text: 'Esta slot de 5 carretes y 20 líneas de pago tiene 6 símbolos que representan a los míticos dioses griegos como Zeus, Atenea, Poseidón, Ares, el casco de Hércules, entre otros.',
+        id: 1,
+        a1: "🏆 Establecido",
+        a2: "1984",
       },
       {
-        h3: 'Buffalo Blitz',
-        text: 'Ambientado en el lejano Oeste, ganarás interesantes premios gracias a los protagonistas de este slot o tragaperras: los búfalos',
+        id: 2,
+        a1: "🥇 Juegos ofrecidos\t",
+        a2: "900+\n",
       },
       {
-        h3: 'Kingdoms Rise',
-        text: 'Disfruta de esta slot de temática de fantasía prehistórica en la serie de premios mayores de Playtech. La estructura del juego la integran 6 carretes y 4096 líneas de pago.',
+        id: 3,
+        a1: "🎲 Licencia de juego\t",
+        a2: "C1901 November 15, 2022 to November 10, 2025​\n",
       },
       {
-        h3: 'Ruleta Coderista',
-        text: 'La mejor ruleta te está esperando en el Casino de Codere. Con crupieres en directo, en español y las recompensas más atractivas',
+        id: 4,
+        a1: "✔️ Moneda\t",
+        a2: "COP",
       },
       {
-        h3: 'Blackjack Live ',
-        text: 'Consigue una mano de cartas que sea lo más cercana posible al 21, pero sin pasarte.',
+        id: 5,
+        a1: "💰 Depósito mínimo\t",
+        a2: "$8.000 COP\n",
+      },
+      {
+        id: 6,
+        a1: "💸 Limites de Retiros\t",
+        a2: "desde $50.000 pesos hasta $1.500.000 pesos por transacción.\n",
+      },
+      {
+        id: 7,
+        a1: "💳 Formas de Pago\t",
+        a2: "Visa, MasterCard, PSE, PAyU, tpaga, efecty, Dimonex, Punto Red, Daviplata, Via Baloto\n",
       },
     ],
   };
-  const transmisiones = {
-    id: 'transmisiones',
-    h2: 'Diviértete en las transmisiones en directo con Crupieres reales',
-    p: '',
-  };
-  const leva = {
-    id: 'leva',
-    h2: 'Lleva el Casino en tus manos con la app de Codere.es ',
-    p: 'Podrás encontrar la app de Codere.es tanto en el Play Store de Android, como en la App Store de Apple. Con la aplicación de Codere podréis jugar desde cualquier parte y disfrutar desde tu sofá de los mejores juegos online del planeta. Todo el Casino, en un mismo lugar.',
-    p2: 'Esta app de Codere la podrás utilizar tanto desde tu móvil, como en tu ordenador o en una tablet. Así que ya sabes: descarga ahora la app de Codere.es y disfruta de una manera sencilla del mejor casino del mundo.',
-  };
-  const ventajas = {
-    id: 'ventajas',
-    h2: 'Ventajas de jugar en Casino Online Regulado ',
-    p: [
-      'Cada vez hay más personas en el mundo que optan por el Casino Online. Pero esta elección no es fruto de la coincidencia, tiene una explicación. Una de las primeras cosas que más llama la atención de los casinos online es la adaptabilidad a horarios y lugar, haciendo posible que todo el mundo pueda jugar cuando ellos lo deseen.',
-      'Además la rapidez de las partidas en los Casinos Online hace que sea más interesante para aquellos jugadores impacientes. Otro de los aspectos es la seguridad con la que Codere alberga tu información, tu dinero y tus recompensas. ',
-      'Por otro lado, el mayor número de promociones y beneficios presentes en los casinos online, hace que los usuarios lo vean como una ventaja. Por último, la facilidad de elección en la forma de pago y la seguridad que te ofrece un Casino online, hace que mucha gente guste más de él que de un local.',
-    ],
-    inner: {
-      h3: '¿Cómo funciona?',
-      text: 'Registrarse en nuestro casino en línea es fácil. Simplemente crea una cuenta, realiza un depósito y comienza a jugar. Con soporte al cliente las 24 horas del día, los 7 días de la semana, siempre tendrás a alguien a quien acudir si necesitas ayuda.',
+
+  // Games Data
+  const live_games = [
+    {
+      name: "PTPremiumBlackjack_Square",
+      img: "PTPremiumBlackjack_Square",
+      urlImageTitle: "PT%20Premium%20Blackjack",
+      sponsor: "MGS",
     },
+    {
+      name: "PRPAviator_Square",
+      img: "PRPAviator_Square",
+      urlImageTitle: "PRP%20Aviator",
+      sponsor: "MGS",
+    },
+    {
+      name: "PTLiveQuantumRoulette_Square",
+      img: "PTLiveQuantumRoulette_Square",
+      urlImageTitle: "PT%20Live%20Quantum%20Roulette",
+      sponsor: "MGS",
+    },
+    {
+      name: "PTLiveAmericanRoulette_Square",
+      img: "PTLiveAmericanRoulette_Square",
+      urlImageTitle: "PT%20Live%20American%20Roulette",
+      sponsor: "MGS",
+    },
+    {
+      name: "PTBlueWizard_Square",
+      img: "PTBlueWizard_Square",
+      urlImageTitle: "PT%20Blue%20Wizard",
+      sponsor: "MGS",
+    },
+    {
+      name: "PTLiveBaccarat_Square",
+      img: "PTLiveBaccarat_Square",
+      urlImageTitle: "PT%20Live%20Baccarat",
+      sponsor: "MGS",
+    },
+    {
+      name: "EVGRNGBlackjack_Square",
+      img: "EVGRNGBlackjack_Square",
+      urlImageTitle: "EVG%20RNG%20Blackjack",
+      sponsor: "MGS",
+    },
+    {
+      name: "EVGRuletaRelampagoEnVivo_Square",
+      img: "EVGRuletaRelampagoEnVivo_Square",
+      urlImageTitle: "EVG%20Ruleta%20Relampago%20En%20Vivo",
+      sponsor: "MGS",
+    },
+    {
+      name: "PTPharaohsDaughter_Square",
+      img: "PTPharaohsDaughter_Square",
+      urlImageTitle: "PT%20Pharaohs%20Daughter",
+      sponsor: "MGS",
+    },
+    {
+      name: "EVGRuletaEspanol_Square",
+      img: "EVGRuletaEspanol_Square",
+      urlImageTitle: "EVG%20Ruleta%20Espanol",
+      sponsor: "MGS",
+    },
+    {
+      name: "EVGNoCommissionBaccarat_Square",
+      img: "EVGNoCommissionBaccarat_Square",
+      urlImageTitle: "EVG%20No%20Commission%20Baccarat",
+      sponsor: "MGS",
+    },
+    {
+      name: "PTLiveAllBetsBlackjack_Square",
+      img: "PTLiveAllBetsBlackjack_Square",
+      urlImageTitle: "PT%20Live%20All%20Bets%20Blackjack",
+      sponsor: "MGS",
+    },
+  ];
+
+  const como_juega = {
+    id: "como_juega",
+
+    p:
+      "Porque en Codere está la mejor selección de juegos de casino y las mejores condiciones! Entra en el mejor casino en línea, elige entre la enorme lista de juegos de slot que tendrás al alcance de tu mano, descubre las últimas novedades que han llegado al mercado y disfruta jugando con total seguridad." +
+      "Acepta el reto, regístrate ahora, disfruta de todas las ventajas que tiene jugar en Codere y empieza a ganar en grande." +
+      "¡Porque en Codere está la mejor selección de juegos de casino y las mejores condiciones! Entra en el mejor casino en línea, elige entre la enorme lista de juegos de slot que tendrás al alcance de tu mano, descubre las últimas novedades que han llegado al mercado y disfruta jugando con total seguridad." +
+      "Acepta el reto, regístrate ahora, disfruta de todas las ventajas que tiene jugar en Codere y empieza a ganar en grande.\n",
   };
-  const preguntas = {
-    id: 'preguntas',
-    h2: 'Preguntas frecuentes sobre el Casino Online ',
+
+  const reglas = {
+    id: "anchor-1",
+    h2: "Crown Casino: La emoción de los juegos de azar ahora en línea",
+    p: {
+      p5: "Donde podrás ganar increíbles premios si tienes suerte, habilidad y sabes cómo utilizar tus giros y avances. Seguramente conozcas las máquinas clásicas de slots con tres carretes y tres filas, pero con los slots online se abre una nueva dimensión para aumentar la diversión.",
+      pi: [
+        "¿Qué pasa en los casinos que los hace tan emocionantes? Muchas personas dirán que son las luces parpadeantes, los temas coloridos y los grandes jackpots hacen de las maquinas slot la parte más fascinante de la experiencia de juegos casino. Las personas que van al casino acuden a sus máquinas de slot favorita y pasan todo el día y la noche girándola.",
+        "Las máquinas de slot cuentan con una combinación de suerte y suspenso que las hacen difícil de resistir. Desafortunadamente, sacar tiempo para ir a tu casino más cercano no siempre es lo más conveniente.\n",
+
+        "Jugar slots online es la manera perfecta de evitar este viaje y disfrutar de la emoción de jugar juegos de slot desde la comodidad de tu hogar.",
+      ],
+    },
+
     inner: [
       {
-        h3: '¿Es seguro jugar en un Casino Online?',
-        text: 'Siempre y cuando se juegue en un casino regulado en España, estos incorporan las medidas de seguridad necesarias para apostar de manera segura para ti.',
-      },
-      {
-        h3: '¿Cuáles son los tipos de juego en el Casino más populares?',
-        text: 'Existe una gran variedad increíble de juegos casinos como blackjack, ruleta, ruleta en vivo, slots y mucho más.',
-      },
-      {
-        h3: '¿Cómo se retiran las ganancias en Codere?',
-        text: 'Verifica tu documentación, entra en la sección de cobros de Codere y, siempre que tengas saldo retirable, podrás usar cualquiera de nuestros métodos de cobro.s',
+        h2: "¿Cuáles son los beneficios de jugar Juegos de Casino en línea?",
+        id: "anchor-2",
+        p: [
+          "Jugar juegos de casino online trae muchos beneficios. En muchos casos, los juegos de casino online son incluso más divertidos que aquellos que se juegan en casinos físicos, principalmente debido a que incrementan la inmersión e interactividad. Aquí te dejamos algunos beneficios de jugar juegos de casino online:",
+        ],
+        list: [
+          "Juega en cualquier lugar y en cualquier momento. No hay necesidad de planear un día de excursión cuando juegas juegos de casino online. En la mayoría de casinos online puedes jugar desde cualquier lugar y en cualquier momento.",
+          "Diseño del juego. Los juegos de casino online ofrecen una experiencia alusiva al juego ya que presentan hermosos gráficos en 3D con infinidad de opciones temáticas.",
+          "Ofertas ilimitadas. Los casinos físicos tienen una cantidad limitada de espacio físico, lo que significa que la variedad de juegos que ofrecen están restringidos por el área de sus pisos. Los mejores sitios de casinos online proveen a sus usuarios con muchas ​opciones de juego, usualmente muchas más opciones que su contraparte en tierra.",
+        ],
       },
     ],
+  };
+
+  const estrategias = {
+    id: "anchor-3",
+    h2: "Reseña de los Juegos Más Populares de Casino Online\n",
+    p: [
+      "Los juegos de casino online más populares pueden dividirse en dos categorías: juegos de mesa y los juegos tragamonedas. Los juegos de mesa incluyen juegos de cartas y cualquier otro juego que tradicionalmente se juegan en un casino de mesa. Estos juegos incluyen póker, blackJack, ruleta y los dados. Los casinos a menudo ofrecen una amplia diversidad de reglas y variaciones de juego para cada juego.",
+      "Las máquinas de tragamonedas online son especialmente populares porque combinan riesgo, suerte y variedad. Los juegos de slots son una opción particularmente atractiva ya que hay muchísima variedad de opciones. Hay, literalmente, miles de diferentes juegos de casino online para explorar, disfrutar y aumentar tu oportunidad de ganar. Muchas de las mejores plataformas de casinos online ofrecen cientos de diferentes títulos de juegos de tragaperras, proveyendo a sus usuarios, prácticamente, opciones ilimitadas.",
+      "Muchos sitios de casino online también ofrecen juegos en directo los cuales cuentan con dealers profesionales en la vida real y los jugadores pueden ver e interactuar en tiempo real.",
+    ],
+  };
+
+  const floor1 = {
+    id: "anchor-4",
+    h2: "Primeros Pasos: ¿Cómo Jugar en un Casino Online en Colombia?\n",
+    p: [
+      "Jugar en un casino online es muy fácil una vez que conozca unos pocos pasos básicos y consejos para empezar. Primero, vas a querer realizar una pequeña investigación. Comienza utilizando un motor de búsqueda que averigüe el mejor casino en línea para ti. Cada casino tiene un conjunto de pros y contras. Dependiendo de la plataforma, cada casino en línea ofrece su propio vuelco a la experiencia de jugar en línea.",
+      "Una vez has encontrado el casino que mejor se ajuste a tus deseos de juego, es tiempo de registrarse en una cuenta. Antes de que divulgues cualquier información personal, como los datos de tu tarjeta, es importante verificar la seguridad del sitio. Un casino en línea debería ofrecer no menos de 128-bit SSL de cifrado digital. Cualquier casino en línea legítimo tendrá sus cualificaciones de seguridad fácilmente accesible a sus posibles usuarios.\n" +
+        "\n",
+      "Luego de que estés seguro que tu elección de casino online es seguro, ¡estás listo para registrarte, realizar tus apuestas y jugar!\n" +
+        "\n",
+    ],
+  };
+
+  const floor2 = {
+    id: "floor2",
+    h2: "¿Qué es un ‘Bono Casino sin Deposito’?\n",
+    p: [
+      "Una vez has elegido un casino en línea de Codere, estás listo para elegir todas las opciones de juegos casino y bonos de juego. Una vez empieces a navegar, podrás notar que el sitio ofrece un bono casino sin depósito. ¿Qué significa esto exactamente? Algunos sitios de casino ofrecen bonos que no requieren que el usuario realice cualquier depósito adicional, lo que significa que no se requiere de dinero para depositar. ",
+      "El bono casino sin depósito puede incluir giros gratis o incluso dinero gratis en el balance de tu cuenta. Algunos casinos online incluso ofrecen bonos sin depósito cuando los usuarios registran una cuenta por primera vez en sus sitios.",
+    ],
+  };
+
+  const floor3 = {
+    id: "anchor-5",
+    h2: "¿Por qué Codere es el mejor casino en línea?\n",
+    p: [
+      "Encuentra en el Casino Online de Codere una variedad increíble de juegos casino como blackjack, ruleta, ruleta en vivo y la última incorporación a nuestro catálogo, ¡el videobingo! Recuerda que en todos los juegos de casino tus ganancias no serán en bono y podrás retirarlas en cualquier momento sin problemas para tener tus premios en efectivo.\n",
+      "Además, sorpréndete con la rapidez de nuestra plataforma, tanto en tu ordenador como en tu aplicación móvil.\n" +
+        "\n",
+    ],
+    table: "",
   };
 
   return (
-    <>
+    <div className="cas-seo">
       <Helmet>
-        <title>El Casino de España #1 para Jugar Online | Codere®</title>
-        <meta
-          name='description'
-          content='Apuesta en línea con Codere y disfruta de los mejores juegos de Casino Online en España: ruletas, blackjack, slots y más'
-        />
-        <link
-          rel='canonical'
-          href='https://www.codere.es/casino'
-        />
-        <script type='application/ld+json'>{JSON.stringify(json)}</script>
+        <title>{title}</title>
+        <link rel="canonical" href="https://www.codere.com.co/casino" />
+        <meta name="description" content={description} />
+        <script type="application/ld+json">{JSON.stringify(json)}</script>
       </Helmet>
-      {/* End of SEO block */}
 
-      <Floating
-        text='¡El mejor Casino!'
-        juega={true}
-      />
+      <Floating text="¡El mejor Casino!" juega={true} />
       <div
-        className='top-bg-seo'
+        className="top-bg-seo "
         style={{
-          backgroundImage: `url(https://www.codere.es/Spain/assets/seoPages/casino/casino${
-            props.flag ? 'Mobile' : ''
+          backgroundImage: `url(https://www.codere.com.co/Colombia/images/seoCasinoImages/casino/TODOS${
+            props.flag ? "_mob" : ""
           }.webp)`,
-          backgroundSize: 'cover',
-        }}></div>
+          backgroundSize: "cover",
+        }}
+      ></div>
 
-      <Container>
-        <h1 className='PageH1TitleSeoPages923 mt-4'>
-          Vive la experiencia del Casino Online desde España
-        </h1>
-        <p>
-          Bienvenidos al mundo de los casinos online en España, donde la emoción del juego está a
-          solo un clic de distancia. Ven, experimenta y diviértete apostando desde la comodidad de
-          tu hogar. Juega, busca el <Link to='/casino/jackpots'>jackpot</Link> y repite: nuestro
-          casino en línea en España es tu destino para un entretenimiento único.
-        </p>
-        {!props.flag ? <TableOfContents table={table_of_contents_list} /> : null}
+      <Container style={{ color: "#fff" }}>
+        <h1 className="header mt-4 mb-3">{top_par.h1}</h1>
+        {top_par.p.map((par, k) => (
+          <p key={k}>{par}</p>
+        ))}
 
-        <div
-          id={juegos.id}
-          className='mt-4'>
-          <h2>{juegos.h2}</h2>
-          <p>{juegos.p}</p>
-          <Row className='casino-row'>
-            {games.casino.slice(0, !props.flag ? games.slots.length : 4).map((game, k) => (
-              <Col
-                lg={2}
-                md={4}
-                xs={6}
-                key={k}>
-                <NavLink href={game.link}>
-                  <div className='cas-game-wrapper'>
+        {/* Table */}
+        {!props.flag ? (
+          <TableOfContents table={table_of_contents_list} />
+        ) : null}
+        <p>{como_juega.p}</p>
+
+        {/* Games */}
+        <Row className="casino-row">
+          {live_games
+            .slice(0, !props.flag ? live_games.length : 4)
+            .map((game, k) => (
+              <Col lg={2} md={4} xs={6} key={k}>
+                <NavLink
+                  href={`${game_prefix}${game.urlImageTitle}`}
+                  rel="nofollow"
+                >
+                  <div className="cas-game-wrapper">
                     <LazyLoadImage
-                      className='casino-game-img shining'
-                      src={game.img}
+                      className="casino-game-img shining"
+                      src={
+                        "https://www.codere.com.co/Colombia/images/seoCasinoImages/casino/" +
+                        game.img +
+                        ".jpg"
+                      }
                     />
-                    <div className='hvr'>
+                    <div className="hvr">
                       <p>{game.name}</p>
-                      <LazyLoadImage src='https://www.codere.bet.ar/assets/seo/jackpotsPlayHoverLogo.svg' />
+                      <LazyLoadImage src="https://www.codere.com.co/Colombia/images/casinoIcons/playHoverLogo.svg" />
                     </div>
                   </div>
                 </NavLink>
               </Col>
             ))}
-          </Row>
-          <Accordion>
-            {juegos.inner.map((games, k) => (
-              <Accordion.Item
-                eventKey={k}
-                key={k}>
-                <Accordion.Header as='h3'>{games.h3}</Accordion.Header>
-                <Accordion.Body>{games.text}</Accordion.Body>
-              </Accordion.Item>
-            ))}
-          </Accordion>
-        </div>
-        <div
-          id={transmisiones.id}
-          className='mt-4'>
-          <h2>{transmisiones.h2}</h2>
-          <p>
-            En los juegos de casino por streaming, los crupieres reales operan las mesas de juego,
-            como la <Link to='/casino/ruleta'>ruleta</Link>, el{' '}
-            <Link to='/casino/blackjack'>blackjack</Link>, entre otros. Ellos interactúan contigo y
-            otros jugadores a través de un chat en vivo, respondiendo preguntas y llevando a cabo
-            todas las acciones del juego en tiempo real. Puedes ver las cartas siendo repartidas, la
-            ruleta girando y la bola saltando hasta que se detenga en un número, todo ello gracias a
-            la transmisión en directo de alta calidad.
-          </p>
-        </div>
+        </Row>
 
-        <div
-          id={leva.id}
-          className='mt-4'>
-          <h2>{leva.h2}</h2>
-          <p>{leva.p}</p>
-          <p>{leva.p2}</p>
-        </div>
-        <div
-          id={ventajas.id}
-          className='mt-4'>
-          <h2>{ventajas.h2}</h2>
-          {ventajas.p.map((pi, k) => (
-            <p key={k}>{pi}</p>
+        <div id={reglas.id}>
+          <h2 className="mt-4 mb-3">{reglas.h2}</h2>
+          <p>{reglas.p.p5} </p>
+          {reglas.p.pi.map((p, k) => (
+            <p key={k}>{p}</p>
           ))}
-          <h3>{ventajas.inner.h3}</h3>
-          <p>{ventajas.inner.text}</p>
-          <Table
-            striped
-            bordered
-            hover
-            variant='dark'
-            className='mb-4'>
-            <tbody>
-              <tr>
-                <td>🏆 Establecido</td>
-                <td>2008</td>
-              </tr>
-              <tr>
-                <td>🎰 Juegos ofrecidos</td>
-                <td>900+</td>
-              </tr>
-              <tr>
-                <td>🎲 Licencia de juego</td>
-                <td>
-                  Licencias otorgadas por la DGOJ: 225-11/GA/A86346038/SGR, AOC/2014/002,
-                  ADC/2014/001, AHC/2014/002, 223-11/GO/ A86346038/SGR, MAZ/2015/032, RLT/2016/009,
-                  BLJ/2016/007.
-                </td>
-              </tr>
-              <tr>
-                <td>✔️ Moneda</td>
-                <td>EUR</td>
-              </tr>
-              <tr>
-                <td>💰 Depósito mínimo</td>
-                <td>10€</td>
-              </tr>
-              <tr>
-                <td>💸 Límites de Retiros</td>
-                <td>El máximo de retiro es de 10.000€</td>
-              </tr>
-              <tr>
-                <td>💳 Formas de Pago</td>
-                <td>
-                  Bizum, Visa, MasterCard, Transferencia Bancaria, Netller, Skrill, Paypal,
-                  Paysafecard, MuchBetter, Halcash, Rapid
-                </td>
-              </tr>
-            </tbody>
-          </Table>
         </div>
-        <div
-          id={preguntas.id}
-          className='mt-4'>
-          <h2>{preguntas.h2}</h2>
 
-          <Accordion>
-            {preguntas.inner.map((question, k) => (
-              <Accordion.Item
-                eventKey={k}
-                key={k}>
-                <Accordion.Header as='h3'>{question.h3}</Accordion.Header>
-                <Accordion.Body>{question.text}</Accordion.Body>
-              </Accordion.Item>
+        {reglas.inner.map((game, k) => (
+          <div key={k}>
+            <h2 id={game.id} className={"mt-4"}>
+              {game.h2}
+            </h2>
+            {game.p.map((pi, k) => (
+              <p key={k}>{pi}</p>
             ))}
-          </Accordion>
-        </div>
-      </Container>
-    </>
-  );
-};
 
-export default Casino;
+            <ol>
+              {game.list.map((li, k) => (
+                <li key={k}>{li}</li>
+              ))}
+            </ol>
+          </div>
+        ))}
+
+        <div id={estrategias.id}>
+          <h2 className="mt-4 mb-3">{estrategias.h2}</h2>
+          <div className="estrategias_container">
+            {estrategias.p.map((pi, k) => (
+              <p key={k}>{pi}</p>
+            ))}
+          </div>
+        </div>
+
+        <div id={floor1.id}>
+          <h2 className="mt-4 mb-3">{floor1.h2}</h2>
+          <div className="estrategias_container">
+            {floor1.p.map((pi, k) => (
+              <p key={k}>{pi}</p>
+            ))}
+          </div>
+        </div>
+
+        <div id={floor2.id}>
+          <h2 className="mt-4 mb-3">{floor2.h2}</h2>
+          <div className="estrategias_container">
+            {floor2.p.map((pi, k) => (
+              <p key={k}>{pi}</p>
+            ))}
+          </div>
+        </div>
+
+        <div id={floor3.id}>
+          <h2 className="mt-4 mb-3">{floor3.h2}</h2>
+          <div className="estrategias_container">
+            {floor3.p.map((pi, k) => (
+              <p key={k}>{pi}</p>
+            ))}
+          </div>
+        </div>
+
+        <DynamicTable table={tableData} />
+        <Button
+          href={"https://m.codere.com.co/deportescolombia/#/RegistroCONewPage"}
+          className="cas-reg-btn"
+          rel="nofollow"
+        >
+          Registrate
+        </Button>
+      </Container>
+    </div>
+  );
+}

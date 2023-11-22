@@ -281,7 +281,7 @@ export default function Bingo(props) {
             .slice(0, !props.flag ? live_games.length : 4)
             .map((game, k) => (
               <Col lg={2} md={4} xs={6} key={k}>
-                <NavLink href={`${game_prefix}${game.urlTxt}`}>
+                <NavLink href={`${game_prefix}${game.urlTxt}`} rel="nofollow">
                   <div className="cas-game-wrapper">
                     <LazyLoadImage
                       className="casino-game-img shining"
