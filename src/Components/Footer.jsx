@@ -221,8 +221,7 @@ function Footer() {
 
                 <li>
                   <a
-                    href="www.codere.com.co/ayuda/apuesta-en-tu-movil"
-                    rel="nofollow"
+                    href="https://www.codere.com.co/ayuda/apuesta-en-tu-movil"
                   >
                     Descarga App
                   </a>
