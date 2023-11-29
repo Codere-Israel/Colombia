@@ -32,7 +32,9 @@ const Header = observer(() => {
   const acceder =
     "https://m.codere.com.co/deportescolombia/#/HomePage?openlogin=true";
   const LOGO =
-    "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/SponsorsLogoGrey.png";
+    new Date() <= new Date("2023-12-30T22:00:00Z") && new Date() >= new Date("2023-12-01T07:00:00Z")
+      ? "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/christmassLogo.gif"
+      : "https://www.codere.com.co/_catalogs/masterpage/codere/images/splash/SponsorsLogoGrey.png";
 
   // Hooks
 
