@@ -1,12 +1,12 @@
 {
   "spanish_games": [
     {
-      "name": "VIP Blackjack Espanol 7",
-      "alt": "VIP Blackjack Espanol 7",
-      "logo_alt": "VIP Blackjack Espanol 7 Logo",
-      "image": "https://www.codere.com.co/Colombia/images/inisio/vip-blackjack.jpg",
-      "logo": "https://www.codere.com.co/Colombia/images/inisio/vip-blackjack-logo.png",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=EVG VIP Blackjack Espanol 7"
+      "name":     "Ruleta codersita",
+      "alt":      "Ruleta codersita",
+      "logo_alt": "Ruleta codersita Logo",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/Ruleta codersita.jpg",
+      "logo": "https://www.codere.com.co/Colombia/images/inisio/RULETA-CODERISTA-logo.png",
+      "gamelink": "https://m.codere.com.co/csbgonlinereports/CasinoGames/CasinoGames?gameId=5fc6be0a-167e-ee11-9473-00155d90a816&language=es&sessId=REAL&deviceType=web"
     },
     {
       "name": "Ruleta Relampago En Vivo",
