@@ -1,9 +1,9 @@
 {
   "spanish_games": [
     {
-      "name": "Ruleta codersita",
-      "alt":  "Ruleta codersita",
-      "provider": "EVG",
+      "name": "Live Ruleta Coderista",
+      "alt":  "Live Ruleta Coderista",
+      "provider": "PT",
       "image": "https://www.codere.com.co/Colombia/images/inisio/PTLiveRuletaCoderista_Square.jpg"
     },
     {
