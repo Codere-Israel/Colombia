@@ -1,13 +1,6 @@
 {
   "spanish_games": [
-    {
-      "name": "VIP Blackjack Espanol 7",
-      "alt": "VIP Blackjack Espanol 7",
-      "logo_alt": "VIP Blackjack Espanol 7 Logo",
-      "image": "https://www.codere.com.co/Colombia/images/inisio/vip-blackjack.jpg",
-      "logo": "https://www.codere.com.co/Colombia/images/inisio/vip-blackjack-logo.png",
-      "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=EVG VIP Blackjack Espanol 7"
-    },
+
     {
       "name": "Ruleta Relampago En Vivo",
       "alt": "Ruleta Relampago En Vivo",
@@ -15,6 +8,14 @@
       "image": "https://www.codere.com.co/Colombia/images/inisio/lightning.jpg",
       "logo": "https://www.codere.com.co/Colombia/images/inisio/lightning-logo.png",
       "gamelink": "https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=EVG%20Ruleta%20Relampago%20En%20Vivo"
+    },
+    {
+      "name":     "Ruleta Coderista Live",
+      "alt":      "Ruleta Coderista Live",
+      "logo_alt": "",
+      "image": "https://www.codere.com.co/Colombia/images/inisio/639x743-DESKTOP-LOGO.jpg",
+      "logo": "",
+      "gamelink": "https://m.codere.com.co/deportescolombia/#/CasinoPage?playgame=PT%20Live%20Ruleta%20Coderista"
     },
     {
       "name": "Bacara Rapido Espanol",

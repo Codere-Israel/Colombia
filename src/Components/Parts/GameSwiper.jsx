@@ -17,7 +17,9 @@ function GameSwiper(props) {
         loop={true}
       >
         {props.games.map((item, index) => {
+            console.log(item)
           return (
+
             <SwiperSlide key={index}>
               <a
                 href={`https://m.codere.com.co/deportescolombia/#/SlotsPage?playgame=${item.provider} ${item.name}`}
