@@ -609,43 +609,7 @@ body{
 	top :-2rem;
 	}
 
-/* Styles for ultra-wide screens (e.g., wider than 1440px) */
-@media (min-width: 1441px) and (max-width: 2000px)  {
-	.top_new_1 img {
-		top: 160px; /* Example value for ultra-wide screens */
-		}
-	}
-@media (min-width: 2001px) {
-	.top_new_1 img {
-		top: 244px; /* Example value for ultra-wide screens */
-		}
-	}
-@media (max-width: 1440px) {
-	.top_new_1 img {
-		top: 140px; /* Example value for ultra-wide screens */
-		}
-	}
 
-/* Styles for widescreen monitors (from 1024px to 1439px) */
-@media (min-width: 1024px) and (max-width: 1439px) {
-	.top_new_1 img {
-		top: 120px; /* Example value for widescreen monitors */
-		}
-	}
-
-/* Styles for laptop and tablet screens (from 768px to 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-	.top_new_1 img {
-		top: 90px; /* Example value for laptop screens */
-		}
-	}
-
-/* Styles for mobile devices and small tablets (less than 768px) */
-@media (max-width: 767px) {
-	.top_new_1 img {
-		top: 60px; /* Example value for small screens */
-		}
-	}
 
 .top_new_2 img{
 	top :-3rem;
