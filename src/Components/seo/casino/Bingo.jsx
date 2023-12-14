@@ -266,7 +266,7 @@ export default function Bingo(props) {
           <TableOfContents table={table_of_contents_list} />
         ) : null}
 
-        <h2 className="mt-4 mb-3">{floor1.title}</h2>
+        <h2 className="mt-4 mb-3" id={floor1.id}>{floor1.title}</h2>
         {floor1.p.map((par, k) => (
           <p key={k}>{par}</p>
         ))}

@@ -122,6 +122,7 @@ export default function Blackjack(props) {
 
   const reglas = {
     id: "anchor-1",
+    idDrp: "anchor-3",
     h2: "Principales Juegos de Blackjack Online en Codere",
     p: {
       p5: "Es momento de darle una mirada a la lista a de opciones que te dará la oportunidad de disfrutar incluso la experiencia de disfrutar cada partida con un croupier en vivo",
@@ -152,6 +153,7 @@ export default function Blackjack(props) {
         ],
       },
     ],
+
     dropdownSection: [
       {
         title: "¿Cuáles son las reglas del blackjack?",
@@ -287,9 +289,14 @@ export default function Blackjack(props) {
             <div key={k} id={reglas.dropdownSection.id}>
               <Accordion>
                 <Accordion.Item>
-                  <Accordion.Header as={"h3"}>{t.title}</Accordion.Header>
+                  <div id={reglas.idDrp}>
+                  <Accordion.Header as={"h3"} >{t.title}</Accordion.Header>
+                  </div>
                   <Accordion.Body as={"div"}>
-                    <p>{t.data.p1}</p>
+                    <p>
+
+                      {t.data.p1}
+                    </p>
                     <ul>
                       {t.data.list.map((li, k) => (
                         <li key={k}>{li}</li>

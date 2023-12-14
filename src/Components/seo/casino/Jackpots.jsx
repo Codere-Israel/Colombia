@@ -164,7 +164,7 @@ export default function Jackpots(props) {
   };
 
   const floor1 = {
-    id: "floor1",
+    id: "anchor-1",
     title: "¿Qué es un jackpot y cuales son sus diferentes tipos?",
     data: {
       p1: [
