@@ -324,70 +324,76 @@ function Footer() {
 
       <div className="payments">
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/img/FooterLocalCodere.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_PSE.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/img/FooterVisa.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_PuntoRed.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/img/FooterMasterCard.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_TPaga.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/images/PSE.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Visa.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/images/PayU.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Daviplata.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/img/dimonex.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Dimonex.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/img/Logo_Puntored.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Efecty.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/img/daviplata.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Exito.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/img/efecty.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_LocalCodere.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/images/Nequi.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Mastercard.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
         />
         <img
-          src="https://www.codere.com.co/_catalogs/masterpage/codere/images/TPaga_logo.png"
-          width="auto"
-          height="auto"
+          src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Nequi.webp"
+          width="91.34px"
+          height="49.99px"
           alt=""
+        />
+        <img
+            src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_payu.webp"
+            width="91.34px"
+            height="49.99px"
+            alt=""
         />
       </div>
 
