@@ -1,13 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faInstagram,
-  faXTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { faHeadset } from "@fortawesome/free-solid-svg-icons/faHeadset";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container} from "react-bootstrap";
+import { CodereChat, Facebook, Instagram, Twitter, Youtube } from '../icons';
 
 function Footer() {
   return (
@@ -66,7 +59,8 @@ function Footer() {
                 title="Codere Colombia"
                 rel="nofollow"
               >
-                <FontAwesomeIcon icon={faHeadset} />
+
+                <CodereChat />
               </a>
             </li>
             <li>
@@ -75,7 +69,7 @@ function Footer() {
                 title="Codere Colombia"
                 rel="nofollow"
               >
-                <FontAwesomeIcon icon={faFacebookF} />
+                <Facebook />
               </a>
             </li>
             <li>
@@ -84,7 +78,7 @@ function Footer() {
                 title="Codere Colombia"
                 rel="nofollow"
               >
-                <FontAwesomeIcon icon={faInstagram} />
+                <Instagram />
               </a>
             </li>
             <li>
@@ -93,7 +87,7 @@ function Footer() {
                 title="Codere Colombia"
                 rel="nofollow"
               >
-                <FontAwesomeIcon icon={faXTwitter} />
+                <Twitter />
               </a>
             </li>
             <li>
@@ -102,7 +96,7 @@ function Footer() {
                 title="Codere Colombia"
                 rel="nofollow"
               >
-                <FontAwesomeIcon icon={faYoutube} />
+                <Youtube />
               </a>
             </li>
           </ul>
@@ -325,73 +319,73 @@ function Footer() {
       <div className="payments">
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_PSE.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_PuntoRed.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_TPaga.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Visa.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Daviplata.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Dimonex.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Efecty.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Exito.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_LocalCodere.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Mastercard.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
           src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_Nequi.webp"
-          width="91.34px"
+          width="80px"
           height="49.99px"
           alt=""
         />
         <img
             src="https://www.codere.com.co/Colombia/images/footer/newPaymentLogos/cs-logo_payu.webp"
-            width="91.34px"
+            width="80px"
             height="49.99px"
             alt=""
         />
