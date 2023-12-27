@@ -1284,9 +1284,11 @@ h1.bottomContentSubTitle {
   gap: 10px;
   justify-content: center;
   margin: 1.25rem auto;
-  width: 60%;
+  width: 43%;
 }
-
+h2.comoJugar > button.accordion-button{
+  color:#79c000;
+  }
 .mobiles img {
   max-height: 55px;
 }

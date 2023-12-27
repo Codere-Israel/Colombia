@@ -146,7 +146,7 @@ const Header = observer (() => {
 								{/*mobile*/}
 								<Accordion className="hamb-accordion">
 									<Accordion.Item eventKey="0">
-										<Accordion.Header>¿Cómo jugar?</Accordion.Header>
+										<Accordion.Header className={"comoJugar"}>¿Cómo jugar?</Accordion.Header>
 										<Accordion.Body>
 											<ul>
 												{seo_menu.map ((item, k) => (<li key={k}>
