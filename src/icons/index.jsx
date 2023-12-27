@@ -11,14 +11,15 @@ export { ReactComponent as Slotmachines } from './menu/slot-machines.svg';
 export { ReactComponent as LocalesMenuIcon } from './menu/locales.svg';
 export { ReactComponent as Directo } from './menu/directo.svg';
 export { ReactComponent as Crown } from './menu/Crown-White.svg';
+export { ReactComponent as Withdrawal } from './menu/withdrawal-st.svg';
 
 
 //social
-export { ReactComponent as Facebook } from './social/facebook.svg';
-export { ReactComponent as Instagram } from './social/instagram.svg';
+export { ReactComponent as Facebook } from './social/facebook-round-color-icon.svg';
+export { ReactComponent as Instagram } from './social/ig-instagram-icon.svg';
 export { ReactComponent as Twitter } from './social/twitterx.svg';
-export { ReactComponent as Youtube } from './social/youtube.svg';
-export { ReactComponent as CodereChat } from './social/chat-dots.svg';
+export { ReactComponent as Youtube } from './social/youtube-color-icon.svg';
+export { ReactComponent as CodereChat } from './social/contact-us-icon.svg';
 
 
 //other

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import DropdownMenuComponent from "../Parts/DropdownMenuComponent";
 import { observer } from "mobx-react";
 import myStore from "../../mobX/Store";
-import { Arrowrightw, Deportes,  Envivo, LocalesMenuIcon, Promociones, CasinoMenuIcon, Directo, Crown } from '../../icons';
+import { Arrowrightw, Deportes, Withdrawal, Envivo, LocalesMenuIcon, Promociones, CasinoMenuIcon, Directo, Crown } from '../../icons';
 
 
 const Header = observer (() => {
@@ -138,7 +138,7 @@ const Header = observer (() => {
 								<a href="/ayuda/deposito-en-efectivo" rel="nofollow">
 									<div className={"mobMenuSVGwrapper"}>
 
-										<Deportes/>
+										<Withdrawal/>
 										Recargas Y Retiros
 									</div>
 									<div className={'arrowrightw'}><Arrowrightw/></div>

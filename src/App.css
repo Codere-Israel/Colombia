@@ -1272,9 +1272,19 @@ h1.bottomContentSubTitle {
 }
 
 .payments {
+  /* display: flex; */
+
+  /* flex-wrap: wrap; */
+
+  /* justify-content: center; */
+
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
+  margin: 1.25rem auto;
+  width: 60%;
 }
 
 .mobiles img {
@@ -1287,10 +1297,15 @@ h1.bottomContentSubTitle {
 }
 
 .payments img {
-  max-height: 40px;
-  margin: 1px;
-  border-radius: 5px;
-  padding: 2px;
+  /* max-height: 40px; */
+
+  /* margin: 1px; */
+
+  /* border-radius: 5px; */
+
+  /* padding: 2px; */
+  height: auto;
+  max-width: 100px;
 }
 
 .footerList34u {
@@ -1357,6 +1372,12 @@ footer.nb-footer .about .social-media {
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0 4px 9px -2px rgba(0, 0, 0, 0.71);
   box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.71);
+}
+
+.list-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .list-inline li {
@@ -1513,6 +1534,15 @@ footer.nb-footer .footer-info-single p {
     width: 90%;
   }
 
+  .payments {
+    width: 100%;
+  }
+
+  .payments img {
+    adding: 1.2vw;
+    width: 27vw;
+  }
+
   /* Cookie */
   .cookie-btn {
     width: 92vw;
@@ -1520,12 +1550,12 @@ footer.nb-footer .footer-info-single p {
   }
 
   /* End Cookie */
-  .mobiles,
-  .logos,
-  .payments {
-    margin: 0 15px;
-    justify-content: space-around;
-  }
+  /*.mobiles,*/
+  /*.logos,*/
+  /*.payments {*/
+  /*  margin: 0 15px;*/
+  /*  justify-content: space-around;*/
+  /*}*/
 
   .mobiles img {
     max-height: 50px;
@@ -1662,7 +1692,7 @@ footer.nb-footer .footer-info-single p {
   .mobMenuSVGwrapper svg {
     margin-right: 0.5rem;
     height: 1em !important;
-    min-width:36px;
+    min-width: 36px;
   }
 
   /* Hamburger */
@@ -2142,9 +2172,9 @@ footer.nb-footer .about .social-media {
 
 .about .social-media ul li a {
   display: flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   width: 46px;
   background-color: #fff;
   height: 46px;
@@ -2157,9 +2187,11 @@ footer.nb-footer .about .social-media {
   -webkit-box-shadow: 0 4px 9px -2px rgba(0, 0, 0, 0.71);
   box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.71);
 }
+
 .about .social-media ul li a > svg {
-  width:2vw;
-  }
+  width: 2vw;
+}
+
 .list-inline li {
   display: inline-flex;
   padding-left: 1vw;
@@ -2267,8 +2299,9 @@ footer.nb-footer .footer-info-single p {
 
 @media only screen and (max-width: 767px) {
   .about .social-media ul li a > svg {
-    width:7vw;
-    }
+    width: 7vw;
+  }
+
   .top-bg-seo {
     padding-bottom: 50%;
   }
