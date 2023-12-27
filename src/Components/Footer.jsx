@@ -291,12 +291,12 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://api.whatsapp.com/send?phone=573168754044&amp;text=Hola%20Coderista,%0D%0A%20Bienvenido%20a%20nuestro%20soporte%20online%20al%20usuario%20%0D%0A%C2%BFEn%20que%20podemos%20ayudarte?"
+                    href="https://api.whatsapp.com/send?phone=573045321224&amp;text=Hola%20Coderista,%0D%0A%20Bienvenido%20a%20nuestro%20soporte%20online%20al%20usuario%20%0D%0A%C2%BFEn%20que%20podemos%20ayudarte?"
                     rel="nofollow"
                     target="_blank"
                     className="whatsapp"
                   >
-                    WhatsApp: +57 316 875 4044
+                    WhatsApp: +57 304 5321224
                   </a>
                 </li>
 
