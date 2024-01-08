@@ -1669,12 +1669,7 @@ footer.nb-footer .footer-info-single p {
     color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
-
-    /* border-bottom: #fff 1px solid; */
-    padding: 1vw 3.5vw;
     padding-top: 3vw;
-
-    /* margin-left: 3vw; */
     display: flex !important;
     justify-content: space-between;
     align-items: center;
@@ -1693,7 +1688,7 @@ footer.nb-footer .footer-info-single p {
   /*	} */
   .mobMenuSVGwrapper svg {
     margin-right: 0.5rem;
-    height: 1em !important;
+    height: 1.6em !important;
     min-width: 36px;
   }
 
